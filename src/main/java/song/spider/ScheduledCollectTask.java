@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
 
 /**
@@ -20,11 +21,15 @@ public class ScheduledCollectTask {
     @Autowired
     private NewsItemRepository newsItemRepository;
 
-    @Scheduled(fixedRate = 5000)
+    @Autowired
+    private NewsDetailRepository newsDetailRepository;
+
+    @Scheduled(fixedRate = PERIOD_DAY)
     public void autoCollectNews(){
-        AutoCollectNews collectNews = new CollectLeiFengNews(newsItemRepository);
+        AutoCollectNews collectNews = new CollectLeiFengNews(newsItemRepository,newsDetailRepository);
+        logger.warn("Start To Collect News");
         collectNews.collect();
-        logger.warn("---------Collect News --------------");
+        logger.debug("Finish To Collect News");
     }
 }
 

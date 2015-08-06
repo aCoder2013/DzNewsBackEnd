@@ -18,6 +18,8 @@ public class NewsItem {
     @Column
     private String title;//标题
     @Column
+    private String thumbnail ;//缩略图
+    @Column
     private String description; //简述
     @Column
     private String auth;//作者
@@ -33,8 +35,9 @@ public class NewsItem {
     public NewsItem() {
     }
 
-    public NewsItem(String title, String description, String auth, String pubTime, int comNumber, String targerUrl) {
+    public NewsItem(String title, String thumbnail, String description, String auth, String pubTime, int comNumber, String targerUrl) {
         this.title = title;
+        this.thumbnail = thumbnail;
         this.description = description;
         this.auth = auth;
         this.pubTime = pubTime;
@@ -56,6 +59,14 @@ public class NewsItem {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
     public String getDescription() {

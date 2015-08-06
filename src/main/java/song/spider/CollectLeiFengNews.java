@@ -1,16 +1,20 @@
 package song.spider;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
+import song.model.NewsDetail;
 import song.model.NewsItem;
+import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -24,34 +28,73 @@ public class CollectLeiFengNews implements AutoCollectNews{
     private String url ="http://www.leiphone.com/";
 
     private NewsItemRepository newsItemRepository;
+    private NewsDetailRepository newsDetailRepository;
 
+    private Document doc  = null;
+
+    private List<NewsItem> itemList ;
     public CollectLeiFengNews() {
     }
 
-    public CollectLeiFengNews(NewsItemRepository newsItemRepository) {
+    public CollectLeiFengNews(NewsItemRepository newsItemRepository, NewsDetailRepository newsDetailRepository) {
         this.newsItemRepository = newsItemRepository;
+        this.newsDetailRepository = newsDetailRepository;
     }
-
+    /*
+        收集新闻
+     */
     @Override
     public void collect() {
-        List<NewsItem> itemSet = ParseNews();
-        if(itemSet!=null) {
-            newsItemRepository.save(itemSet);//保存新闻
+        itemList = ParseNews();//解析新闻列表
+        if(itemList!=null) {
+            newsItemRepository.save(itemList);//保存新闻
         }
     }
-
+        /*
+            解析新闻详情页面
+         */
+        private NewsDetail parseDetail(String url) {
+            NewsDetail newsDetail = null;
+            try {
+                doc = Jsoup.connect(url).get();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //如果为文字形式，则解析
+            Element index_main = doc.select("div.index-main").addClass("lph-main").addClass("clr").first();
+            if (index_main != null) {
+                //新闻标题
+                String title = index_main.select("div.pageTop").first().getElementsByTag("h1").text();
+                Element contentElement = index_main.select("div.pageCont").addClass("lph-article-comView").first();
+                Element procard = contentElement.select("div.lp-proCard").addClass("clr").first();
+                if(procard!=null){
+                    procard.remove();
+                }
+                String content = contentElement.html();
+                int comNumber = Integer.parseInt(doc.select("div.pi-comment").first().getElementsByTag("span").first().text());
+                newsDetail  = new NewsDetail(title, content,comNumber);
+                return newsDetail;
+            }
+            else if(doc.select("div.photoActicle-main").addClass("lph-main").addClass("clr").first()!=null){
+             /*
+                如果为轮播图片的形式
+             */
+                return null;
+            }else {
+                return null;
+            }
+        }
 
 
     /*
         根据置指定URL解析新闻数据
      */
     private List<NewsItem> ParseNews() {
-        List<NewsItem> itemSet = new ArrayList<>();
+        List<NewsItem> itemList = new ArrayList<>();
         List<NewsItem> itemInDB = newsItemRepository.findAll();//找到在数据库中的所有数据
         for(NewsItem item:itemInDB){
             item.setId(null);//将ID置为空
         }
-        Document doc = null;
         try {
             doc= Jsoup.connect(url).get();
         } catch (IOException e) {
@@ -62,6 +105,8 @@ public class CollectLeiFengNews implements AutoCollectNews{
         Element ul = newsList.getElementsByTag("ul").first();
         Elements li = ul.select("li.pbox").addClass("clr");
         for(Element e :li){
+            Element img = e.select("img.lazy").first();
+            String thumbnail = img.attr("data-original");
             Element word = e.select("div.word").first();
             Element titleElement = word.select("a[href]").first();
             String targetUrl = titleElement.attr("href");
@@ -77,12 +122,17 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 pubTime+=temp.text()+" ";
             }
             int comNumber =Integer.parseInt(infoElement.select("a.cmt").first().getElementsByTag("span").text());
-            NewsItem news = new NewsItem(title,desc,auth, pubTime, comNumber, targetUrl);
+            NewsItem news = new NewsItem(title, thumbnail,desc,auth, pubTime, comNumber, targetUrl);
             news.setId(null);
             if(!itemInDB.contains(news)){ //如果数据库中已经存在这条新闻，则不添加到列表中
-                itemSet.add(news);
+                NewsDetail detail = parseDetail(news.getTargerUrl());//获取新闻详情
+                //如果新闻详情不为空才添加到列表中
+                if(detail!=null) {
+                    newsDetailRepository.save(detail);
+                    itemList.add(news);
+                }
             }
         }
-        return itemSet;
+        return itemList;
     }
 }
