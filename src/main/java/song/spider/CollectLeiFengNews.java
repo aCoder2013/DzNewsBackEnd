@@ -129,6 +129,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 //如果新闻详情不为空才添加到列表中
                 if(detail!=null) {
                     newsDetailRepository.save(detail);
+                    news.setNewsDetail(detail);//建立关联关系
                     itemList.add(news);
                 }
             }

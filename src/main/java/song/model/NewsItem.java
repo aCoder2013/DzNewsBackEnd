@@ -1,9 +1,6 @@
 package song.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * 雷锋网
@@ -30,6 +27,8 @@ public class NewsItem {
     @Column
     private String targerUrl ;//新闻URL
 
+    @OneToOne
+    private NewsDetail newsDetail;
 
 
     public NewsItem() {
@@ -107,6 +106,14 @@ public class NewsItem {
 
     public void setTargerUrl(String targerUrl) {
         this.targerUrl = targerUrl;
+    }
+
+    public NewsDetail getNewsDetail() {
+        return newsDetail;
+    }
+
+    public void setNewsDetail(NewsDetail newsDetail) {
+        this.newsDetail = newsDetail;
     }
 
     @Override
