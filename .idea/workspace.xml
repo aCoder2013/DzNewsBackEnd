@@ -2,50 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_test_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\test\java\song\DateTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\test\java\song\NewsServiceEndApplicationTests.java" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\test-classes\song\DateTest.class" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\test-classes\song\NewsServiceEndApplicationTests.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/AutoCollectNews.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/AutoCollectNews.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/CollectLeiFengNews.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/CollectLeiFengNews.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/News.class" afterPath="$PROJECT_DIR$/target/classes/song/model/News.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/NewsDetail.class" afterPath="$PROJECT_DIR$/target/classes/song/model/NewsDetail.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/NewsDetailRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/NewsDetailRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/NewsItem.class" afterPath="$PROJECT_DIR$/target/classes/song/model/NewsItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/NewsItemRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/NewsItemRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/NewsRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/NewsRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" afterPath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/utils/SaeUploadUtils.class" afterPath="$PROJECT_DIR$/target/classes/song/utils/SaeUploadUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/ScheduledCollectTask.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/ScheduledCollectTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/utils/StringUtils.class" afterPath="$PROJECT_DIR$/target/classes/song/utils/StringUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/User.class" afterPath="$PROJECT_DIR$/target/classes/song/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" />
-      <change type="MODIFICATION" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT.jar" afterPath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" afterPath="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/model/News.java" afterPath="$PROJECT_DIR$/src/main/java/song/model/News.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/repository/NewsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/song/repository/NewsRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsServiceEnd.iml" afterPath="$PROJECT_DIR$/NewsServiceEnd.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/NewsServiceEnd_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/NewsServiceEnd_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-song.NewsServiceEndApplicationTests.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-song.NewsServiceEndApplicationTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/song.NewsServiceEndApplicationTests.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/song.NewsServiceEndApplicationTests.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsServiceEnd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -184,8 +142,8 @@
           <file leaf-file-name="News.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/song/model/News.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.5175644">
+                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -969,7 +927,7 @@
       <workItem from="1438932076487" duration="9604000" />
       <workItem from="1439011058818" duration="193000" />
       <workItem from="1439093058732" duration="56000" />
-      <workItem from="1441880384249" duration="5761000" />
+      <workItem from="1441880384249" duration="6427000" />
     </task>
     <task id="LOCAL-00001" summary="新闻项和新闻详情之间建立单向一对一的关系">
       <created>1438934052089</created>
@@ -987,7 +945,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136251000" />
+    <option name="totallyTimeSpent" value="136917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -999,7 +957,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1485,8 +1443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/model/News.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5175644">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
