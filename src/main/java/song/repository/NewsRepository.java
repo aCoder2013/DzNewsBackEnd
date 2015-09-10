@@ -6,6 +6,6 @@ import song.model.News;
 /**
  * Created by Song on 2015/6/13.
  */
-public interface NewsRepository extends JpaRepository<News,Integer> {
+public interface NewsRepository extends JpaRepository<News,Long> {
 
 }

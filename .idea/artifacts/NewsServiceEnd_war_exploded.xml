@@ -83,6 +83,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-websocket:4.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.35" />
           <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.1" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.7.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

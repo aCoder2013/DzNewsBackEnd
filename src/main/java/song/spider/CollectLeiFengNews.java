@@ -73,6 +73,9 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 String content = contentElement.html();
                 int comNumber = Integer.parseInt(doc.select("div.pi-comment").first().getElementsByTag("span").first().text());
                 newsDetail  = new NewsDetail(title, content,comNumber);
+                //解析评论
+                Element articleCommentContainer = index_main.select("div.article-comment-container").first();
+
                 return newsDetail;
             }
             else if(doc.select("div.photoActicle-main").addClass("lph-main").addClass("clr").first()!=null){

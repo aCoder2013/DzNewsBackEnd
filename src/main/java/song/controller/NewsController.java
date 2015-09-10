@@ -52,7 +52,7 @@ public class NewsController {
         2015-6-18 22:49:22
      */
     @RequestMapping(value="/addNews",method = RequestMethod.POST)
-    public String addNews(Integer id ,String title,String content,String fromPublisher,
+    public String addNews(Long id ,String title,String content,String fromPublisher,
                           @RequestParam(value = "publishTime",required=false)String publishTime,int beenRead,  Model model){
         Date time = null;
         if(!StringUtils.isEmpty(title,content,fromPublisher)){
@@ -149,7 +149,7 @@ public class NewsController {
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public String showNewsDetail(@PathVariable String id ,Model model){
-        News news  = newsRepository.findOne(Integer.parseInt(id));
+        News news  = newsRepository.findOne(Long.parseLong(id));
         model.addAttribute("news",news);
         news.setBeenRead(news.getBeenRead()+1);
         newsRepository.save(news);//更新数据
@@ -163,7 +163,7 @@ public class NewsController {
      */
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
     public String deleteNews(@PathVariable("id") String id ,Model model,HttpServletRequest request){
-        newsRepository.delete(Integer.parseInt(id));
+        newsRepository.delete(Long.parseLong(id));
         return "redirect:../";
     }
 
@@ -183,7 +183,7 @@ public class NewsController {
         修改文章
      */
     @RequestMapping("/updateNews")
-    public String updateNews(@RequestParam("id") Integer id,Model model){
+    public String updateNews(@RequestParam("id") Long id,Model model){
             News news = newsRepository.findOne(id);
             model.addAttribute("news",news);
             return "add_news";

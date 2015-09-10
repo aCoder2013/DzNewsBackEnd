@@ -11,7 +11,7 @@ public class News {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     //标题
     @Column
     private String title;
@@ -31,7 +31,7 @@ public class News {
 
     public News(){}
 
-    public News(Integer id ,String title, String content, String fromPublisher, Date publishTime, int beenRead) {
+    public News(Long id ,String title, String content, String fromPublisher, Date publishTime, int beenRead) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -40,11 +40,11 @@ public class News {
         this.beenRead = beenRead;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
