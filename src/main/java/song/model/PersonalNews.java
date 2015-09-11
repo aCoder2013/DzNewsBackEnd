@@ -3,11 +3,11 @@ package song.model;
 import javax.persistence.*;
 import java.util.Date;
 
-/**
+/**个人发布的新闻
  * Created by Song on 2015/6/13.
  */
 @Entity
-public class News {
+public class PersonalNews {
 
     @Id
     @GeneratedValue
@@ -29,9 +29,9 @@ public class News {
     private int beenRead;
 
 
-    public News(){}
+    public PersonalNews(){}
 
-    public News(Long id ,String title, String content, String fromPublisher, Date publishTime, int beenRead) {
+    public PersonalNews(Long id ,String title, String content, String fromPublisher, Date publishTime, int beenRead) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -93,7 +93,7 @@ public class News {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        News news = (News) o;
+        PersonalNews news = (PersonalNews) o;
 
         if (beenRead != news.beenRead) return false;
         if (id != null ? !id.equals(news.id) : news.id != null) return false;
@@ -118,7 +118,7 @@ public class News {
 
     @Override
     public String toString() {
-        return "News{" +
+        return "PersoanlNews{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +

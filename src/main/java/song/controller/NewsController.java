@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
-import song.model.News;
+import song.model.PersonalNews;
 import song.repository.NewsRepository;
 import song.utils.SaeUploadUtils;
 import song.utils.StringUtils;
@@ -68,7 +68,7 @@ public class NewsController {
                     logger.error("Parse Date String Error!Check publishTime!");
                 }
             }
-            newsRepository.save(new News(id,title,content,fromPublisher,time,beenRead));//save news
+            newsRepository.save(new PersonalNews(id,title,content,fromPublisher,time,beenRead));//save news
         }
         model.asMap().clear();
         return "add_news";
@@ -149,7 +149,7 @@ public class NewsController {
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public String showNewsDetail(@PathVariable String id ,Model model){
-        News news  = newsRepository.findOne(Long.parseLong(id));
+        PersonalNews news  = newsRepository.findOne(Long.parseLong(id));
         model.addAttribute("news",news);
         news.setBeenRead(news.getBeenRead()+1);
         newsRepository.save(news);//更新数据
@@ -174,7 +174,7 @@ public class NewsController {
     @RequestMapping("")
     public String admin(Model model,HttpServletRequest request){
         request.removeAttribute("newsList");
-        List<News> newsList = newsRepository.findAll();
+        List<PersonalNews> newsList = newsRepository.findAll();
         model.addAttribute("newsList",newsList);
         request.getSession().setAttribute("newsList",newsList);
         return "news_admin";
@@ -184,7 +184,7 @@ public class NewsController {
      */
     @RequestMapping("/updateNews")
     public String updateNews(@RequestParam("id") Long id,Model model){
-            News news = newsRepository.findOne(id);
+        PersonalNews news = newsRepository.findOne(id);
             model.addAttribute("news",news);
             return "add_news";
     }
@@ -195,8 +195,8 @@ public class NewsController {
      */
     @RequestMapping(value = "/api/newsList")
     @ResponseBody
-    public List<News> showNewsList(){
-        List<News> newsList = newsRepository.findAll();
+    public List<PersonalNews> showNewsList(){
+        List<PersonalNews> newsList = newsRepository.findAll();
         if(newsList!=null){
             return newsList;
         }

@@ -125,7 +125,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 pubTime+=temp.text()+" ";
             }
             int comNumber =Integer.parseInt(infoElement.select("a.cmt").first().getElementsByTag("span").text());
-            NewsItem news = new NewsItem(title, thumbnail,desc,auth, pubTime, comNumber, targetUrl);
+            NewsItem news = new NewsItem(title, thumbnail,desc,auth, pubTime, comNumber, targetUrl,"雷锋网");
             news.setId(null);
             if(!itemInDB.contains(news)){ //如果数据库中已经存在这条新闻，则不添加到列表中
                 NewsDetail detail = parseDetail(news.getTargerUrl());//获取新闻详情

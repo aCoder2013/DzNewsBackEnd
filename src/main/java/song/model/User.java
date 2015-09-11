@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
+ * 用户表
  * Created by Song on 2015/6/12.
  */
 @Entity

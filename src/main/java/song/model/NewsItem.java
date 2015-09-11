@@ -3,7 +3,7 @@ package song.model;
 import javax.persistence.*;
 
 /**
- * 雷锋网
+ * 新闻列表项
  * Created by Song on 2015/8/6.
  */
 @Entity
@@ -26,6 +26,9 @@ public class NewsItem {
     private int comNumber;//评论数目
     @Column
     private String targerUrl ;//新闻URL
+    @Column
+    private String fromPublisher;//新闻来源
+
 
     @OneToOne
     private NewsDetail newsDetail;
@@ -34,7 +37,7 @@ public class NewsItem {
     public NewsItem() {
     }
 
-    public NewsItem(String title, String thumbnail, String description, String auth, String pubTime, int comNumber, String targerUrl) {
+    public NewsItem(String title, String thumbnail, String description, String auth, String pubTime, int comNumber, String targerUrl,String fromPublisher) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.description = description;
@@ -42,6 +45,7 @@ public class NewsItem {
         this.pubTime = pubTime;
         this.comNumber = comNumber;
         this.targerUrl = targerUrl;
+        this.fromPublisher = fromPublisher;
     }
 
     public Long getId() {
@@ -116,6 +120,14 @@ public class NewsItem {
         this.newsDetail = newsDetail;
     }
 
+    public String getFromPublisher() {
+        return fromPublisher;
+    }
+
+    public void setFromPublisher(String fromPublisher) {
+        this.fromPublisher = fromPublisher;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -123,17 +135,27 @@ public class NewsItem {
 
         NewsItem item = (NewsItem) o;
 
+        if (comNumber != item.comNumber) return false;
         if (title != null ? !title.equals(item.title) : item.title != null) return false;
+        if (thumbnail != null ? !thumbnail.equals(item.thumbnail) : item.thumbnail != null) return false;
         if (description != null ? !description.equals(item.description) : item.description != null) return false;
-        return !(auth != null ? !auth.equals(item.auth) : item.auth != null);
+        if (auth != null ? !auth.equals(item.auth) : item.auth != null) return false;
+        if (pubTime != null ? !pubTime.equals(item.pubTime) : item.pubTime != null) return false;
+        if (targerUrl != null ? !targerUrl.equals(item.targerUrl) : item.targerUrl != null) return false;
+        return !(fromPublisher != null ? !fromPublisher.equals(item.fromPublisher) : item.fromPublisher != null);
 
     }
 
     @Override
     public int hashCode() {
         int result = title != null ? title.hashCode() : 0;
+        result = 31 * result + (thumbnail != null ? thumbnail.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (auth != null ? auth.hashCode() : 0);
+        result = 31 * result + (pubTime != null ? pubTime.hashCode() : 0);
+        result = 31 * result + comNumber;
+        result = 31 * result + (targerUrl != null ? targerUrl.hashCode() : 0);
+        result = 31 * result + (fromPublisher != null ? fromPublisher.hashCode() : 0);
         return result;
     }
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 新闻详情
  * Created by Song on 2015/8/6.
  */
 @Entity

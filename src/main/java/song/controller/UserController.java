@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import song.model.News;
+import song.model.PersonalNews;
 import song.model.User;
 import song.repository.NewsRepository;
 import song.repository.UserRepository;
@@ -44,7 +44,7 @@ public class UserController {
                 model.addAttribute("error","用户名或密码错误!");
                 return "index";
             }
-            List<News> newsList = newsRepository.findAll();
+            List<PersonalNews> newsList = newsRepository.findAll();
             model.addAttribute("user",user);
             model.addAttribute("newsList",newsList);
             request.getSession().setAttribute("user",user);
