@@ -1,6 +1,6 @@
 package song.controller;
 
-import com.sun.istack.internal.logging.Logger;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import song.model.PersonalNews;
+import song.model.NewsItem;
 import song.model.User;
-import song.repository.NewsRepository;
+import song.repository.NewsItemRepository;
 import song.repository.UserRepository;
 import song.utils.StringUtils;
 
@@ -30,7 +30,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    private NewsRepository newsRepository;
+    private NewsItemRepository newsItemRepository;
 
     /*
     *   登录
@@ -44,7 +44,7 @@ public class UserController {
                 model.addAttribute("error","用户名或密码错误!");
                 return "index";
             }
-            List<PersonalNews> newsList = newsRepository.findAll();
+            List<NewsItem> newsList = newsItemRepository.findAll();
             model.addAttribute("user",user);
             model.addAttribute("newsList",newsList);
             request.getSession().setAttribute("user",user);

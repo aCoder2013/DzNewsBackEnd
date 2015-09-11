@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import song.repository.NewsRepository;
+import song.repository.NewsItemRepository;
 
 /**
  * Created by Song on 2015/6/12.
@@ -14,14 +14,14 @@ import song.repository.NewsRepository;
 @SessionAttributes("newsList")
 public class IndexController {
     @Autowired
-    private NewsRepository newsRepository;
+    private NewsItemRepository newsItemRepository;
 
     /*
         跳转到主页
      */
     @RequestMapping("/")
     public String home(Model model){
-        model.addAttribute("newsList",newsRepository.findAll());
+        model.addAttribute("newsList",newsItemRepository.findAll());
         return "home";
     }
 

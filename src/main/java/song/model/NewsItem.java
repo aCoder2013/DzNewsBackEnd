@@ -1,6 +1,7 @@
 package song.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * 新闻列表项
@@ -21,7 +22,7 @@ public class NewsItem {
     @Column
     private String auth;//作者
     @Column
-    private String pubTime;//发表时间
+    private Date pubTime;//发表时间
     @Column
     private int comNumber;//评论数目
     @Column
@@ -29,6 +30,8 @@ public class NewsItem {
     @Column
     private String fromPublisher;//新闻来源
 
+    @Column
+    private int beenRead ;  //阅读数
 
     @OneToOne
     private NewsDetail newsDetail;
@@ -37,7 +40,20 @@ public class NewsItem {
     public NewsItem() {
     }
 
-    public NewsItem(String title, String thumbnail, String description, String auth, String pubTime, int comNumber, String targerUrl,String fromPublisher) {
+    public NewsItem(Long id,String title, String thumbnail, String description, String auth, Date pubTime, int comNumber, String targerUrl, String fromPublisher, NewsDetail newsDetail) {
+        this.id = id;
+        this.title = title;
+        this.thumbnail = thumbnail;
+        this.description = description;
+        this.auth = auth;
+        this.pubTime = pubTime;
+        this.comNumber = comNumber;
+        this.targerUrl = targerUrl;
+        this.fromPublisher = fromPublisher;
+        this.newsDetail = newsDetail;
+    }
+
+    public NewsItem(String title, String thumbnail, String description, String auth, Date pubTime, int comNumber, String targerUrl,String fromPublisher) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.description = description;
@@ -88,11 +104,11 @@ public class NewsItem {
         this.auth = auth;
     }
 
-    public String getPubTime() {
+    public Date getPubTime() {
         return pubTime;
     }
 
-    public void setPubTime(String pubTime) {
+    public void setPubTime(Date pubTime) {
         this.pubTime = pubTime;
     }
 
@@ -128,6 +144,14 @@ public class NewsItem {
         this.fromPublisher = fromPublisher;
     }
 
+    public int getBeenRead() {
+        return beenRead;
+    }
+
+    public void setBeenRead(int beenRead) {
+        this.beenRead = beenRead;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -140,9 +164,7 @@ public class NewsItem {
         if (thumbnail != null ? !thumbnail.equals(item.thumbnail) : item.thumbnail != null) return false;
         if (description != null ? !description.equals(item.description) : item.description != null) return false;
         if (auth != null ? !auth.equals(item.auth) : item.auth != null) return false;
-        if (pubTime != null ? !pubTime.equals(item.pubTime) : item.pubTime != null) return false;
-        if (targerUrl != null ? !targerUrl.equals(item.targerUrl) : item.targerUrl != null) return false;
-        return !(fromPublisher != null ? !fromPublisher.equals(item.fromPublisher) : item.fromPublisher != null);
+        return !(targerUrl != null ? !targerUrl.equals(item.targerUrl) : item.targerUrl != null);
 
     }
 
@@ -152,10 +174,8 @@ public class NewsItem {
         result = 31 * result + (thumbnail != null ? thumbnail.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (auth != null ? auth.hashCode() : 0);
-        result = 31 * result + (pubTime != null ? pubTime.hashCode() : 0);
         result = 31 * result + comNumber;
         result = 31 * result + (targerUrl != null ? targerUrl.hashCode() : 0);
-        result = 31 * result + (fromPublisher != null ? fromPublisher.hashCode() : 0);
         return result;
     }
 }

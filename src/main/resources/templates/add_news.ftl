@@ -153,7 +153,7 @@
             'alignment'
         ]
     });
-    editor.setValue('${((news.content))!''}');
+    editor.setValue('${((content))!''}');
 </script>
 
 

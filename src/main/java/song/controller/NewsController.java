@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
-import song.model.PersonalNews;
-import song.repository.NewsRepository;
+import song.model.NewsDetail;
+import song.model.NewsItem;
+import song.repository.NewsDetailRepository;
+import song.repository.NewsItemRepository;
 import song.utils.SaeUploadUtils;
 import song.utils.StringUtils;
 
@@ -35,8 +37,9 @@ public class NewsController {
     Logger logger = Logger.getLogger(NewsController.class);
 
     @Autowired
-    private NewsRepository newsRepository;
-
+    private NewsItemRepository newsItemRepository;
+    @Autowired
+    private NewsDetailRepository newsDetailRepository;
 
     /*
         跳转到添加新闻页面
@@ -48,7 +51,7 @@ public class NewsController {
 
     }
     /*
-        添加新闻
+        添加,更新新闻
         2015-6-18 22:49:22
      */
     @RequestMapping(value="/addNews",method = RequestMethod.POST)
@@ -56,7 +59,6 @@ public class NewsController {
                           @RequestParam(value = "publishTime",required=false)String publishTime,int beenRead,  Model model){
         Date time = null;
         if(!StringUtils.isEmpty(title,content,fromPublisher)){
-            System.out.print("time "+publishTime);
             if(publishTime==null){
                 time = new Date();
             }else {
@@ -68,7 +70,18 @@ public class NewsController {
                     logger.error("Parse Date String Error!Check publishTime!");
                 }
             }
-            newsRepository.save(new PersonalNews(id,title,content,fromPublisher,time,beenRead));//save news
+            if(id==null){//ID为空，说明为添加新闻
+                NewsDetail newsDetail = new NewsDetail(title, content, 0);
+                newsDetailRepository.save(newsDetail);
+                NewsItem item = new NewsItem(id, title, null, null, null, time, 0, null, "DzNews", newsDetail);
+                newsItemRepository.save(item);//save news
+            }else {//ID不为空，说明为更新新闻
+                NewsItem item = newsItemRepository.findOne(id);
+                item.setTitle(title);
+                item.getNewsDetail().setContent(content);
+                item.setFromPublisher(fromPublisher);
+                newsItemRepository.save(item);
+            }
         }
         model.asMap().clear();
         return "add_news";
@@ -149,13 +162,12 @@ public class NewsController {
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public String showNewsDetail(@PathVariable String id ,Model model){
-        PersonalNews news  = newsRepository.findOne(Long.parseLong(id));
-        model.addAttribute("news",news);
+        NewsItem news  = newsItemRepository.findOne(Long.parseLong(id));
+        NewsDetail detail  = news.getNewsDetail();
+        model.addAttribute("news",detail);
         news.setBeenRead(news.getBeenRead()+1);
-        newsRepository.save(news);//更新数据
+        newsItemRepository.save(news);//更新数据
         return "news_detail";
-
-
     }
 
     /*
@@ -163,7 +175,7 @@ public class NewsController {
      */
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
     public String deleteNews(@PathVariable("id") String id ,Model model,HttpServletRequest request){
-        newsRepository.delete(Long.parseLong(id));
+        newsItemRepository.delete(Long.parseLong(id));
         return "redirect:../";
     }
 
@@ -174,7 +186,7 @@ public class NewsController {
     @RequestMapping("")
     public String admin(Model model,HttpServletRequest request){
         request.removeAttribute("newsList");
-        List<PersonalNews> newsList = newsRepository.findAll();
+        List<NewsItem> newsList = newsItemRepository.findAll();
         model.addAttribute("newsList",newsList);
         request.getSession().setAttribute("newsList",newsList);
         return "news_admin";
@@ -184,8 +196,9 @@ public class NewsController {
      */
     @RequestMapping("/updateNews")
     public String updateNews(@RequestParam("id") Long id,Model model){
-        PersonalNews news = newsRepository.findOne(id);
+        NewsItem news = newsItemRepository.findOne(id);
             model.addAttribute("news",news);
+            model.addAttribute("content",news.getNewsDetail().getContent());
             return "add_news";
     }
 
@@ -195,14 +208,11 @@ public class NewsController {
      */
     @RequestMapping(value = "/api/newsList")
     @ResponseBody
-    public List<PersonalNews> showNewsList(){
-        List<PersonalNews> newsList = newsRepository.findAll();
+    public List<NewsItem> showNewsList(){
+        List<NewsItem> newsList = newsItemRepository.findAll();
         if(newsList!=null){
             return newsList;
         }
         return null;
      }
-
-
-
 }
