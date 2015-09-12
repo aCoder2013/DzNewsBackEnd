@@ -13,6 +13,7 @@ import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -93,6 +94,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
         根据置指定URL解析新闻数据
      */
     private List<NewsItem> ParseNews() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy / MM /dd HH:mm");
         List<NewsItem> itemList = new ArrayList<>();
         List<NewsItem> itemInDB = newsItemRepository.findAll();//找到在数据库中的所有数据
         for(NewsItem item:itemInDB){
@@ -119,15 +121,19 @@ public class CollectLeiFengNews implements AutoCollectNews{
             Element aut = infoElement.select("div.aut").first();
             String auth = aut.select("a").select("span").text();
             Element time = infoElement.select("div.time").first();
-        /*    Elements timeSpan = time.getElementsByTag("span");
+            Elements timeSpan = time.getElementsByTag("span");
             String pubTime ="";
             for(Element temp : timeSpan){
                 pubTime+=temp.text()+" ";
-            }*/
+            }
+            Date date = null;
+            try {
+                 date = simpleDateFormat.parse(pubTime);
+            } catch (ParseException e1) {
+                e1.printStackTrace();
+            }
             int comNumber =Integer.parseInt(infoElement.select("a.cmt").first().getElementsByTag("span").text());
-            NewsItem news = new NewsItem(title, thumbnail,desc,auth, new Date(), comNumber, targetUrl,"雷锋网");
-            news.setId(null);
-            news.setPubTime(null);
+            NewsItem news = new NewsItem(title, thumbnail,desc,auth,date, comNumber, targetUrl,"雷锋网");
             if(!itemInDB.contains(news)){ //如果数据库中已经存在这条新闻，则不添加到列表中
                 NewsDetail detail = parseDetail(news.getTargerUrl());//获取新闻详情
                 //如果新闻详情不为空才添加到列表中

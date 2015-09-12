@@ -21,7 +21,8 @@ public class NewsItem {
     private String description; //简述
     @Column
     private String auth;//作者
-    @Column
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column()
     private Date pubTime;//发表时间
     @Column
     private int comNumber;//评论数目

@@ -48,7 +48,6 @@ public class NewsController {
     public String toAddNewsPage(){
 
         return "add_news";
-
     }
     /*
         添加,更新新闻

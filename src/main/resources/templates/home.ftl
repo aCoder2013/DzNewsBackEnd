@@ -108,7 +108,7 @@
             <!-- Pager -->
             <ul class="pager">
                 <li class="next">
-                    <a href="#">Older Posts &rarr;</a>
+                    <a href="?page=${pagenum}">下一页 &rarr;</a>
                 </li>
             </ul>
         </div>
