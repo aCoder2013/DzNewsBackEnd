@@ -1,6 +1,7 @@
 package song.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +27,7 @@ public class IndexController {
      */
     @RequestMapping("/")
     public String home(Model model,Pageable pageable){
-        List<NewsItem> newsItemList= newsItemRepository.findAllByOrderByPubTime(pageable);
+        Page<NewsItem> newsItemList= newsItemRepository.findAllByOrderByPubTime(pageable);
 /*        List<NewsItem> list  = new ArrayList<>(newsItemPage.getContent());
         Collections.sort(list, new Comparator<NewsItem>() {
             @Override
@@ -34,9 +35,9 @@ public class IndexController {
                 return o1.getPubTime().compareTo(o2.getPubTime());
             }
         });*/
-        model.addAttribute("newsList",newsItemList);
-        model.addAttribute("pagenum", pageable.next().getPageNumber());
-//        model.addAttribute("pagenum",newsItemPage.hasNext()?newsItemPage.nextPageable().getPageNumber():0);
+        model.addAttribute("newsList",newsItemList.getContent());
+//        model.addAttribute("pagenum", pageable.next().getPageNumber());
+        model.addAttribute("pagenum",newsItemList.hasNext()?newsItemList.nextPageable().getPageNumber():0);
         return "home";
     }
 
