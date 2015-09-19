@@ -2,6 +2,7 @@ package song.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -202,8 +203,9 @@ public class NewsController {
     }
 
 
-    /*
-        API:返回新闻列表JSon数据
+    /**
+     * API:获取全部新闻
+     * @return
      */
     @RequestMapping(value = "/api/newsList")
     @ResponseBody
@@ -214,4 +216,27 @@ public class NewsController {
         }
         return null;
      }
+
+    /**
+     * API:获取单页新闻
+     * @param pageable
+     * @return
+     */
+    @RequestMapping(value = "/api/news")
+    @ResponseBody
+    public List<NewsItem> showNewsPage(Pageable pageable){
+        return newsItemRepository.findAll(pageable).getContent();
+    }
+
+    /**
+     * API：获取新闻详情
+     */
+    @RequestMapping(value = "/api/{id}")
+    @ResponseBody
+    public NewsDetail showNewsDetail(@PathVariable("id")Long id){
+        return newsDetailRepository.findOne(id);
+    }
+
+
+
 }
