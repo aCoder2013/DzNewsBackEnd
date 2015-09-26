@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/spider/AutoCollectNews.java" afterPath="$PROJECT_DIR$/src/main/java/song/spider/AutoCollectNews.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" afterPath="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/spider/ScheduledCollectTask.java" afterPath="$PROJECT_DIR$/src/main/java/song/spider/ScheduledCollectTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/home.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/home.ftl" />
+    <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="功能增强">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/AutoCollectNews.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/AutoCollectNews.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/CollectLeiFengNews.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/CollectLeiFengNews.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/ScheduledCollectTask.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/ScheduledCollectTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsServiceEnd.iws" />
@@ -29,7 +21,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="D:\AboutCoding\Java\项目\NewsServiceEnd" />
   </component>
   <component name="DatabaseView">
     <option name="FLATTEN" value="false" />
@@ -57,10 +49,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9860384">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollectRegularNews.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CollectRegularNews.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.60034907">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -241,11 +233,11 @@
         <option value="$PROJECT_DIR$/src/main/java/song/spider/ScheduledCollectTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/utils/TextExtract.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/utils/NewsItemBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/ColllectRegularNewsTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java" />
       </list>
     </option>
   </component>
@@ -1114,7 +1106,7 @@
       <workItem from="1442836498657" duration="3936000" />
       <workItem from="1442922253011" duration="8242000" />
       <workItem from="1443245955164" duration="1741000" />
-      <workItem from="1443252536690" duration="6376000" />
+      <workItem from="1443252536690" duration="7166000" />
     </task>
     <task id="LOCAL-00001" summary="新闻项和新闻详情之间建立单向一对一的关系">
       <created>1438934052089</created>
@@ -1176,11 +1168,17 @@
       <option name="project" value="LOCAL" />
       <updated>1442669790122</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="功能增强">
+      <created>1443259272185</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1443259272185</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200652000" />
+    <option name="totallyTimeSpent" value="201442000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1243,18 +1241,11 @@
     <MESSAGE value="首页根据新闻最近时间排序" />
     <MESSAGE value="Bug Fixed" />
     <MESSAGE value="增加获取新闻相关API" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加获取新闻相关API" />
+    <MESSAGE value="功能增强" />
+    <option name="LAST_COMMIT_MESSAGE" value="功能增强" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
@@ -1508,8 +1499,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1557#1558#0" expanded="false" />
+            <element signature="e#1619#1620#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1527,7 +1518,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1569,7 +1560,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1599,7 +1590,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1617,16 +1608,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="74" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,6 +1658,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_item">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1690,10 +1681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/spider/CollectRegularNews.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9860384">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.60034907">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
