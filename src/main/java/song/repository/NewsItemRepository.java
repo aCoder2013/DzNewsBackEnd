@@ -6,8 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import song.model.NewsItem;
 
-import java.util.List;
-
 
 /**
  * Created by Song on 2015/8/6.

@@ -32,9 +32,14 @@ public class UserController {
     @Autowired
     private NewsItemRepository newsItemRepository;
 
-    /*
-    *   登录
-    *   未进行密码加密
+    /**
+     * 登录
+     * 未进行密码加密
+     * @param email
+     * @param password
+     * @param model
+     * @param request
+     * @return
      */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(@RequestParam("email") String email, @RequestParam("password") String password,Model model,HttpServletRequest request) {
@@ -52,11 +57,4 @@ public class UserController {
         }
         return "news_admin";
     }
-
-
-
-
-
-
-
 }
