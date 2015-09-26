@@ -1,22 +1,20 @@
 package song.spider;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.beans.factory.annotation.Autowired;
 import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
+import song.utils.NewsItemBuilder;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -28,7 +26,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
 
     private Logger logger = Logger.getLogger(CollectLeiFengNews.class);
 
-    private String url ="http://www.leiphone.com/";
+    public static final String LEIFENG_NEWS_URL ="http://www.leiphone.com/";
 
     private NewsItemRepository newsItemRepository;
     private NewsDetailRepository newsDetailRepository;
@@ -47,13 +45,13 @@ public class CollectLeiFengNews implements AutoCollectNews{
         收集新闻
      */
     @Override
-    public void collect() {
-        itemList = ParseNews();//解析新闻列表
+    public void collect(String url) {
+        itemList = ParseNews(url);//解析新闻列表
         if(itemList!=null) {
             newsItemRepository.save(itemList);//保存新闻
         }
     }
-        /*
+        /**
             解析新闻详情页面
          */
         private NewsDetail parseDetail(String url) {
@@ -93,7 +91,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
     /*
         根据置指定URL解析新闻数据
      */
-    private List<NewsItem> ParseNews() {
+    private List<NewsItem> ParseNews(String url) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy / MM /dd HH:mm");
         List<NewsItem> itemList = new ArrayList<>();
         List<NewsItem> itemInDB = newsItemRepository.findAll();//找到在数据库中的所有数据
@@ -133,7 +131,16 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 e1.printStackTrace();
             }
             int comNumber =Integer.parseInt(infoElement.select("a.cmt").first().getElementsByTag("span").text());
-            NewsItem news = new NewsItem(title, thumbnail,desc,auth,date, comNumber, targetUrl,"雷锋网");
+            NewsItemBuilder builder = new NewsItemBuilder();
+            NewsItem news = builder.setTitle(title)
+                    .setThumbnail(thumbnail)
+                    .setDescription(desc)
+                    .setAuth(auth)
+                    .setPubTime(date)
+                    .setComNumber(comNumber)
+                    .setTargetUrl(targetUrl)
+                    .setFromPublisher("雷锋网")
+                    .newsInstance();
             if(!itemInDB.contains(news)){ //如果数据库中已经存在这条新闻，则不添加到列表中
                 NewsDetail detail = parseDetail(news.getTargerUrl());//获取新闻详情
                 //如果新闻详情不为空才添加到列表中

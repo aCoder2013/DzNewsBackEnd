@@ -1,5 +1,7 @@
 package song.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +21,10 @@ import java.util.List;
 @Controller
 @SessionAttributes("newsList")
 public class IndexController {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+
     @Autowired
     private NewsItemRepository newsItemRepository;
 
@@ -28,13 +34,6 @@ public class IndexController {
     @RequestMapping("/")
     public String home(Model model,Pageable pageable){
         Page<NewsItem> newsItemList= newsItemRepository.findAllByOrderByPubTime(pageable);
-/*        List<NewsItem> list  = new ArrayList<>(newsItemPage.getContent());
-        Collections.sort(list, new Comparator<NewsItem>() {
-            @Override
-            public int compare(NewsItem o1, NewsItem o2) {
-                return o1.getPubTime().compareTo(o2.getPubTime());
-            }
-        });*/
         model.addAttribute("newsList",newsItemList.getContent());
 //        model.addAttribute("pagenum", pageable.next().getPageNumber());
         model.addAttribute("pagenum",newsItemList.hasNext()?newsItemList.nextPageable().getPageNumber():0);
