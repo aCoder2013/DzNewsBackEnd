@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import song.model.NewsItem;
 import song.repository.NewsItemRepository;
 
-import java.util.List;
-
 
 /**
  * Created by Song on 2015/6/12.
@@ -32,23 +30,21 @@ public class IndexController {
         跳转到主页
      */
     @RequestMapping("/")
-    public String home(Model model,Pageable pageable){
-        Page<NewsItem> newsItemList= newsItemRepository.findAllByOrderByPubTime(pageable);
-        model.addAttribute("newsList",newsItemList.getContent());
+    public String home(Model model, Pageable pageable) {
+        Page<NewsItem> newsItemList = newsItemRepository.findAllByOrderByPubTime(pageable);
+        model.addAttribute("newsList", newsItemList.getContent());
 //        model.addAttribute("pagenum", pageable.next().getPageNumber());
-        model.addAttribute("pagenum",newsItemList.hasNext()?newsItemList.nextPageable().getPageNumber():0);
+        model.addAttribute("pagenum", newsItemList.hasNext() ? newsItemList.nextPageable().getPageNumber() : 0);
         return "home";
     }
-
-
 
 
     /*
         跳转到后台主页
      */
     @RequestMapping("/admin")
-    public String index(){
-        return  "index";
+    public String index() {
+        return "index";
     }
 
 }

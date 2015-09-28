@@ -1,6 +1,7 @@
 package song.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +26,7 @@ import java.util.List;
 @SessionAttributes(value = {"user","newsList"})
 public class UserController {
 
-    private Logger logger = Logger.getLogger(UserController.class);
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserRepository userRepository;
@@ -42,7 +43,9 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@RequestParam("email") String email, @RequestParam("password") String password,Model model,HttpServletRequest request) {
+    public String login(@RequestParam("email") String email,
+                        @RequestParam("password") String password
+            ,Model model,HttpServletRequest request) {
         if (!StringUtils.isEmpty(email, password)) {
             User user = userRepository.findByEmailAndPassword(email, password);
             if (user==null) {

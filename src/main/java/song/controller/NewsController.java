@@ -1,6 +1,7 @@
 package song.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
@@ -35,7 +36,7 @@ import java.util.Map;
 @SessionAttributes("newsList")
 public class NewsController {
 
-    Logger logger = Logger.getLogger(NewsController.class);
+    private Logger logger = LoggerFactory.getLogger(NewsController.class);
 
     @Autowired
     private NewsItemRepository newsItemRepository;
@@ -47,7 +48,6 @@ public class NewsController {
   */
     @RequestMapping(value = "/addNewsPage",method = RequestMethod.GET)
     public String toAddNewsPage(){
-
         return "add_news";
     }
     /*
@@ -56,7 +56,8 @@ public class NewsController {
      */
     @RequestMapping(value="/addNews",method = RequestMethod.POST)
     public String addNews(Long id ,String title,String content,String fromPublisher,
-                          @RequestParam(value = "publishTime",required=false)String publishTime,int beenRead,  Model model){
+                          @RequestParam(value = "publishTime",required=false)String publishTime
+            ,int beenRead,  Model model){
         Date time = null;
         if(!StringUtils.isEmpty(title,content,fromPublisher)){
             if(publishTime==null){
@@ -161,8 +162,8 @@ public class NewsController {
         展示新闻细节页面
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String showNewsDetail(@PathVariable String id ,Model model){
-        NewsItem news  = newsItemRepository.findOne(Long.parseLong(id));
+    public String showNewsDetail(@PathVariable long id ,Model model){
+        NewsItem news  = newsItemRepository.findOne(id);
         NewsDetail detail  = news.getNewsDetail();
         model.addAttribute("news",detail);
         news.setBeenRead(news.getBeenRead()+1);
@@ -174,8 +175,8 @@ public class NewsController {
         删除新闻
      */
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
-    public String deleteNews(@PathVariable("id") String id ,Model model,HttpServletRequest request){
-        newsItemRepository.delete(Long.parseLong(id));
+    public String deleteNews(@PathVariable("id") long id ,Model model,HttpServletRequest request){
+        newsItemRepository.delete(id);
         return "redirect:../";
     }
 
