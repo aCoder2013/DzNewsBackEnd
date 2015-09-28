@@ -153,7 +153,9 @@
             'alignment'
         ]
     });
-    editor.setValue('${((content))!''}');
+    <#if content??>
+    editor.setValue("${content?js_string}");
+    </#if>
 </script>
 
 
