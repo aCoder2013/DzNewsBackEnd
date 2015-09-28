@@ -9,8 +9,8 @@ import javax.persistence.Id;
  * 用户表
  * Created by Song on 2015/6/12.
  */
-@Entity
-public class User {
+@Entity(name = "admin")
+public class Admin {
 
     @Id
     @GeneratedValue
@@ -22,7 +22,7 @@ public class User {
     @Column(nullable = false)
     private String email;//邮箱
 
-    public User() {
+    public Admin() {
     }
 
     public Integer getId() {
@@ -62,7 +62,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User user = (User) o;
+        Admin user = (Admin) o;
 
         if (id != null ? !id.equals(user.id) : user.id != null) return false;
         if (name != null ? !name.equals(user.name) : user.name != null) return false;
@@ -82,7 +82,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Admin{" +
                 "email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
