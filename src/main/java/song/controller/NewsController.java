@@ -50,9 +50,8 @@ public class NewsController {
     public String toAddNewsPage(){
         return "add_news";
     }
-    /*
+    /**
         添加,更新新闻
-        2015-6-18 22:49:22
      */
     @RequestMapping(value="/addNews",method = RequestMethod.POST)
     public String addNews(Long id ,String title,String content,String fromPublisher,
@@ -84,8 +83,9 @@ public class NewsController {
                 newsItemRepository.save(item);
             }
         }
-        model.asMap().clear();
-        return "add_news";
+        List<NewsItem> newsList = newsItemRepository.findAll();
+        model.addAttribute("newsList",newsList);
+        return "redirect:/admin/show";
     }
 
     /*
@@ -177,7 +177,10 @@ public class NewsController {
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
     public String deleteNews(@PathVariable("id") long id ,Model model,HttpServletRequest request){
         newsItemRepository.delete(id);
-        return "redirect:../";
+        List<NewsItem> newsList = newsItemRepository.findAll();
+        model.addAttribute("newsList",newsList);
+        request.getSession().setAttribute("newsList",newsList);
+        return "redirect:/admin/show";
     }
 
     /*

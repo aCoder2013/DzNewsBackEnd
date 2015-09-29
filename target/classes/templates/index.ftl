@@ -8,15 +8,15 @@
     <title>XX新闻后台管理系统</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
-    <link href="css/metisMenu.css" rel="stylesheet">
+    <link href="../../css/metisMenu.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../../css/font-awesome.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
                     <h3 class="panel-title">请登录</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="post" action="/login">
+                    <form role="form" method="post" action="/admin/login">
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
@@ -66,14 +66,14 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-2.1.3.js"></script>
+<script src="../../js/jquery-2.1.3.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
+<script src="../../js/bootstrap.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="js/metisMenu.min.js"></script>
+<script src="../../js/metisMenu.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="/js/sb-admin-2.js"></script>
+<script src="../..//js/sb-admin-2.js"></script>
 
 </body>
 </html>

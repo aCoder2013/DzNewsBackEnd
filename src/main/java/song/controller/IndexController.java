@@ -39,12 +39,5 @@ public class IndexController {
     }
 
 
-    /*
-        跳转到后台主页
-     */
-    @RequestMapping("/admin")
-    public String index() {
-        return "index";
-    }
 
 }
