@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/vaadin/AdminUI.java" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\model\User.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\repository\UserRepository.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/spider/CollectRegularNews.class" afterPath="$PROJECT_DIR$/target/classes/song/spider/CollectRegularNews.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/NewsItemResTest.class" afterPath="$PROJECT_DIR$/target/classes/test/NewsItemResTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/NewsItemResTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/NewsItemResTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsServiceEnd.iml" afterPath="$PROJECT_DIR$/NewsServiceEnd.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/news_admin.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/news_admin.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/news_admin.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/news_admin.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsServiceEnd.iws" />
@@ -122,10 +109,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditArticleForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43504533">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="65" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditArticleForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/EditArticleForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64199394">
+            <state vertical-scroll-proportion="0.0">
               <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -182,16 +179,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1072,7 +1059,7 @@
       <workItem from="1443335724271" duration="1871000" />
       <workItem from="1443338994825" duration="9246000" />
       <workItem from="1443443961779" duration="1265000" />
-      <workItem from="1443491848599" duration="21059000" />
+      <workItem from="1443491848599" duration="21145000" />
     </task>
     <task id="LOCAL-00001" summary="新闻项和新闻详情之间建立单向一对一的关系">
       <created>1438934052089</created>
@@ -1176,11 +1163,17 @@
       <option name="project" value="LOCAL" />
       <updated>1443416927698</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="后台全面切换至Vaadin">
+      <created>1443525485432</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1443525485432</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237685000" />
+    <option name="totallyTimeSpent" value="237771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1203,7 +1196,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46463546" sideWeight="0.508547" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24591948" sideWeight="0.4946581" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24591948" sideWeight="0.4946581" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39499456" sideWeight="0.491453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1250,7 +1243,8 @@
     <MESSAGE value="bug fixed" />
     <MESSAGE value="细节优化" />
     <MESSAGE value="优化后台" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化后台" />
+    <MESSAGE value="后台全面切换至Vaadin" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台全面切换至Vaadin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1522,20 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="65" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#2241#2242#0" expanded="false" />
-            <element signature="e#2276#2277#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1692,8 +1672,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4755" column="56" selection-start-line="4755" selection-start-column="16" selection-end-line="4755" selection-end-column="56" />
           <folding>
-            <element signature="e#167642#167643#0" expanded="true" />
-            <element signature="e#167679#167680#0" expanded="true" />
+            <element signature="e#167642#167643#0" expanded="false" />
+            <element signature="e#167679#167680#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1793,7 +1773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/EditArticleForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64199394">
+        <state vertical-scroll-proportion="0.0">
           <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1806,6 +1786,14 @@
             <element signature="e#3788#3789#0" expanded="true" />
             <element signature="e#3818#3819#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43504533">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="65" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
