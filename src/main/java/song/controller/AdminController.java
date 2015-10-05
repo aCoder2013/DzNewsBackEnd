@@ -65,15 +65,8 @@ public class AdminController {
             request.getSession().setAttribute("user",admin);
             request.getSession().setAttribute("newsList",newsList);
         }
-        return "redirect:/admin/show";
+        return "redirect:/admin/main";
     }
 
-    /**
-     * 展示新闻相关操作
-     * @return
-     */
-    @RequestMapping(value = "/show")
-    public String show(){
-        return "news_admin";
-    }
+
 }

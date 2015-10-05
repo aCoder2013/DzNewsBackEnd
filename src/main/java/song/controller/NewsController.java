@@ -163,6 +163,7 @@ public class NewsController {
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public String showNewsDetail(@PathVariable long id ,Model model){
+        logger.warn("showNewsDetail->ID:"+id);
         NewsItem news  = newsItemRepository.findOne(id);
         NewsDetail detail  = news.getNewsDetail();
         model.addAttribute("news",detail);
