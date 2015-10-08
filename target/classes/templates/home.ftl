@@ -90,7 +90,7 @@
                         </#if>
                     </div>
                     <div class="media-body">
-                        <h4><a href="/news/${news.id}" class="media-heading">${news.title}</a></h4>
+                        <h4><a href="/news/${news.id?c}" class="media-heading">${news.title}</a></h4>
                     <#if news.description?? >
                             <p>
                             ${news.description}

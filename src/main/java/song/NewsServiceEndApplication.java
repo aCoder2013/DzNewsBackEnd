@@ -3,13 +3,18 @@ package song;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import song.interceptor.AdminAuthorizationInterceptor;
 
 import javax.servlet.ServletContext;
+import java.util.HashMap;
+import java.util.Map;
 
 @SpringBootApplication
 @EnableScheduling
@@ -27,4 +32,6 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/admin")
                 .excludePathPatterns("/admin/login");
     }
+
+
 }

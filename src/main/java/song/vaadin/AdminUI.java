@@ -1,15 +1,13 @@
 package song.vaadin;
 
-import com.vaadin.annotations.PreserveOnRefresh;
-import com.vaadin.annotations.Theme;
-import com.vaadin.data.util.BeanItemContainer;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinService;
-import com.vaadin.server.VaadinSession;
-import com.vaadin.spring.annotation.SpringUI;
+import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.*;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import song.model.Admin;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
@@ -19,33 +17,45 @@ import java.util.List;
 /**
  * Created by Song on 2015/9/29.
  */
-@Theme("valo")
-@PreserveOnRefresh
-@SpringUI(path = "/admin/main")
-public class AdminUI extends UI {
+public class AdminUI extends CustomComponent implements View {
 
-    @Autowired
-    private NewsItemRepository repository;
-    @Autowired
-    private NewsDetailRepository detailRepository;
+    public static final String NAME = "adminui";
+    private Logger logger = org.slf4j.LoggerFactory.getLogger(AdminUI.class);
+
+
     private Table table ;
 
     private EditArticleForm articleForm = new EditArticleForm();
+
+    private NewsItemRepository repository;
+    private NewsDetailRepository detailRepository;
+
+
+    public AdminUI(NewsItemRepository repository, NewsDetailRepository detailRepository) {
+        this.repository = repository;
+        this.detailRepository  = detailRepository;
+
+    }
 
     public Table getTable() {
         return table;
     }
 
-    @Override
-    protected void init(VaadinRequest vaadinRequest) {
+    public void AdminUI(){
+    }
+
+
+
+    private  void setUp() {
+        setSizeFull();
         final List<NewsItem> newsItems = repository.findAll();
-        table = new Table("文章列表");
+        table = new Table();
         table.addContainerProperty("Id",Long.class,null);
         table.addContainerProperty("Title",String.class,null);
         table.addContainerProperty("操作",Button.class,null);
         table.addContainerProperty("删除",Button.class,null);
         setUpTable(newsItems);
-        VerticalLayout left = new VerticalLayout(table);
+        VerticalLayout left = new VerticalLayout(new Label("文章列表"),table);
         left.setSizeFull();
         table.setSizeFull();
         left.setExpandRatio(table, 1);
@@ -54,7 +64,7 @@ public class AdminUI extends UI {
         mainLayout.setSizeFull();
         mainLayout.setExpandRatio(left, 1);
         mainLayout.setExpandRatio(articleForm,1);
-        setContent(mainLayout);
+        setCompositionRoot(mainLayout);
     }
 
 
@@ -93,5 +103,11 @@ public class AdminUI extends UI {
             });
             table.addItem(new Object[]{id,title,change,delete},id);
         }
+    }
+
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent event) {
+        Notification.show("登陆成功！");
+        setUp();
     }
 }

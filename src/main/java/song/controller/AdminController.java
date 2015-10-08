@@ -21,7 +21,7 @@ import java.util.List;
  * Created by Song on 2015/9/28.
  */
 @Controller
-@RequestMapping("/admin")
+//@RequestMapping("/admin")
 @SessionAttributes(value = {"admin","newsList"})
 public class AdminController {
 
@@ -62,7 +62,7 @@ public class AdminController {
             List<NewsItem> newsList = newsItemRepository.findAll();
             model.addAttribute("admin",admin);
             model.addAttribute("newsList",newsList);
-            request.getSession().setAttribute("user",admin);
+            request.getSession().setAttribute("admin",admin);
             request.getSession().setAttribute("newsList",newsList);
         }
         return "redirect:/admin/main";

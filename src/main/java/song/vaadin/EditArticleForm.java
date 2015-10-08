@@ -68,7 +68,7 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
                     item.setDescription(description.getValue());
                     itemRepository.save(item);
                 }
-                getUI().refereshTable();//刷新模型
+//                getUI().refereshTable();//刷新模型
                 Notification.show("save", Notification.Type.TRAY_NOTIFICATION);
             }
         });
@@ -76,7 +76,7 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
             @Override
             public void buttonClick(Button.ClickEvent event) {
                 Notification.show("cancle", Notification.Type.TRAY_NOTIFICATION);
-                getUI().getTable().select(null);
+//                getUI().getTable().select(null);
                 setVisible(false);
             }
         });
@@ -103,10 +103,7 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
         setVisible(item!=null);
     }
 
-    @Override
-    public AdminUI getUI() {
-        return (AdminUI) super.getUI();
-    }
+
 
     @Override
     public void valueChange(Property.ValueChangeEvent event) {
