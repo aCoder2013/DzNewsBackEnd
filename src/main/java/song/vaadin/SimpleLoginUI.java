@@ -1,7 +1,5 @@
 package song.vaadin;
 
-import com.google.common.base.Optional;
-import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
 import com.vaadin.navigator.Navigator;
