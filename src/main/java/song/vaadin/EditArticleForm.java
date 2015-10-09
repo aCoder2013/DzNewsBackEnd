@@ -11,7 +11,7 @@ import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
-
+import song.utils.NewsItemBuilder;
 
 
 /**
@@ -35,17 +35,14 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
     private NewsItemRepository itemRepository;
     private NewsDetailRepository detailRepository;
 
-    public EditArticleForm() {
-        configureComponents();
-        setUpValueChangeListener();
-        buildLayout();
-    }
 
 
     public EditArticleForm(NewsItemRepository itemRepository, NewsDetailRepository detailRepository) {
-        this();
         this.itemRepository = itemRepository;
         this.detailRepository = detailRepository;
+        configureComponents();
+        setUpValueChangeListener();
+        buildLayout();
     }
 
     private void setUpValueChangeListener() {
@@ -72,7 +69,7 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
                 if(changed){
                     NewsDetail detail = item.getNewsDetail();
                     detail.setContent(content.getValue());
-                    detailRepository.save(detail );
+                    detailRepository.save(detail);
                     item.setAuth(auth.getValue());
                     item.setTitle(title.getValue());
                     item.setDescription(description.getValue());
@@ -101,9 +98,16 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
     }
 
 
-    void edit(Long id ,NewsItemRepository itemRepository,NewsDetailRepository detailRepository){
-        this.itemRepository = itemRepository;
-        this.detailRepository = detailRepository;
+    public void add(){
+            item = new NewsItemBuilder().setTitle("").setAuth("").setDescription("").newsInstance();
+            item.setNewsDetail(new NewsDetail("","",0));
+            formFieldBing  = BeanFieldGroup.bindFieldsBuffered(item, this);
+            content.setValue("");
+            title.focus();
+            setVisible(true);
+    }
+
+    void edit(Long id){
         this.item = itemRepository.findOne(id);
         if(item!=null){
             formFieldBing  = BeanFieldGroup.bindFieldsBuffered(item, this);

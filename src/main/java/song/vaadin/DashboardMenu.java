@@ -2,13 +2,8 @@ package song.vaadin;
 
 
 import com.google.common.eventbus.EventBus;
-import com.google.common.eventbus.Subscribe;
-import com.vaadin.event.dd.DragAndDropEvent;
-import com.vaadin.event.dd.DropHandler;
-import com.vaadin.event.dd.acceptcriteria.AcceptCriterion;
 import com.vaadin.server.*;
 import com.vaadin.shared.ui.label.ContentMode;
-import com.vaadin.ui.AbstractSelect.AcceptItem;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
@@ -16,19 +11,16 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.CustomComponent;
-import com.vaadin.ui.DragAndDropWrapper;
-import com.vaadin.ui.DragAndDropWrapper.DragStartMode;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.MenuBar.Command;
 import com.vaadin.ui.MenuBar.MenuItem;
-import com.vaadin.ui.Table;
-import com.vaadin.ui.UI;
 import com.vaadin.ui.themes.ValoTheme;
+import song.event.AddArticleEvent;
 import song.model.Admin;
+import song.utils.EventBusHelper;
 
-import java.io.File;
 
 /**
  * A responsive menu component providing user information and the controls for
@@ -45,13 +37,13 @@ public final class DashboardMenu extends CustomComponent {
     private Label reportsBadge;
     private MenuItem settingsItem;
 
+
+    private EventBus eventBus = new EventBus();
+
     public DashboardMenu() {
         setPrimaryStyleName("valo-menu");
         setId(ID);
         setSizeUndefined();
-
-
-
         setCompositionRoot(buildContent());
     }
 
@@ -93,9 +85,6 @@ public final class DashboardMenu extends CustomComponent {
         final Admin user = getCurrentAdmin();
         settingsItem = settings.addItem("",
                 new ExternalResource("https://raw.githubusercontent.com/vaadin/dashboard-demo/master/src/main/webapp/VAADIN/themes/dashboard/img/profile-pic-300px.jpg"), null);
-//        updateUserName(null);
-        settingsItem.setText(user.getName());
-
         settingsItem.addItem("Edit Profile", new Command() {
             @Override
             public void menuSelected(final MenuItem selectedItem) {
@@ -113,8 +102,10 @@ public final class DashboardMenu extends CustomComponent {
             @Override
             public void menuSelected(final MenuItem selectedItem) {
 //                DashboardEventBus.post(new UserLoggedOutEvent());
+
             }
         });
+        updateAdminName();
         return settings;
     }
 
@@ -147,20 +138,23 @@ public final class DashboardMenu extends CustomComponent {
         editButton.addClickListener(new ClickListener() {
             @Override
             public void buttonClick(ClickEvent event) {
-
+                /**
+                 * to do
+                 */
+                EventBusHelper.getEventBus().post(new AddArticleEvent("New Article"));
             }
         });
         menuItemsLayout.addComponent(editButton);
         return menuItemsLayout;
     }
 
+    public void updateAdminName(){
+        settingsItem.setText(getCurrentAdmin().getName());
+    }
 
 
     @Override
     public void attach() {
         super.attach();
     }
-
-
-
 }

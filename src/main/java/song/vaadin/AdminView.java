@@ -1,13 +1,17 @@
 package song.vaadin;
 
+import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.Subscribe;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.*;
 import org.slf4j.Logger;
+import song.event.AddArticleEvent;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
+import song.utils.EventBusHelper;
 
 import java.util.List;
 
@@ -22,24 +26,22 @@ public class AdminView extends CustomComponent implements View {
 
     private Table table ;
 
-    private EditArticleForm articleForm = new EditArticleForm();
-
+    private EditArticleForm articleForm;
     private NewsItemRepository repository;
     private NewsDetailRepository detailRepository;
+
 
 
     public AdminView(NewsItemRepository repository, NewsDetailRepository detailRepository) {
         this.repository = repository;
         this.detailRepository  = detailRepository;
-
+        articleForm = new EditArticleForm(repository,detailRepository);
     }
 
     public Table getTable() {
         return table;
     }
 
-    public void AdminUI(){
-    }
 
 
 
@@ -83,7 +85,7 @@ public class AdminView extends CustomComponent implements View {
                 public void buttonClick(Button.ClickEvent event) {
                     Long id = (Long) event.getButton().getData();
 //                    getCurrent().getPage().setLocation("/news/updateNews?id="+id);
-                    articleForm.edit(id,repository,detailRepository);
+                    articleForm.edit(id);
                 }
             });
             Button delete  = new Button("删除",FontAwesome.TRASH_O);
@@ -106,5 +108,16 @@ public class AdminView extends CustomComponent implements View {
     public void enter(ViewChangeListener.ViewChangeEvent event) {
         Notification.show("登陆成功！");
         setUp();
+        EventBusHelper.getEventBus().register(this);
     }
+
+
+    @Subscribe
+    public void addArticle(AddArticleEvent event){
+        articleForm.add();
+        logger.info("New Article!");
+    }
+
+
+
 }
