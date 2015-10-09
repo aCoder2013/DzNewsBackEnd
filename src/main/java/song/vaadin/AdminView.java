@@ -3,11 +3,8 @@ package song.vaadin;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
-import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.*;
 import org.slf4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import song.model.Admin;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
@@ -17,10 +14,10 @@ import java.util.List;
 /**
  * Created by Song on 2015/9/29.
  */
-public class AdminUI extends CustomComponent implements View {
+public class AdminView extends CustomComponent implements View {
 
     public static final String NAME = "adminui";
-    private Logger logger = org.slf4j.LoggerFactory.getLogger(AdminUI.class);
+    private Logger logger = org.slf4j.LoggerFactory.getLogger(AdminView.class);
 
 
     private Table table ;
@@ -31,7 +28,7 @@ public class AdminUI extends CustomComponent implements View {
     private NewsDetailRepository detailRepository;
 
 
-    public AdminUI(NewsItemRepository repository, NewsDetailRepository detailRepository) {
+    public AdminView(NewsItemRepository repository, NewsDetailRepository detailRepository) {
         this.repository = repository;
         this.detailRepository  = detailRepository;
 
@@ -59,7 +56,7 @@ public class AdminUI extends CustomComponent implements View {
         left.setSizeFull();
         table.setSizeFull();
         left.setExpandRatio(table, 1);
-        HorizontalLayout mainLayout = new HorizontalLayout(left, articleForm);
+        HorizontalLayout mainLayout = new HorizontalLayout(new DashboardMenu(),left, articleForm);
         articleForm.setSizeFull();
         mainLayout.setSizeFull();
         mainLayout.setExpandRatio(left, 1);

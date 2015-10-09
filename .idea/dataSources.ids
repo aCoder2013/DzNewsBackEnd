@@ -38,14 +38,5 @@
       <foreign-key name="FK_b1x0t92o6hfyqk2p6opsthe5g" columns="news_detail_id" ref-table="news_detail" ref-schema="" ref-catalog="customnews" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="FK_b1x0t92o6hfyqk2p6opsthe5g" unique="false" columns="news_detail_id"/>
     </table>
-    <table name="personal_news" schema="" catalog="customnews" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="been_read" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
-      <column name="from_publisher" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="publish_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
   </data-source>
 </component>

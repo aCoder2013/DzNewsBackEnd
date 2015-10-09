@@ -3,6 +3,8 @@ package song.vaadin;
 import com.vaadin.data.Property;
 import com.vaadin.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.event.ShortcutAction;
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 import song.model.NewsDetail;
@@ -15,7 +17,8 @@ import song.repository.NewsItemRepository;
 /**
  * Created by Song on 2015/9/29.
  */
-public class EditArticleForm extends FormLayout implements Property.ValueChangeListener {
+public class EditArticleForm extends FormLayout implements Property.ValueChangeListener,View {
+    public static final String NAME="editarticleform";
 
     private Button save = new Button("保存");
     private Button cancel = new Button("取消");
@@ -36,6 +39,13 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
         configureComponents();
         setUpValueChangeListener();
         buildLayout();
+    }
+
+
+    public EditArticleForm(NewsItemRepository itemRepository, NewsDetailRepository detailRepository) {
+        this();
+        this.itemRepository = itemRepository;
+        this.detailRepository = detailRepository;
     }
 
     private void setUpValueChangeListener() {
@@ -108,5 +118,10 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
     @Override
     public void valueChange(Property.ValueChangeEvent event) {
         changed = true;
+    }
+
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent event) {
+        title.focus();
     }
 }

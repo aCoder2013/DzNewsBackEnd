@@ -45,7 +45,8 @@ public class SimpleLoginUI extends UI {
         //
         // Add the main view of the application
         //
-        getNavigator().addView(AdminUI.NAME,new AdminUI(repository,detailRepository));
+        getNavigator().addView(AdminView.NAME,new AdminView(repository,detailRepository));
+
         //
         // We use a view change handler to ensure the user is always redirected
         // to the login view if the user is not logged in.
@@ -58,6 +59,7 @@ public class SimpleLoginUI extends UI {
                 // Check if a user has logged in
                 boolean isLoggedIn = getSession().getAttribute("admin") != null;
                 boolean isLoginView = event.getNewView() instanceof SimpleLoginView;
+                boolean isAdminView = event.getNewView() instanceof AdminView;
 
                 if (!isLoggedIn && !isLoginView) {
                     // Redirect to login view always if a user has not yet
@@ -68,9 +70,9 @@ public class SimpleLoginUI extends UI {
                 } else if (isLoggedIn && isLoginView) {
                     // If someone tries to access to login view while logged in,
                     // then cancel
+                    getNavigator().navigateTo(AdminView.NAME);
                     return false;
                 }
-
                 return true;
             }
 

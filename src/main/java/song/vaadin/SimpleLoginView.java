@@ -2,73 +2,127 @@ package song.vaadin;
 
 import com.vaadin.data.validator.AbstractValidator;
 import com.vaadin.data.validator.EmailValidator;
+import com.vaadin.event.ShortcutAction;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.shared.ui.MarginInfo;
-import com.vaadin.spring.annotation.SpringView;
+import com.vaadin.server.Responsive;
+import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.*;
-import com.vaadin.ui.themes.Reindeer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
+import com.vaadin.ui.themes.ValoTheme;
 import song.model.Admin;
 import song.repository.AdminRepository;
 /**
  * Created by Song on 2015/10/8.
  */
-public class SimpleLoginView extends CustomComponent implements View,
-        Button.ClickListener {
+public class SimpleLoginView extends VerticalLayout implements View{
 
     public static final String NAME = "";
 
-    private final TextField user;
 
-    private final PasswordField password;
 
-    private final Button loginButton;
+
 
     private AdminRepository adminRepository;
 
     public SimpleLoginView(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
         setSizeFull();
-        // Create the user input field
-        user = new TextField("用户名:");
-        user.setWidth("300px");
+        Component loginForm = buildLoginForm();
+        addComponent(loginForm);
+        setComponentAlignment(loginForm, Alignment.MIDDLE_CENTER);
+
+    }
+
+    private Component buildLoginForm() {
+        final VerticalLayout loginPanel = new VerticalLayout();
+        loginPanel.setSizeUndefined();
+        loginPanel.setSpacing(true);
+        Responsive.makeResponsive(loginPanel);
+        loginPanel.addStyleName("login-panel");
+
+        loginPanel.addComponent(buildLabels());
+        loginPanel.addComponent(buildFields());
+        loginPanel.addComponent(new CheckBox("Remember me", true));
+        return loginPanel;
+    }
+
+    private Component buildFields() {
+        HorizontalLayout fields = new HorizontalLayout();
+        fields.setSpacing(true);
+        fields.addStyleName("fields");
+        final TextField user = new TextField("用户名:");
+        user.setIcon(FontAwesome.USER);
         user.setRequired(true);
         user.setInputPrompt("请输入用户名(邮箱地址)");
         user.addValidator(new EmailValidator(
-                "不合法的邮箱地址！"));
+                "Invalid Email Input"));
         user.setInvalidAllowed(false);
 
         // Create the password input field
-        password = new PasswordField("密码:");
-        password.setWidth("300px");
+        final PasswordField password = new PasswordField("密码:");
+        password.setIcon(FontAwesome.LOCK);
         password.addValidator(new PasswordValidator());
         password.setRequired(true);
-        password.setValue("");
+        password.setValue("请输入密码");
         password.setNullRepresentation("");
 
         // Create login button
-        loginButton = new Button("Login", this);
+        final Button loginButton = new Button("Login", new Button.ClickListener() {
+            @Override
+            public void buttonClick(Button.ClickEvent event) {
+                //
+                // Validate the fields using the navigator. By using validors for the
+                // fields we reduce the amount of queries we have to use to the database
+                // for wrongly entered passwords
+                //
+                if (!user.isValid() || !password.isValid()) {
+                    return;
+                }
 
-        // Add both to a panel
-        VerticalLayout fields = new VerticalLayout(new Label("登陆后台系统"),user, password, loginButton);
-        fields.setSpacing(true);
-        fields.setMargin(new MarginInfo(true, true, true, false));
-        fields.setSizeUndefined();
+                String usernameValue = user.getValue();
+                String passwordValue = password.getValue();
 
-        // The view root layout
-        VerticalLayout viewLayout = new VerticalLayout(fields);
-        viewLayout.setSizeFull();
-        viewLayout.setComponentAlignment(fields, Alignment.MIDDLE_CENTER);
-        viewLayout.setStyleName(Reindeer.LAYOUT_BLUE);
-        setCompositionRoot(viewLayout);
+                //
+                // Validate username and password with database here.
+                //
+                Admin admin =adminRepository.findByEmailAndPassword(usernameValue, passwordValue);
+                if (admin!=null) {
+                    // Store the current user in the service session
+//                    getSession().setAttribute(Admin.class,admin);
+                    getSession().setAttribute("admin", admin);
+                    // Navigate to main view
+                    getUI().getNavigator().navigateTo(AdminView.NAME);
+
+                } else {
+                    // Wrong password clear the password field and refocuses it
+                    password.setValue(null);
+                    password.focus();
+
+                }
+            }
+        });
+        loginButton.setClickShortcut(ShortcutAction.KeyCode.ENTER);
+        fields.addComponents(user, password, loginButton);
+        fields.setComponentAlignment(loginButton, Alignment.BOTTOM_LEFT);
+        return fields;
     }
+
+    private Component buildLabels() {
+        CssLayout labels = new CssLayout();
+        labels.addStyleName("labels");
+
+        Label welcome = new Label("欢迎登陆DzNews后台管理系统");
+        welcome.setSizeUndefined();
+        welcome.addStyleName(ValoTheme.LABEL_H2);
+        welcome.addStyleName(ValoTheme.LABEL_COLORED);
+        labels.addComponent(welcome);
+        return labels;
+    }
+
 
     @Override
     public void enter(ViewChangeListener.ViewChangeEvent event) {
         // focus the username field when user arrives to the login view
-        user.focus();
     }
 
     // Validator for validating the passwords
@@ -97,36 +151,5 @@ public class SimpleLoginView extends CustomComponent implements View,
         }
     }
 
-    @Override
-    public void buttonClick(Button.ClickEvent event) {
 
-        //
-        // Validate the fields using the navigator. By using validors for the
-        // fields we reduce the amount of queries we have to use to the database
-        // for wrongly entered passwords
-        //
-        if (!user.isValid() || !password.isValid()) {
-            return;
-        }
-
-        String username = user.getValue();
-        String password = this.password.getValue();
-
-        //
-        // Validate username and password with database here.
-        //
-        Admin admin =adminRepository.findByEmailAndPassword(username, password);
-        if (admin!=null) {
-            // Store the current user in the service session
-            getSession().setAttribute("admin", admin);
-            // Navigate to main view
-            getUI().getNavigator().navigateTo(AdminUI.NAME);
-
-        } else {
-            // Wrong password clear the password field and refocuses it
-            this.password.setValue(null);
-            this.password.focus();
-
-        }
-    }
 }
