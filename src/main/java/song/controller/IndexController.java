@@ -33,7 +33,6 @@ public class IndexController {
     public String home(Model model, Pageable pageable) {
         Page<NewsItem> newsItemList = newsItemRepository.findAllByOrderByPubTime(pageable);
         model.addAttribute("newsList", newsItemList.getContent());
-//        model.addAttribute("pagenum", pageable.next().getPageNumber());
         model.addAttribute("pagenum", newsItemList.hasNext() ? newsItemList.nextPageable().getPageNumber() : 0);
         return "home";
     }

@@ -43,9 +43,9 @@ public class NewsController {
     @Autowired
     private NewsDetailRepository newsDetailRepository;
 
-    /*
+    /**
         跳转到添加新闻页面
-  */
+    */
     @RequestMapping(value = "/addNewsPage",method = RequestMethod.GET)
     public String toAddNewsPage(){
         return "add_news";
