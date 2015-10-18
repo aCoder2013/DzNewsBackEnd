@@ -1,5 +1,6 @@
 # XX-NewsSystem
-一个采用SpringBoot,SpringDataJPA,Bootstrap编写的Simple新闻客户端,
+一个采用SpringBoot,SpringDataJPA,Material Design Lite
+编写的Simple新闻客户端,
 ##Feature
 1.  图片支持上传到新浪云
 2.  新闻数据支持由爬虫抓取或人工添加。
