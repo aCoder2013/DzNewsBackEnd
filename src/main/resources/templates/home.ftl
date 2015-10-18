@@ -25,7 +25,7 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="../mages/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="../img/android-desktop.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,7 +37,7 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -71,10 +71,6 @@
         .mdl-layout_nav_link{
             color: black;
         }
-        .demo-blog .coffee-pic .mdl-card__media {
-            background-image: url();
-        }
-
     </style>
 </head>
 <body>
@@ -117,24 +113,16 @@
                         </div>
                     </div>
                 </#list>
-                <#--<nav class="demo-nav mdl-cell mdl-cell--6-col">
-                    <div class="section-spacer"></div>
-                    <a href="entry.html" class="demo-nav__button" title="show more">
-                        More
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                            <i class="material-icons" role="presentation">arrow_forward</i>
-                        </button>
-                    </a>
-                </nav>-->
+
                     <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-                        <a href="index.html" class="demo-nav__button">
+                        <a href="?page=${pagenum-1}" class="demo-nav__button">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                             Newer
                         </a>
                         <div class="section-spacer"></div>
-                        <a href="index.html" class="demo-nav__button">
+                        <a href="?page=${pagenum+1}" class="demo-nav__button">
                             Older
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                                 <i class="material-icons">arrow_forward</i>
