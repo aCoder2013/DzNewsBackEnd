@@ -113,15 +113,7 @@
                         </div>
                     </div>
                 </#list>
-                <#--<nav class="demo-nav mdl-cell mdl-cell--6-col">
-                    <div class="section-spacer"></div>
-                    <a href="entry.html" class="demo-nav__button" title="show more">
-                        More
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                            <i class="material-icons" role="presentation">arrow_forward</i>
-                        </button>
-                    </a>
-                </nav>-->
+
                     <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
                         <a href="?page=${pagenum-1}" class="demo-nav__button">
                             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
