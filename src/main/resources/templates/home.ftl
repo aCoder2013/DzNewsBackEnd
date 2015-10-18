@@ -107,8 +107,8 @@
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <div class="minilogo"></div>
                             <div>
-                                <strong>${news.auth}</strong>
-                                <span>${news.pubTime}</span>
+                                <strong>${(news.auth)!}</strong>
+                                <span>${(news.pubTime)!}</span>
                             </div>
                         </div>
                     </div>

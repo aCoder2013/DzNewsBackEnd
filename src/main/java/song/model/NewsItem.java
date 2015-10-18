@@ -168,7 +168,6 @@ public class NewsItem {
         if (description != null ? !description.equals(item.description) : item.description != null) return false;
         if (auth != null ? !auth.equals(item.auth) : item.auth != null) return false;
         return !(targerUrl != null ? !targerUrl.equals(item.targerUrl) : item.targerUrl != null);
-
     }
 
     @Override

@@ -242,6 +242,14 @@ public class NewsController {
         return newsDetailRepository.findOne(id);
     }
 
-
-
+   /* @RequestMapping(value = "/abs")
+    public String referesh(){
+        List<NewsItem> itemList = newsItemRepository.findAll();
+        for(NewsItem item : itemList){
+            item.getNewsDetail().setAuth(item.getAuth());
+            item.getNewsDetail().setPubTime(item.getPubTime());
+            newsDetailRepository.save(item.getNewsDetail());
+        }
+        return "/";
+    }*/
 }

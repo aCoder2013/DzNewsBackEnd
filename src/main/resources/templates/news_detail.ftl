@@ -75,8 +75,8 @@
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
                     <div class="minilogo"></div>
                     <div>
-                        <strong>The Newist</strong>
-                        <span>2 days ago</span>
+                        <strong>${(news.auth)!'匿名'}</strong>
+                        <span>${(news.pubTime)!}</span>
                     </div>
                     <div class="section-spacer"></div>
                     <div class="meta__favorites">

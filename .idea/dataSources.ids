@@ -19,6 +19,8 @@
       <column name="com_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
       <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="auth" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pub_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="FK_b1x0t92o6hfyqk2p6opsthe5g" table="news_item" schema="" catalog="customnews" columns="news_detail_id"/>
     </table>

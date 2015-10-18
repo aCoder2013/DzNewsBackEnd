@@ -1,7 +1,10 @@
 package song.model;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,6 +19,12 @@ public class NewsDetail {
     private Long  id ;
     @Column
     private String title;
+    @Column
+    private String auth;//作者
+    @Temporal(TemporalType.TIMESTAMP)
+    @CreatedDate
+    @Column()
+    private Date pubTime;//发表时间
     @Lob
     private String content;
     @Column
@@ -44,6 +53,22 @@ public class NewsDetail {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getAuth() {
+        return auth;
+    }
+
+    public void setAuth(String auth) {
+        this.auth = auth;
+    }
+
+    public Date getPubTime() {
+        return pubTime;
+    }
+
+    public void setPubTime(Date pubTime) {
+        this.pubTime = pubTime;
     }
 
     public String getContent() {

@@ -145,6 +145,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 NewsDetail detail = parseDetail(news.getTargerUrl());//获取新闻详情
                 //如果新闻详情不为空才添加到列表中
                 if(detail!=null) {
+                    detail.setPubTime(new Date());//设置发表日期
                     newsDetailRepository.save(detail);
                     news.setNewsDetail(detail);//建立关联关系
                     itemList.add(news);
