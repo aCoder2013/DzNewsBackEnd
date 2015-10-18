@@ -95,6 +95,7 @@
                     <a class="mdl-navigation__link" href="">发现</a>
                 </nav>
             </div>
+        </div>
         <main class="mdl-layout__content">
             <div class="demo-blog__posts mdl-grid">
                 <#list newsList as news>
@@ -153,7 +154,7 @@
             </footer>
         </main>
         <div class="mdl-layout__obfuscator"></div>
-    </div>
+
 </div>
 <script src="../js/material.min.js"></script>
 </body>
