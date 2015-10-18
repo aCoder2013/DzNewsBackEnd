@@ -74,26 +74,27 @@
     </style>
 </head>
 <body>
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">DzNews</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-        </div>
-    </header>
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">DzNews</span>
 
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="/">主页</a>
-            <a class="mdl-navigation__link" href="">新闻</a>
-            <a class="mdl-navigation__link" href="">通知</a>
-            <a class="mdl-navigation__link" href="">发现</a>
-        </nav>
-    </div>
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">DzNews</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">DzNews</span>
+
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="/">主页</a>
+                    <a class="mdl-navigation__link" href="">新闻</a>
+                    <a class="mdl-navigation__link" href="">通知</a>
+                    <a class="mdl-navigation__link" href="">发现</a>
+                </nav>
+            </div>
         <main class="mdl-layout__content">
             <div class="demo-blog__posts mdl-grid">
                 <#list newsList as news>
