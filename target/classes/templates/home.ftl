@@ -1,177 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
 <html lang="zh-CN">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>DzNews</title>
 
-    <title>独自存货</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../mages/android-desktop.png">
 
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
-    <!-- Custom CSS -->
-    <link href="../css/clean-blog.min.css" rel="stylesheet">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="../images/favicon.png" />
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/material.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+        <!-- Uses a transparent header that draws on top of the layout's background -->
+
+        .demo-layout-transparent {
+
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button  {
+            /* This background is dark, so we set text to white. Use 87% black instead if
+               your background is light. */
+            color: white;
+        }
+        .mdl-layout_nav_link{
+            color: black;
+        }
+        .demo-blog .coffee-pic .mdl-card__media {
+            background-image: url();
+        }
+
+    </style>
 </head>
-
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">独自存货</a>
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">DzNews</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
         </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">DzNews</span>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/">主页</a>
-                </li>
-                <li>
-                    <a href="#">新闻</a>
-                </li>
-                <li>
-                    <a href="#">投稿</a>
-                </li>
-                <li>
-                    <a href="#">关于我</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/">主页</a>
+            <a class="mdl-navigation__link" href="">新闻</a>
+            <a class="mdl-navigation__link" href="">通知</a>
+            <a class="mdl-navigation__link" href="">发现</a>
+        </nav>
     </div>
-    <!-- /.container -->
-</nav>
-
-<!-- Page Header -->
-<!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('../img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>独自存货</h1>
-                    <hr class="small">
-                    <span class="subheading">网罗天下大事,享受一站式阅读</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <ul class="media">
-        <#list newsList as news>
-            <li class="media">
-                <div class="media-left">
-                        <#if news.thumbnail?? >
-                             <img width="150" height="150" src="${news.thumbnail}" alt="缩略图" class="media-object">
-                        </#if>
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+        <main class="mdl-layout__content">
+            <div class="demo-blog__posts mdl-grid">
+                <#list newsList as news>
+                    <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__title mdl-color-text--grey-50">
+                            <h3 class=""><a href="/news/${news.id?c}">${news.title}</a></h3>
+                        </div>
+                        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                        ${news.description}
+                        </div>
+                        <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                            <div class="minilogo"></div>
+                            <div>
+                                <strong>The Newist</strong>
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="media-body">
-                        <h4><a href="/news/${news.id?c}" class="media-heading">${news.title}</a></h4>
-                    <#if news.description?? >
-                            <p>
-                            ${news.description}
-                            </p>
-                    </#if>
-                    </div>
-            </#list>
-            </ul>
-           <#-- <#list newsList as news>
-                <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a href="/news/${news.id}">
-                        ${news.title}
+                </#list>
+                <nav class="demo-nav mdl-cell mdl-cell--6-col">
+                    <div class="section-spacer"></div>
+                    <a href="entry.html" class="demo-nav__button" title="show more">
+                        More
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                            <i class="material-icons" role="presentation">arrow_forward</i>
+                        </button>
                     </a>
-                </div>
-                <div class="panel-body">
-                    <p>
-                       ${news.description}
-                    </p>
-                </div>
-                </div>
-                <hr>
-            </#list>-->
+                </nav>
 
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="next">
-                    <a href="?page=${pagenum}">下一页 &rarr;</a>
-                </li>
-            </ul>
-        </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer--left-section">
+                    <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                        <span class="visuallyhidden">Twitter</span>
+                    </button>
+                    <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+                        <span class="visuallyhidden">Facebook</span>
+                    </button>
+                    <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                        <span class="visuallyhidden">Google Plus</span>
+                    </button>
+                </div>
+                <div class="mdl-mini-footer--right-section">
+                    <button class="mdl-mini-footer--social-btn social-btn__share">
+                        <i class="material-icons" role="presentation">share</i>
+                        <span class="visuallyhidden">share</span>
+                    </button>
+                </div>
+            </footer>
+        </main>
+        <div class="mdl-layout__obfuscator"></div>
     </div>
 </div>
-
-<hr>
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted">Copyright &copy; acoder2013.com</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
+<script src="../js/material.min.js"></script>
 </body>
-
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+        var link = el.querySelector('a');
+        if(!link) {
+            return;
+        }
+        var target = link.getAttribute('href');
+        if(!target) {
+            return;
+        }
+        el.addEventListener('click', function() {
+            location.href = target;
+        });
+    });
+</script>
 </html>
