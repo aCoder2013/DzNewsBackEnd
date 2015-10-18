@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </#list>
-                <nav class="demo-nav mdl-cell mdl-cell--6-col">
+                <#--<nav class="demo-nav mdl-cell mdl-cell--6-col">
                     <div class="section-spacer"></div>
                     <a href="entry.html" class="demo-nav__button" title="show more">
                         More
@@ -125,7 +125,22 @@
                             <i class="material-icons" role="presentation">arrow_forward</i>
                         </button>
                     </a>
-                </nav>
+                </nav>-->
+                    <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+                        <a href="index.html" class="demo-nav__button">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                                <i class="material-icons">arrow_back</i>
+                            </button>
+                            Newer
+                        </a>
+                        <div class="section-spacer"></div>
+                        <a href="index.html" class="demo-nav__button">
+                            Older
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </a>
+                    </nav>
 
             </div>
             <footer class="mdl-mini-footer">
