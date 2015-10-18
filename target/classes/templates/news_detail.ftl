@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+           <#-- <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
                 <a href="index.html" class="demo-nav__button">
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                         <i class="material-icons">arrow_back</i>
@@ -174,7 +174,7 @@
                         <i class="material-icons">arrow_forward</i>
                     </button>
                 </a>
-            </nav>
+            </nav>-->
         </div>
         <footer class="mdl-mini-footer">
             <div class="mdl-mini-footer--left-section">

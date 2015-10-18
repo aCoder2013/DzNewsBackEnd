@@ -162,22 +162,15 @@ public class NewsItem {
 
         NewsItem item = (NewsItem) o;
 
-        if (comNumber != item.comNumber) return false;
         if (title != null ? !title.equals(item.title) : item.title != null) return false;
-        if (thumbnail != null ? !thumbnail.equals(item.thumbnail) : item.thumbnail != null) return false;
-        if (description != null ? !description.equals(item.description) : item.description != null) return false;
-        if (auth != null ? !auth.equals(item.auth) : item.auth != null) return false;
-        return !(targerUrl != null ? !targerUrl.equals(item.targerUrl) : item.targerUrl != null);
+        return !(description != null ? !description.equals(item.description) : item.description != null);
+
     }
 
     @Override
     public int hashCode() {
         int result = title != null ? title.hashCode() : 0;
-        result = 31 * result + (thumbnail != null ? thumbnail.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (auth != null ? auth.hashCode() : 0);
-        result = 31 * result + comNumber;
-        result = 31 * result + (targerUrl != null ? targerUrl.hashCode() : 0);
         return result;
     }
 }

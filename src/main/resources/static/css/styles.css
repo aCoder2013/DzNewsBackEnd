@@ -290,6 +290,10 @@ body .demo-blog {
 .demo-blog--blogpost .custom-header {
   background-color: transparent;
 }
+.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
+    background-image: url('../img/road_big.jpg');
+    height: 280px;
+}
 
 .demo-blog--blogpost .comments {
   background-color: #EEE;

@@ -92,21 +92,17 @@ public class NewsDetail {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        NewsDetail that = (NewsDetail) o;
+        NewsDetail detail = (NewsDetail) o;
 
-        if (comNumber != that.comNumber) return false;
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        return !(content != null ? !content.equals(that.content) : that.content != null);
+        if (!title.equals(detail.title)) return false;
+        return !(content != null ? !content.equals(detail.content) : detail.content != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (title != null ? title.hashCode() : 0);
+        int result = title.hashCode();
         result = 31 * result + (content != null ? content.hashCode() : 0);
-        result = 31 * result + comNumber;
         return result;
     }
 }
