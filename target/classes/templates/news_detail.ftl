@@ -92,7 +92,7 @@
                         <span class="visuallyhidden">share</span>
                     </div>
                 </div>
-                <div class="mdl-color-text--grey-700 mdl-grid">
+                <div class="mdl-color-text--grey-700 mdl-grid mdl-card__supporting-text meta">
                     <div class="mdl-cell mdl-cell--1-col"></div>
                     <div class="mdl-cell mdl-cell--8-col">
                          ${news.content}
