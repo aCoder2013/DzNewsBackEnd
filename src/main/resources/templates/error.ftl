@@ -39,7 +39,7 @@
 <div class="container">
     <div class="row">
         <div class="alert alert-danger panel-danger col-md-4 col-md-offset-4" role="alert">
-            <h3>错误页面</h3>
+            <h3>错误--${status!}</h3>
             <p>
                 来源链接是否正确？用户、话题或问题是否存在？
             </p>
@@ -49,5 +49,13 @@
         </div>
     </div>
 </div>
+<!--
+    This is for programmer!
+    Message:  ${message!""}
+    Status:  ${status!""}
+    Path:  ${path!""}
+    Error:  ${(error)!""}
+    Url:  ${(url!)!""}
+-->
 </body>
 </html>

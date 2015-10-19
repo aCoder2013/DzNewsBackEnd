@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
+import song.exception.GlobalDefaultExceptionHandler;
 
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -33,7 +36,6 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         factory.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR,"/servererror"));
         return factory;
     }*/
-
 
 
 }

@@ -176,7 +176,7 @@ public class NewsController {
         return "news_detail";
     }
 
-    /*
+    /**
         删除新闻
      */
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
