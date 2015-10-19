@@ -25,14 +25,14 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
                 .run(NewsServiceEndApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
         factory.setPort(80);
-        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/notfound.html"));
-        factory.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR,"/servererror.html"));
+        factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/notfound"));
+        factory.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR,"/servererror"));
         return factory;
-    }
+    }*/
 
 
 

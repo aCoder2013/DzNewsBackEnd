@@ -32,6 +32,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/static/js/material.min.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/static/js/module.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/templates/error.ftl" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/notfound.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/templates/notfound.ftl" charset="GBK" />
   </component>
 </project>

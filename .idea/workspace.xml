@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="增加导航栏">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/notfound.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/service/BaseService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/exception/NewsItemNotFoundException.java" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\interceptor\AdminAuthorizationInterceptor.class" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\blog-home.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\clean-blog.min.css" afterPath="" />
@@ -18,6 +18,8 @@
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\sb-admin-2.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\simditor.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\error.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\notfound.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/NewsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" afterPath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
@@ -27,6 +29,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\vaadin\SImpleLoginView.java" afterPath="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginView.java" />
+      <change type="MOVED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\templates\error.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/error1.ftl" />
+      <change type="MOVED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\templates\notfound.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/notfound.ftl" />
     </list>
     <list id="54c57a6e-0d10-4aa3-8c4f-cd8f750dfb2d" name="Failed commit: Default" comment="优化" />
     <ignored path="NewsServiceEnd.iws" />
@@ -71,31 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
-              <caret line="51" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NewsServiceEndApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,7 +89,25 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
+              <caret line="170" column="48" selection-start-line="170" selection-start-column="48" selection-end-line="170" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#8413#8414#0" expanded="true" />
+                <element signature="e#8485#8486#0" expanded="true" />
+                <element signature="e#8645#8646#0" expanded="true" />
+                <element signature="e#8700#8701#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsItemNotFoundException.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/exception/NewsItemNotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5671642">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,48 +115,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error.ftl">
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5">
-              <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bg.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/bg.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="DefaultHandlerExceptionResolver.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.6.RELEASE/spring-webmvc-4.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/support/DefaultHandlerExceptionResolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="176" column="26" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="26" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="avatar.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/avatar.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="HttpServletResponse.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.0.23/tomcat-embed-core-8.0.23-sources.jar!/javax/servlet/http/HttpServletResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="472" column="54" selection-start-line="472" selection-start-column="54" selection-end-line="472" selection-end-column="54" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="favicon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/favicon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/service/BaseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ios-desktop.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/ios-desktop.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="CrudRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home-bg.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/home-bg.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -186,11 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_item" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/song/utils/NewsComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/spider/AutoCollectNews.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/spider/ScheduledCollectTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/utils/TextExtract.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/utils/NewsItemBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/ColllectRegularNewsTest.java" />
@@ -199,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/main/java/song/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/model/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/news_admin.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/song/vaadin/VaadinUi.java" />
@@ -233,10 +256,16 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/news_detail.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/error.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/song/service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/model/Admin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/service/NewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/BaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/service/BaseService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/error.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/song/exception/NewsItemNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
       </list>
     </option>
   </component>
@@ -518,7 +547,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -527,7 +556,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/AboutCoding/Java/项目/NewsServiceEnd/src/main/java/song/NewsServiceEndApplication.java&#10;InvalidValueException&#9;PSI&#9;JAVA://com.vaadin.data.Validator.InvalidValueException&#10;AbstractComponent&#9;FILE&#9;jar://C:/Users/Song/.m2/repository/com/vaadin/vaadin-server/7.5.5/vaadin-server-7.5.5-sources.jar!/com/vaadin/ui/AbstractComponent.java&#10;NewsC&#9;FILE&#9;file://D:/AboutCoding/Java/项目/NewsServiceEnd/src/main/java/song/controller/NewsController.java&#10;news_ad&#9;FILE&#9;file://D:/AboutCoding/Java/项目/NewsServiceEnd/src/main/resources/templates/news_admin.ftl&#10;Timestamp&#9;PSI&#9;JAVA://java.sql.Timestamp" />
+    <property name="SearchEverywhereHistoryKey" value="DefaultHandlerExceptionResolver&#9;PSI&#9;JAVA://org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver&#10;InvalidValueException&#9;PSI&#9;JAVA://com.vaadin.data.Validator.InvalidValueException&#10;AbstractComponent&#9;FILE&#9;jar://C:/Users/Song/.m2/repository/com/vaadin/vaadin-server/7.5.5/vaadin-server-7.5.5-sources.jar!/com/vaadin/ui/AbstractComponent.java&#10;NewsC&#9;FILE&#9;file://D:/AboutCoding/Java/项目/NewsServiceEnd/src/main/java/song/controller/NewsController.java&#10;news_ad&#9;FILE&#9;file://D:/AboutCoding/Java/项目/NewsServiceEnd/src/main/resources/templates/news_admin.ftl&#10;Timestamp&#9;PSI&#9;JAVA://java.sql.Timestamp" />
     <property name="Console.TableResult.DefaultCopyAction" value="SQL Insert Statements" />
   </component>
   <component name="RecentsManager">
@@ -1047,7 +1076,7 @@
       <workItem from="1444620394107" duration="1460000" />
       <workItem from="1444703826436" duration="35000" />
       <workItem from="1445087687778" duration="21457000" />
-      <workItem from="1445216229866" duration="6675000" />
+      <workItem from="1445216229866" duration="14960000" />
     </task>
     <task id="LOCAL-00001" summary="新闻项和新闻详情之间建立单向一对一的关系">
       <created>1438934052089</created>
@@ -1233,7 +1262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311747000" />
+    <option name="totallyTimeSpent" value="320032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1265,6 +1294,7 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14102565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1276,7 +1306,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861805" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1364,72 +1393,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/utils/EventBusHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..admin">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a270bf0d-e27c-4e6b-955e-e9e2336e6882/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/DashboardMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5672#5673#0" expanded="false" />
+            <element signature="e#5737#5738#0" expanded="false" />
+            <element signature="e#5780#5781#0" expanded="false" />
+            <element signature="e#5810#5811#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1489,14 +1463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/NewsDetailRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1508,6 +1474,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,6 +1522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1727,26 +1695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/notfound.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/notfound.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1756,16 +1708,6 @@
         <state vertical-scroll-proportion="-14.0">
           <caret line="51" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/NewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1794,19 +1736,130 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.7.2.RELEASE/spring-data-jpa-1.7.2.RELEASE-sources.jar!/org/springframework/data/jpa/domain/AbstractPersistable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error1.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.88889">
           <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.6.RELEASE/spring-web-4.1.6.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+          <folding>
+            <element signature="e#16708#16709#0" expanded="true" />
+            <element signature="e#16745#16746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.0.23/tomcat-embed-core-8.0.23-sources.jar!/javax/servlet/http/HttpServletResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="472" column="54" selection-start-line="472" selection-start-column="54" selection-end-line="472" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.6.RELEASE/spring-webmvc-4.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/support/DefaultHandlerExceptionResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="176" column="26" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="170" column="48" selection-start-line="170" selection-start-column="48" selection-end-line="170" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#8413#8414#0" expanded="true" />
+            <element signature="e#8485#8486#0" expanded="true" />
+            <element signature="e#8645#8646#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/exception/NewsItemNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5671642">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

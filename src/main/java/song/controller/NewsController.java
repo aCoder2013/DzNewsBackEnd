@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
+import song.exception.NewsItemNotFoundException;
 import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
@@ -20,6 +21,7 @@ import song.utils.SaeUploadUtils;
 import song.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
@@ -46,14 +48,14 @@ public class NewsController {
     private NewsDetailRepository newsDetailRepository;
 
     /**
-        跳转到添加新闻页面
-    */
+     跳转到添加新闻页面
+     */
     @RequestMapping(value = "/addNewsPage",method = RequestMethod.GET)
     public String toAddNewsPage(){
         return "add_news";
     }
     /**
-        添加,更新新闻
+     添加,更新新闻
      */
     @RequestMapping(value="/addNews",method = RequestMethod.POST)
     public String addNews(Long id ,String title,String content,String fromPublisher,
@@ -164,12 +166,9 @@ public class NewsController {
         展示新闻细节页面
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String showNewsDetail(@PathVariable long id ,Model model){
-        logger.warn("showNewsDetail->ID:"+id);
+    public String showNewsDetail(@PathVariable long id ,Model model,HttpServletResponse response){
         NewsItem news  = newsItemRepository.findOne(id);
-        if(news==null){
-            return "not_found";
-        }
+        if(news==null) throw new NewsItemNotFoundException("News : "+id+" doesn't exit .");
         NewsDetail detail  = news.getNewsDetail();
         model.addAttribute("news",detail);
         news.setBeenRead(news.getBeenRead()+1);
@@ -207,9 +206,9 @@ public class NewsController {
     @RequestMapping("/updateNews")
     public String updateNews(@RequestParam("id") Long id,Model model){
         NewsItem news = newsItemRepository.findOne(id);
-            model.addAttribute("news",news);
-            model.addAttribute("content",news.getNewsDetail().getContent());
-            return "add_news";
+        model.addAttribute("news",news);
+        model.addAttribute("content",news.getNewsDetail().getContent());
+        return "add_news";
     }
 
 
@@ -225,7 +224,7 @@ public class NewsController {
             return newsList;
         }
         return null;
-     }
+    }
 
     /**
      * API:获取单页新闻
