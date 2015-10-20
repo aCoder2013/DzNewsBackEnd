@@ -8,6 +8,11 @@
 4.  采用SpringBoot，省去了大量配置文件
 5.  采用Spring DataJPA，只需定义接口即可
 
+##API
+1.  /api/news ：获取单页新闻,支持size,page,sort
+2.  /api/news/{id} ：获取指定ID的新闻项
+3.  /api/news/detail/{id} :获取指定ID的新闻详情
+
 ##访问
 0.  项目部署在阿里云，
 1.  前台：http://115.28.26.248:8080
