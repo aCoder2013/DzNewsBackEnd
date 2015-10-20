@@ -1,6 +1,10 @@
 package song.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.data.annotation.CreatedDate;
+import song.utils.View;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -10,12 +14,13 @@ import java.util.Date;
  * Created by Song on 2015/8/6.
  */
 @Entity
+@JsonAutoDetect
 public class NewsItem {
 
     @Id
     @GeneratedValue
     private Long id ;
-    @Column
+    @Column(nullable = false)
     private String title;//标题
     @Column
     private String thumbnail ;//缩略图
@@ -37,6 +42,7 @@ public class NewsItem {
     private int beenRead ;  //阅读数
 
     @OneToOne
+    @JsonIgnore
     private NewsDetail newsDetail;
 
 

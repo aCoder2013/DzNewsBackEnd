@@ -1,5 +1,8 @@
 package song.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +13,7 @@ import javax.persistence.Id;
  * Created by Song on 2015/6/12.
  */
 @Entity(name = "admin")
+@JsonIgnoreProperties(value = {"password","id"})
 public class Admin {
 
     @Id

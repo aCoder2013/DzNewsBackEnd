@@ -1,5 +1,6 @@
 package song.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.List;
  * Created by Song on 2015/8/6.
  */
 @Entity
+@JsonAutoDetect
 public class NewsDetail {
 
     @Id

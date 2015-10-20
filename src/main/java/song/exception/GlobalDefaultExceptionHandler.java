@@ -22,7 +22,7 @@ public class GlobalDefaultExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
         // If the exception is annotated with @ResponseStatus rethrow it and let
-        // the framework handle it - like the NewsItemNotFoundException example
+        // the framework handle it - like the NewsNotFoundException example
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null)
             throw e;
 
