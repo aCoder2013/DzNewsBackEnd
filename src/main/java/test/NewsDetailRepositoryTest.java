@@ -15,7 +15,6 @@ import song.repository.NewsDetailRepository;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = NewsServiceEndApplication.class)
-//@ContextConfiguration(classes = NewsServiceEndApplication.class)
 public class NewsDetailRepositoryTest {
 
 

@@ -5,6 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
+import song.model.NewsDetail;
 import song.model.NewsItem;
 
 
@@ -22,7 +23,6 @@ public interface NewsItemRepository extends JpaRepository<NewsItem,Long> {
      */
     @Query("SELECT n FROM NewsItem n order by pubTime desc ")
     Page<NewsItem> findAllByOrderByPubTime(Pageable pageable);
-
 
 
 

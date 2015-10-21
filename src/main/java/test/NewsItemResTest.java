@@ -11,7 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import song.NewsServiceEndApplication;
+import song.model.NewsDetail;
 import song.model.NewsItem;
+import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
 
 
@@ -27,12 +29,21 @@ public class NewsItemResTest {
     @Autowired
     private NewsItemRepository repository;
 
+    @Autowired
+    private NewsDetailRepository detailRepository;
+
     @Test
     public  void test(){
         Page<NewsItem> list = repository.findAllByOrderByPubTime(new PageRequest(1, 20));
-        Assert.assertNotNull(list);
     }
 
+
+    @Test
+    public void testFindNewsDetail(){
+
+        NewsDetail detail = detailRepository.findNewsDetailByNewsItemId(406L);
+        org.springframework.util.Assert.notNull(detail);
+    }
 
 
 }

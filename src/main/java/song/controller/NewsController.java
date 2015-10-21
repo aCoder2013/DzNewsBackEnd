@@ -165,7 +165,7 @@ public class NewsController {
         展示新闻细节页面
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String showNewsDetail(@PathVariable NewsItem news ,Model model,HttpServletResponse response){
+    public String showNewsDetail(@PathVariable("id") NewsItem news ,Model model,HttpServletResponse response){
         if(news==null) throw new NewsNotFoundException("News : "+news.getId()+" doesn't exit .");
         NewsDetail detail  = news.getNewsDetail();
         model.addAttribute("news",detail);
