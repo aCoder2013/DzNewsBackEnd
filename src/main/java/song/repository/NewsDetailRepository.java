@@ -19,5 +19,5 @@ public interface NewsDetailRepository extends JpaRepository<NewsDetail,Long> {
      */
     @Query(value = "select * from news_detail  where id = (select n.news_detail_id from news_item   n where id =?)",nativeQuery = true)
     NewsDetail findNewsDetailByNewsItemId(Long id);
-    
+
 }

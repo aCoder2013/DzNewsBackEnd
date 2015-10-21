@@ -40,10 +40,19 @@ public class NewsItemResTest {
 
     @Test
     public void testFindNewsDetail(){
-
+        long start = System.currentTimeMillis();
         NewsDetail detail = detailRepository.findNewsDetailByNewsItemId(406L);
-        org.springframework.util.Assert.notNull(detail);
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
     }
 
 
+
+    @Test
+    public void testGetNewsDetail(){
+        long start = System.currentTimeMillis();
+        NewsDetail detail = repository.findOne(406L).getNewsDetail();
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+    }
 }

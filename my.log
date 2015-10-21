@@ -1124,3 +1124,334 @@ java.lang.NullPointerException: null
 2015-10-21 16:09:45.796  INFO 8496 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
 2015-10-21 16:09:45.799  INFO 8496 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.994 seconds (JVM running for 10.829)
 2015-10-21 16:09:52.765  INFO 8496 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@29853b23: startup date [Wed Oct 21 16:09:37 CST 2015]; root of context hierarchy
+2015-10-21 16:13:48.156  INFO 11272 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 11272 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:13:48.376  INFO 11272 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e5db277: startup date [Wed Oct 21 16:13:48 CST 2015]; root of context hierarchy
+2015-10-21 16:14:41.264  INFO 8372 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 8372 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:14:41.423  INFO 8372 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d12855: startup date [Wed Oct 21 16:14:41 CST 2015]; root of context hierarchy
+2015-10-21 16:14:44.566  INFO 8372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$a4ad0c63] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:14:45.428  INFO 8372 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:14:45.486  INFO 8372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:14:45.612  INFO 8372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:14:45.617  INFO 8372 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:14:45.620  INFO 8372 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:14:45.968  INFO 8372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:14:46.391  INFO 8372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:14:46.578  INFO 8372 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:14:47.240  INFO 8372 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:14:47.241  INFO 8372 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:14:47.243  INFO 8372 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:14:47.573  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:14:47.574  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:14:47.574  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:14:47.575  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:14:47.590  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:14:47.591  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:14:47.592  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:14:47.592  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:14:47.611  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:14:47.611  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:14:47.612  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:14:47.613  INFO 8372 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:14:47.617  INFO 8372 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:14:48.574  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:14:48.659  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:14:48.669  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:14:48.673  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:14:48.719  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:14:48.720  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:14:48.721  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:14:48.723  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:14:48.723  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:14:48.797  INFO 8372 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@67618412, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@67618412}
+2015-10-21 16:14:48.818  INFO 8372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:14:48.819  INFO 8372 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:14:48.839  INFO 8372 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:14:48.863  WARN 8372 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:14:49.999  INFO 8372 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:14:50.001  INFO 8372 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 9.594 seconds (JVM running for 11.018)
+2015-10-21 16:14:50.094  INFO 8372 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d12855: startup date [Wed Oct 21 16:14:41 CST 2015]; root of context hierarchy
+2015-10-21 16:14:50.104  INFO 8372 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:15:07.784  INFO 10112 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 10112 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:15:07.899  INFO 10112 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e5db277: startup date [Wed Oct 21 16:15:07 CST 2015]; root of context hierarchy
+2015-10-21 16:15:10.656  INFO 10112 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$246f73e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:15:11.644  INFO 10112 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:15:11.682  INFO 10112 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:15:11.830  INFO 10112 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:15:11.832  INFO 10112 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:15:11.834  INFO 10112 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:15:12.191  INFO 10112 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:15:12.614  INFO 10112 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:15:12.788  INFO 10112 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:15:13.442  INFO 10112 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:15:13.443  INFO 10112 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:15:13.446  INFO 10112 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:15:13.477  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:15:13.477  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:15:13.478  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:15:13.478  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:15:13.493  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:15:13.494  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:15:13.495  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:15:13.495  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:15:13.515  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:15:13.516  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:15:13.517  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:15:13.518  INFO 10112 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:15:13.521  INFO 10112 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:15:14.290  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:15:14.334  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:15:14.338  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:15:14.339  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:15:14.341  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:15:14.341  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:15:14.342  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:15:14.343  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:15:14.344  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:15:14.377  INFO 10112 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@6b0da8fd, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@6b0da8fd}
+2015-10-21 16:15:14.391  INFO 10112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:15:14.392  INFO 10112 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:15:14.407  INFO 10112 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:15:14.416  WARN 10112 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:15:15.437  INFO 10112 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:15:15.439  INFO 10112 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.819 seconds (JVM running for 10.206)
+2015-10-21 16:15:15.514  INFO 10112 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e5db277: startup date [Wed Oct 21 16:15:07 CST 2015]; root of context hierarchy
+2015-10-21 16:15:15.521  INFO 10112 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:15:26.612  INFO 10288 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 10288 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:15:26.827  INFO 10288 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@696fcad2: startup date [Wed Oct 21 16:15:26 CST 2015]; root of context hierarchy
+2015-10-21 16:15:30.261  INFO 10288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$35be5d8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:15:31.162  INFO 10288 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:15:31.204  INFO 10288 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:15:31.309  INFO 10288 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:15:31.311  INFO 10288 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:15:31.314  INFO 10288 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:15:31.660  INFO 10288 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:15:32.142  INFO 10288 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:15:32.349  INFO 10288 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:15:33.212  INFO 10288 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:15:33.213  INFO 10288 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:15:33.216  INFO 10288 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:15:33.296  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:15:33.297  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:15:33.298  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:15:33.298  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:15:33.313  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:15:33.314  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:15:33.315  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:15:33.316  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:15:33.335  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:15:33.335  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:15:33.336  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:15:33.337  INFO 10288 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:15:33.338  INFO 10288 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:15:34.103  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:15:34.154  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:15:34.160  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:15:34.161  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:15:34.164  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:15:34.165  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:15:34.168  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:15:34.169  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:15:34.169  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:15:34.201  INFO 10288 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@13ae2297, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@13ae2297}
+2015-10-21 16:15:34.213  INFO 10288 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:15:34.214  INFO 10288 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:15:34.228  INFO 10288 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:15:34.237  WARN 10288 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:15:35.263  INFO 10288 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:15:35.264  INFO 10288 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 9.142 seconds (JVM running for 10.42)
+2015-10-21 16:15:35.339  INFO 10288 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@696fcad2: startup date [Wed Oct 21 16:15:26 CST 2015]; root of context hierarchy
+2015-10-21 16:15:35.348  INFO 10288 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:05.254  INFO 11100 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 11100 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:16:05.391  INFO 11100 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a6cd712: startup date [Wed Oct 21 16:16:05 CST 2015]; root of context hierarchy
+2015-10-21 16:16:08.219  INFO 11100 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$8d3a3634] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:16:09.114  INFO 11100 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:09.161  INFO 11100 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:16:09.269  INFO 11100 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:16:09.271  INFO 11100 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:16:09.273  INFO 11100 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:16:09.602  INFO 11100 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:16:09.989  INFO 11100 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:16:10.148  INFO 11100 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:16:10.734  INFO 11100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:16:10.734  INFO 11100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:16:10.736  INFO 11100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:16:10.767  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:16:10.767  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:16:10.768  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:10.768  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:10.783  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:16:10.784  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:16:10.784  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:10.785  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:10.803  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:16:10.804  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:16:10.805  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:16:10.806  INFO 11100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:16:10.808  INFO 11100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:16:11.669  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:16:11.755  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:16:11.759  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:16:11.759  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:16:11.761  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:16:11.761  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:16:11.762  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:16:11.762  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:16:11.763  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:16:11.788  INFO 11100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@3c538cd9, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@3c538cd9}
+2015-10-21 16:16:11.799  INFO 11100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:11.799  INFO 11100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:11.813  INFO 11100 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:16:11.821  WARN 11100 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:16:12.807  INFO 11100 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:16:12.808  INFO 11100 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.54 seconds (JVM running for 9.933)
+2015-10-21 16:16:12.880  INFO 11100 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a6cd712: startup date [Wed Oct 21 16:16:05 CST 2015]; root of context hierarchy
+2015-10-21 16:16:12.888  INFO 11100 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:24.016  INFO 8472 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 8472 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:16:24.208  INFO 8472 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1592a441: startup date [Wed Oct 21 16:16:24 CST 2015]; root of context hierarchy
+2015-10-21 16:16:27.659  INFO 8472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$ab8750cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:16:28.457  INFO 8472 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:28.501  INFO 8472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:16:28.614  INFO 8472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:16:28.617  INFO 8472 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:16:28.620  INFO 8472 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:16:28.922  INFO 8472 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:16:29.327  INFO 8472 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:16:29.489  INFO 8472 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:16:30.099  INFO 8472 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:16:30.100  INFO 8472 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:16:30.103  INFO 8472 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:16:30.141  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:16:30.141  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:16:30.142  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:30.143  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:30.158  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:16:30.159  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:16:30.160  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:30.160  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:30.180  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:16:30.181  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:16:30.182  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:16:30.183  INFO 8472 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:16:30.185  INFO 8472 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:16:30.970  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:16:31.055  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:16:31.061  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:16:31.062  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:16:31.063  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:16:31.064  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:16:31.065  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:16:31.066  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:16:31.066  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:16:31.088  INFO 8472 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@1526c1c8, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@1526c1c8}
+2015-10-21 16:16:31.108  INFO 8472 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:31.109  INFO 8472 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:31.127  INFO 8472 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:16:31.134  WARN 8472 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:16:32.081  INFO 8472 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:16:32.083  INFO 8472 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.573 seconds (JVM running for 9.732)
+2015-10-21 16:16:32.162  INFO 8472 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1592a441: startup date [Wed Oct 21 16:16:24 CST 2015]; root of context hierarchy
+2015-10-21 16:16:32.174  INFO 8472 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:41.040  INFO 12948 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 12948 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:16:41.229  INFO 12948 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e5db277: startup date [Wed Oct 21 16:16:41 CST 2015]; root of context hierarchy
+2015-10-21 16:16:44.795  INFO 12948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$7ad61d99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:16:45.638  INFO 12948 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:16:45.690  INFO 12948 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:16:45.803  INFO 12948 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:16:45.807  INFO 12948 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:16:45.810  INFO 12948 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:16:46.151  INFO 12948 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:16:46.561  INFO 12948 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:16:46.728  INFO 12948 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:16:47.359  INFO 12948 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:16:47.360  INFO 12948 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:16:47.362  INFO 12948 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:16:47.392  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:16:47.392  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:16:47.393  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:47.393  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:47.408  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:16:47.409  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:16:47.410  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:16:47.410  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:16:47.428  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:16:47.429  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:16:47.430  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:16:47.431  INFO 12948 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:16:47.433  INFO 12948 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:16:48.250  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:16:48.327  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:16:48.332  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:16:48.333  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:16:48.335  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:16:48.336  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:16:48.337  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:16:48.339  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:16:48.339  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:16:48.362  INFO 12948 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@11441980, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@11441980}
+2015-10-21 16:16:48.374  INFO 12948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:48.375  INFO 12948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:16:48.388  INFO 12948 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:16:48.395  WARN 12948 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:16:49.378  INFO 12948 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:16:49.380  INFO 12948 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.818 seconds (JVM running for 10.109)
+2015-10-21 16:16:49.464  INFO 12948 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e5db277: startup date [Wed Oct 21 16:16:41 CST 2015]; root of context hierarchy
+2015-10-21 16:16:49.473  INFO 12948 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:17:43.919  INFO 6100 --- [main] test.NewsItemResTest                     : Starting NewsItemResTest on BrotherSong with PID 6100 (started by Song in D:\AboutCoding\Java\项目\NewsServiceEnd)
+2015-10-21 16:17:44.069  INFO 6100 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@471f7458: startup date [Wed Oct 21 16:17:44 CST 2015]; root of context hierarchy
+2015-10-21 16:17:47.195  INFO 6100 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$4b458cb9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-10-21 16:17:48.017  INFO 6100 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-21 16:17:48.054  INFO 6100 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-21 16:17:48.161  INFO 6100 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.10.Final}
+2015-10-21 16:17:48.163  INFO 6100 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2015-10-21 16:17:48.165  INFO 6100 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2015-10-21 16:17:48.457  INFO 6100 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-21 16:17:48.884  INFO 6100 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-21 16:17:49.039  INFO 6100 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2015-10-21 16:17:49.693  INFO 6100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2015-10-21 16:17:49.693  INFO 6100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000102: Fetching database metadata
+2015-10-21 16:17:49.696  INFO 6100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000396: Updating schema
+2015-10-21 16:17:49.736  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.admin
+2015-10-21 16:17:49.737  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, email, name, password]
+2015-10-21 16:17:49.737  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:17:49.738  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:17:49.754  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_detail
+2015-10-21 16:17:49.755  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [content, id, pub_time, title, com_number, auth]
+2015-10-21 16:17:49.756  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: []
+2015-10-21 16:17:49.757  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [primary]
+2015-10-21 16:17:49.775  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: customnews.news_item
+2015-10-21 16:17:49.776  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [id, from_publisher, title, pub_time, thumbnail, description, news_detail_id, com_number, been_read, auth, targer_url]
+2015-10-21 16:17:49.776  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000108: Foreign keys: [fk_b1x0t92o6hfyqk2p6opsthe5g]
+2015-10-21 16:17:49.778  INFO 6100 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000126: Indexes: [fk_b1x0t92o6hfyqk2p6opsthe5g, primary]
+2015-10-21 16:17:49.780  INFO 6100 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000232: Schema update complete
+2015-10-21 16:17:50.487  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Checking the application context for Vaadin UI mappings
+2015-10-21 16:17:50.534  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+2015-10-21 16:17:50.540  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Registering Vaadin servlet
+2015-10-21 16:17:50.541  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+2015-10-21 16:17:50.543  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Setting servlet init parameters
+2015-10-21 16:17:50.544  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [productionMode] = [false]
+2015-10-21 16:17:50.545  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [resourceCacheTime] = [3600]
+2015-10-21 16:17:50.546  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [heartbeatInterval] = [300]
+2015-10-21 16:17:50.546  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Set servlet init parameter [closeIdleSessions] = [false]
+2015-10-21 16:17:50.574  INFO 6100 --- [main] c.v.s.b.i.VaadinServletConfiguration     : Forwarding @SpringUI URLs from {/admin/=org.springframework.web.servlet.mvc.ServletForwardingController@1526c1c8, /admin=org.springframework.web.servlet.mvc.ServletForwardingController@1526c1c8}
+2015-10-21 16:17:50.589  INFO 6100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin/] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:17:50.590  INFO 6100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/admin] onto handler of type [class org.springframework.web.servlet.mvc.ServletForwardingController]
+2015-10-21 16:17:50.605  INFO 6100 --- [main] c.v.spring.navigator.SpringViewProvider  : Looking up SpringViews
+2015-10-21 16:17:50.612  WARN 6100 --- [main] c.v.spring.navigator.SpringViewProvider  : No SpringViews found
+2015-10-21 16:17:51.732  INFO 6100 --- [pool-2-thread-1] song.spider.ScheduledCollectTask         : Start To Collect News
+2015-10-21 16:17:51.734  INFO 6100 --- [main] test.NewsItemResTest                     : Started NewsItemResTest in 8.39 seconds (JVM running for 9.606)
+2015-10-21 16:17:51.818  INFO 6100 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@471f7458: startup date [Wed Oct 21 16:17:44 CST 2015]; root of context hierarchy
+2015-10-21 16:17:51.825  INFO 6100 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

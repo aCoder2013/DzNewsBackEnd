@@ -45,7 +45,7 @@ public class APIController {
      */
     @RequestMapping(value = "/news/detail/{id}")
     public NewsDetail showNewsDetail(@PathVariable("id")Long id){
-        NewsDetail detail = newsItemRepository.findOne(id).getNewsDetail();
+        NewsDetail detail = newsDetailRepository.findNewsDetailByNewsItemId(id);
         if(detail == null) throw new NewsNotFoundException("News Detail with " +id+" doesn't find");
         return detail;
     }
