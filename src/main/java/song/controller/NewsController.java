@@ -165,9 +165,8 @@ public class NewsController {
         展示新闻细节页面
      */
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String showNewsDetail(@PathVariable long id ,Model model,HttpServletResponse response){
-        NewsItem news  = newsItemRepository.findOne(id);
-        if(news==null) throw new NewsNotFoundException("News : "+id+" doesn't exit .");
+    public String showNewsDetail(@PathVariable NewsItem news ,Model model,HttpServletResponse response){
+        if(news==null) throw new NewsNotFoundException("News : "+news.getId()+" doesn't exit .");
         NewsDetail detail  = news.getNewsDetail();
         model.addAttribute("news",detail);
         news.setBeenRead(news.getBeenRead()+1);
@@ -203,8 +202,7 @@ public class NewsController {
         修改文章
      */
     @RequestMapping("/updateNews")
-    public String updateNews(@RequestParam("id") Long id,Model model){
-        NewsItem news = newsItemRepository.findOne(id);
+    public String updateNews(@RequestParam("id") NewsItem news,Model model){
         model.addAttribute("news",news);
         model.addAttribute("content",news.getNewsDetail().getContent());
         return "add_news";

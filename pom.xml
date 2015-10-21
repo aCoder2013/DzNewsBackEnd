@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>NewsServiceEnd</name>
-	<description>Demo project for Spring Boot</description>
+	<description>A News APP</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

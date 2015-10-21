@@ -17,11 +17,13 @@ public interface NewsItemRepository extends JpaRepository<NewsItem,Long> {
 
 
 
-    /*
+    /**
         Sort By Publish Time
      */
     @Query("SELECT n FROM NewsItem n order by pubTime desc ")
     Page<NewsItem> findAllByOrderByPubTime(Pageable pageable);
+
+
 
 
 }

@@ -10,7 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public abstract  class BaseService{
 
-    Logger logger = LoggerFactory.getLogger(getClass());
+    private Logger logger = LoggerFactory.getLogger(getClass());
+
+
 
 
 
