@@ -88,7 +88,7 @@
                             <h3 class=""><a href="/news/${news.id?c}">${news.title}</a></h3>
                         </div>
                         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-                        ${news.description}
+                        ${news.description!}
                         </div>
                         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
                             <div class="minilogo"></div>

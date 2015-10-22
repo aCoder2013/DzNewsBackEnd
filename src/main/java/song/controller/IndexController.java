@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import song.model.NewsItem;
 import song.repository.NewsItemRepository;
+import song.service.NewsItemService;
 
 
 /**
@@ -24,20 +25,20 @@ public class IndexController {
     private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
     @Autowired
-    private NewsItemRepository newsItemRepository;
+    private NewsItemService itemService;
 
     /*
         跳转到主页
      */
     @RequestMapping("/")
     public String home(Model model, Pageable pageable) {
-        Page<NewsItem> newsItemList = newsItemRepository.findAllByOrderByPubTime(pageable);
+        Page<NewsItem> newsItemList = itemService.findRecentNews(pageable);
         model.addAttribute("newsList", newsItemList.getContent());
 //        model.addAttribute("pagenum", newsItemList.hasNext() ? (newsItemList.nextPageable().getPageNumber()>0?newsItemList.nextPageable().getPageNumber():0) : 0);
         model.addAttribute("pagenum",pageable.getPageNumber());
         return "home";
     }
 
-    
+
 
 }

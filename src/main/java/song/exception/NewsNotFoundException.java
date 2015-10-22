@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class NewsNotFoundException extends RuntimeException {
     private Logger logger = LoggerFactory.getLogger(NewsNotFoundException.class);
     private String message;
+
+
+    public NewsNotFoundException() {
+    }
+
     public NewsNotFoundException(String message) {
         super(message);
         this.message = message;

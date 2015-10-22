@@ -31,5 +31,4 @@ public class ColllectRegularNewsTest {
         CollectRegularNews news = new CollectRegularNews(newsItemRepository, newsDetailRepository);
         news.collect("http://www.cnbeta.com/articles/433807.htm");
     }
-
-}
+    }
