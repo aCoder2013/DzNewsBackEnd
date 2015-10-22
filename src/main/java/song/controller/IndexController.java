@@ -13,6 +13,8 @@ import song.model.NewsItem;
 import song.repository.NewsItemRepository;
 import song.service.NewsItemService;
 
+import java.util.List;
+
 
 /**
  * Created by Song on 2015/6/12.
@@ -32,9 +34,8 @@ public class IndexController {
      */
     @RequestMapping("/")
     public String home(Model model, Pageable pageable) {
-        Page<NewsItem> newsItemList = itemService.findRecentNews(pageable);
-        model.addAttribute("newsList", newsItemList.getContent());
-//        model.addAttribute("pagenum", newsItemList.hasNext() ? (newsItemList.nextPageable().getPageNumber()>0?newsItemList.nextPageable().getPageNumber():0) : 0);
+        List<NewsItem> newsItemList = itemService.findRecentNews(pageable);
+        model.addAttribute("newsList", newsItemList);
         model.addAttribute("pagenum",pageable.getPageNumber());
         return "home";
     }

@@ -39,10 +39,10 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
 
 
     @Transactional(readOnly = true)
-    public Page<NewsItem> findRecentNews(Pageable pageable){
-        Page<NewsItem> items = itemRepository.findAllByOrderByPubTime(pageable);
-        if(items==null)throw new NewsNotFoundException();
-        return items;
+    public List<NewsItem>  findRecentNews(Pageable pageable){
+        List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();
+        if(itemList ==null)throw new NewsNotFoundException();
+        return itemList;
     }
 
     public List<NewsItem> findAll(Pageable pageable) {
