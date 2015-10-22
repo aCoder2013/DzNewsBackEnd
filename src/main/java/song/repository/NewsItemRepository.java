@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 import song.model.NewsDetail;
 import song.model.NewsItem;
 
+import java.util.List;
+
 
 /**
  * Created by Song on 2015/8/6.
@@ -23,6 +25,8 @@ public interface NewsItemRepository extends JpaRepository<NewsItem,Long> {
      */
     @Query("SELECT n FROM NewsItem n order by pubTime desc ")
     Page<NewsItem> findAllByOrderByPubTime(Pageable pageable);
+
+
 
 
 

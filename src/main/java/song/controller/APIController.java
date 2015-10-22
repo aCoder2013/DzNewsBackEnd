@@ -9,7 +9,8 @@ import song.exception.NewsNotFoundException;
 import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
-import song.repository.NewsItemRepository;
+import song.service.NewsDetailService;
+import song.service.NewsItemService;
 
 import java.util.List;
 
@@ -21,11 +22,10 @@ import java.util.List;
 public class APIController {
 
     @Autowired
-    private NewsItemRepository newsItemRepository;
+    private NewsItemService itemService;
 
     @Autowired
-    private NewsDetailRepository newsDetailRepository;
-
+    private NewsDetailService detailService;
 
 
 
@@ -36,7 +36,7 @@ public class APIController {
      */
     @RequestMapping(value = "/news")
     public List<NewsItem> showNewsPage(Pageable pageable){
-        return newsItemRepository.findAll(pageable).getContent();
+        return itemService.findAll(pageable);
     }
 
     /**
@@ -45,8 +45,7 @@ public class APIController {
      */
     @RequestMapping(value = "/news/detail/{id}")
     public NewsDetail showNewsDetail(@PathVariable("id")Long id){
-        NewsDetail detail = newsDetailRepository.findNewsDetailByNewsItemId(id);
-        if(detail == null) throw new NewsNotFoundException("News Detail with " +id+" doesn't find");
+        NewsDetail detail = detailService.findByNewsItemId(id);
         return detail;
     }
 
@@ -57,8 +56,7 @@ public class APIController {
      */
     @RequestMapping(value = "/news/{id}")
     public NewsItem showNewsItem(@PathVariable Long id){
-        NewsItem item  = newsItemRepository.findOne(id);
-        if(item==null) throw new NewsNotFoundException("News with "+ id +" doesn't exit .");
+        NewsItem item  = itemService.get(id);
         return item;
     }
 

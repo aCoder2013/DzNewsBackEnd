@@ -53,9 +53,6 @@ public abstract  class BaseService<T,ID extends Serializable>{
         return crudRepository.exists(id);
     }
 
-    public Iterable<T> findAll(Iterable<ID> ids){
-        return crudRepository.findAll(ids);
-    }
 
     public long count(){
         return crudRepository.count();
@@ -73,5 +70,6 @@ public abstract  class BaseService<T,ID extends Serializable>{
     public void delete(Iterable<? extends T> entities){
         crudRepository.delete(entities);
     }
+
 
 }

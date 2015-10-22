@@ -11,27 +11,45 @@ import song.model.NewsItem;
 import song.repository.NewsItemRepository;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 
 /**
  * Created by Song on 2015/10/21.
  */
 @Service
 @Transactional
-@Lazy
 public class NewsItemService extends BaseService<NewsItem,Long> {
 
     @Autowired
-    private NewsItemRepository repository ;
+    private NewsItemRepository itemRepository ;
 
     @PostConstruct
     private void init(){
         //必须调用
-        setCrudRepository(repository);
+        setCrudRepository(itemRepository);
     }
+
+    public NewsItem get(Long id ){
+        NewsItem item = itemRepository.findOne(id);
+        if(item==null)throw new NewsNotFoundException("News with "+id +" not found ");
+        item.setBeenRead(item.getBeenRead()+1);
+        itemRepository.save(item);
+        return item;
+    }
+
+
     @Transactional(readOnly = true)
     public Page<NewsItem> findRecentNews(Pageable pageable){
-        Page<NewsItem> items = repository.findAllByOrderByPubTime(pageable);
+        Page<NewsItem> items = itemRepository.findAllByOrderByPubTime(pageable);
         if(items==null)throw new NewsNotFoundException();
         return items;
     }
+
+    public List<NewsItem> findAll(Pageable pageable) {
+        List<NewsItem> itemList = itemRepository.findAll(pageable).getContent();
+        if(itemList==null) throw new NewsNotFoundException();
+        return itemList;
+    }
+
+
 }

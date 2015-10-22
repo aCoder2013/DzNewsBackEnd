@@ -11,6 +11,8 @@ import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
+import song.service.NewsDetailService;
+import song.service.NewsItemService;
 import song.utils.NewsItemBuilder;
 
 
@@ -32,14 +34,14 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
     private boolean changed =false;//标志位,默认内容不发生改变
     NewsItem item;
     BeanFieldGroup<NewsItem> formFieldBing;
-    private NewsItemRepository itemRepository;
-    private NewsDetailRepository detailRepository;
+    private NewsItemService itemService;
+    private NewsDetailService detailService;
 
 
 
-    public EditArticleForm(NewsItemRepository itemRepository, NewsDetailRepository detailRepository) {
-        this.itemRepository = itemRepository;
-        this.detailRepository = detailRepository;
+    public EditArticleForm(NewsItemService itemService,NewsDetailService detailService) {
+        this.itemService = itemService;
+        this.detailService = detailService;
         configureComponents();
         setUpValueChangeListener();
         buildLayout();
@@ -69,11 +71,11 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
                 if(changed){
                     NewsDetail detail = item.getNewsDetail();
                     detail.setContent(content.getValue());
-                    detailRepository.save(detail);
+                    detailService.save(detail);
                     item.setAuth(auth.getValue());
                     item.setTitle(title.getValue());
                     item.setDescription(description.getValue());
-                    itemRepository.save(item);
+                    itemService.save(item);
                 }
 //                getUI().refereshTable();//刷新模型
                 Notification.show("save", Notification.Type.TRAY_NOTIFICATION);
@@ -108,7 +110,7 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
     }
 
     void edit(Long id){
-        this.item = itemRepository.findOne(id);
+        this.item = itemService.get(id);
         if(item!=null){
             formFieldBing  = BeanFieldGroup.bindFieldsBuffered(item, this);
             content.setValue(item.getNewsDetail().getContent());
