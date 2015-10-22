@@ -1,6 +1,8 @@
 package song.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +17,7 @@ import javax.annotation.PostConstruct;
  */
 @Service
 @Transactional
-@Lazy
+@CacheConfig(cacheNames = "details")
 public class NewsDetailService extends BaseService<NewsDetail,Long> {
 
     @Autowired
@@ -28,6 +30,7 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     }
 
     @Transactional(readOnly = true)
+    @Cacheable(key = "#id")
     public NewsDetail findByNewsItemId(Long id){
         NewsDetail detail = detailRepository.findNewsDetailByNewsItemId(id);
         if (null == detail) throw new NewsNotFoundException();

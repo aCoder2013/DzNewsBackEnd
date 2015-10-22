@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * 用户表
@@ -14,7 +15,8 @@ import javax.persistence.Id;
  */
 @Entity(name = "admin")
 @JsonIgnoreProperties(value = {"password","id"})
-public class Admin {
+public class Admin extends BaseEntity {
+    private static final long serialVersionUID = 1103848239243405667L;
 
     @Id
     @GeneratedValue

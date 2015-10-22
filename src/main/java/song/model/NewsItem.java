@@ -15,7 +15,8 @@ import java.util.Date;
  */
 @Entity
 @JsonAutoDetect
-public class NewsItem {
+public class NewsItem extends BaseEntity {
+    private static final long serialVersionUID = 6496239895533614232L;
 
     @Id
     @GeneratedValue

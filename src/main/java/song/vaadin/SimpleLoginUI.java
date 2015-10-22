@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import song.repository.AdminRepository;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
+import song.service.NewsDetailService;
+import song.service.NewsItemService;
 
 /**
  * Created by Song on 2015/10/8.
@@ -24,9 +26,10 @@ public class SimpleLoginUI extends UI {
     private  AdminRepository adminRepository ;
 
     @Autowired
-    private NewsItemRepository repository;
+    private NewsItemService itemService;
+
     @Autowired
-    private NewsDetailRepository detailRepository;
+    private NewsDetailService detailService;
 
     @Override
     protected void init(VaadinRequest request) {
@@ -45,7 +48,7 @@ public class SimpleLoginUI extends UI {
         //
         // Add the main view of the application
         //
-        getNavigator().addView(AdminView.NAME,new AdminView(repository,detailRepository));
+        getNavigator().addView(AdminView.NAME,new AdminView(itemService,detailService));
 
         //
         // We use a view change handler to ensure the user is always redirected

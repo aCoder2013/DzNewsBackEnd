@@ -1,6 +1,7 @@
 package song.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import song.model.Admin;
 
@@ -8,7 +9,7 @@ import song.model.Admin;
  * 用户相关数据库操作接口
  * Created by Song on 2015/6/12.
  */
-@Transactional
+@Repository
 public interface AdminRepository extends JpaRepository<Admin,Integer> {
 
     /**

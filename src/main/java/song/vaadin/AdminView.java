@@ -11,6 +11,8 @@ import song.event.AddArticleEvent;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
 import song.repository.NewsItemRepository;
+import song.service.NewsDetailService;
+import song.service.NewsItemService;
 import song.utils.EventBusHelper;
 
 import java.util.List;
@@ -27,15 +29,14 @@ public class AdminView extends CustomComponent implements View {
     private Table table ;
 
     private EditArticleForm articleForm;
-    private NewsItemRepository repository;
-    private NewsDetailRepository detailRepository;
+    private NewsItemService itemService;
+    private NewsDetailService detailService;
 
 
-
-    public AdminView(NewsItemRepository repository, NewsDetailRepository detailRepository) {
-        this.repository = repository;
-        this.detailRepository  = detailRepository;
-        articleForm = new EditArticleForm(repository,detailRepository);
+    public AdminView(NewsItemService itemService,NewsDetailService detailService) {
+        this.itemService = itemService;
+        this.detailService = detailService;
+        articleForm = new EditArticleForm(itemService,detailService);
     }
 
     public Table getTable() {
@@ -47,7 +48,7 @@ public class AdminView extends CustomComponent implements View {
 
     private  void setUp() {
         setSizeFull();
-        final List<NewsItem> newsItems = repository.findAll();
+        final List<NewsItem> newsItems = itemService.findAll();
         table = new Table();
         table.addContainerProperty("Id",Long.class,null);
         table.addContainerProperty("Title",String.class,null);
@@ -69,12 +70,12 @@ public class AdminView extends CustomComponent implements View {
 
     public void refereshTable(){
         table.removeAllItems();
-        setUpTable(repository.findAll());
+        setUpTable(itemService.findAll());
     }
 
 
     private void setUpTable(List<NewsItem> newsItems){
-        for(NewsItem item:newsItems){
+        for(final NewsItem item:newsItems){
             Long id = item.getId();
             String title = item.getTitle();
             Button change = new Button("修改",FontAwesome.EDIT);
@@ -95,7 +96,7 @@ public class AdminView extends CustomComponent implements View {
                 @Override
                 public void buttonClick(Button.ClickEvent event) {
                     Long id = (Long) event.getButton().getData();
-                    repository.delete(id);
+                    itemService.delete(id);
                     table.removeItem(id);
                     Notification.show("Id:"+id+"，已经被删除了！");
                 }

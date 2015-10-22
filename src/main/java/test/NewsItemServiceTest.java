@@ -31,7 +31,7 @@ public class NewsItemServiceTest {
 
     @Test
     public void testFindRecentNews() throws Exception {
-        List<NewsItem> itemList = itemService.findRecentNews(new PageRequest(1,10)).getContent();
+        List<NewsItem> itemList = itemService.findRecentNews(new PageRequest(1,10));
         Assert.notNull(itemList);
     }
 }
