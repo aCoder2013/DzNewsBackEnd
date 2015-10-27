@@ -1,18 +1,18 @@
 package song.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * 新闻详情
  * Created by Song on 2015/8/6.
  */
 @Entity
+@Table(name = "news_detail")
 @JsonAutoDetect
 public class NewsDetail extends BaseEntity{
 
@@ -33,6 +33,10 @@ public class NewsDetail extends BaseEntity{
     private String content;
     @Column
     private int comNumber;//评论数目
+
+    @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.EAGER,mappedBy ="detail")
+    @JsonIgnore
+    private List<Comment> comments = new ArrayList<>();
 
     public NewsDetail() {
     }
@@ -89,6 +93,14 @@ public class NewsDetail extends BaseEntity{
 
     public void setComNumber(int comNumber) {
         this.comNumber = comNumber;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     @Override

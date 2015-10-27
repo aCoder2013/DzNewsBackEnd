@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import song.exception.NewsNotFoundException;
+import song.model.Comment;
 import song.model.NewsDetail;
 import song.model.NewsItem;
 import song.repository.NewsDetailRepository;
@@ -26,6 +28,7 @@ public class APIController {
 
     @Autowired
     private NewsDetailService detailService;
+
 
 
 
@@ -60,5 +63,15 @@ public class APIController {
         return item;
     }
 
+    @RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)
+    public Comment addComment(@PathVariable("id") Long detailId,Comment comment){
+            System.out.println(comment);
+            return detailService.addComment(detailId,comment);
+    }
+
+    @RequestMapping(value = "/detail/{id}/comment")
+    public List<Comment> showAllComments(@PathVariable("id") Long detailId){
+        return detailService.getAllComments(detailId);
+    }
 
 }

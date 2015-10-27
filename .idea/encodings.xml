@@ -9,29 +9,5 @@
     <file url="file://$PROJECT_DIR$/src/lib/httpclient-4.2.jar" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/lib/httpcore-4.2.jar" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/lib/scs-java-sdk-distribution-0.0.1-SNAPSHOT-bin.jar" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/css/font-awesome.css" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/css/material.min.css" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/css/styles.css" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/SplitShire-068.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/about-bg.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/android-desktop.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/avatar.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/bg.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/co1.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/co2.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/favicon.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/home-bg.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/ios-desktop.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/logo.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/post-bg.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/profile-pic-300px.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/img/road_big.jpg" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-2.1.3.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/material.min.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/module.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/error.ftl" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/notfound.ftl" charset="GBK" />
   </component>
 </project>

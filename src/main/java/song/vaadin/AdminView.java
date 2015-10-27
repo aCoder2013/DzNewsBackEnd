@@ -66,7 +66,7 @@ public class AdminView extends CustomComponent implements View {
         mainLayout.setExpandRatio(articleForm,1);
         setCompositionRoot(mainLayout);
     }
-
+    
 
     public void refereshTable(){
         table.removeAllItems();

@@ -2,114 +2,202 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="增加导航栏">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/model/BaseEntity.java" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__com_fasterxml_classmate_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_4_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_4_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_35.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_tomcat_jdbc_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_apache_tomcat_tomcat_juli_8_0_23.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_aspectj_aspectjrt_1_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_8_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_atteo_evo_inflector_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_freemarker_freemarker_2_3_22.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_hibernate_hibernate_core_4_3_10_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_4_3_10_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_aop_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_rest_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_freemarker_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_jdbc_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_logging_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_test_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_web_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_websocket_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_9_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_data_spring_data_jpa_1_7_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_data_spring_data_rest_core_2_2_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_data_spring_data_rest_webmvc_2_2_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_hateoas_spring_hateoas_0_16_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_plugin_spring_plugin_core_1_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_aop_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_aspects_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_beans_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_context_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_context_support_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_core_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_expression_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_messaging_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_orm_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_tx_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_web_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_webmvc_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_springframework_spring_websocket_4_1_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\.idea\libraries\Maven__org_yaml_snakeyaml_1_14.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/model/Comment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/repository/CommentRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/test/CommentTest.java" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\controller\IndexController.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\controller\NewsController.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\controller\UserController.class" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\exception\NewsItemNotFoundException.class" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\song\interceptor\AdminAuthorizationInterceptor.class" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\bootstrap.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\clean-blog.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\material.min.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\metisMenu.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\morris.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\sb-admin-2.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\simditor.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\styles.css" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\css\timeline.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\SplitShire-068.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\about-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\android-desktop.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\co1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\co2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\home-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\ios-desktop.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\post-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\profile-pic-300px.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\img\road_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\bootstrap.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\clean-blog.min.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\hotkeys.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\jquery-2.1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\material.min.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\metisMenu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\module.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\sb-admin-2.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\simditor.js" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\static\js\uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\error.ftl" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\error1.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\home.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\news_detail.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\notfound.ftl" afterPath="" />
       <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\classes\templates\notfound.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT.war.original" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\NewsServiceEndApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\controller\IndexController.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\controller\NewsController.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\controller\UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\model\News.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\model\NewsDetail.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\model\NewsItem.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\model\User.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\repository\NewsDetailRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\repository\NewsItemRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\repository\NewsRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\repository\UserRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\spider\AutoCollectNews.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\spider\CollectLeiFengNews.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\spider\ScheduledCollectTask.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\utils\SaeUploadUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\song\utils\StringUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\blog-home.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\clean-blog.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\metisMenu.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\morris.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\sb-admin-2.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\simditor.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\css\timeline.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\img\SplitShire-068.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\img\about-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\img\home-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\img\post-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\clean-blog.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\hotkeys.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\jquery-2.1.3.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\metisMenu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\module.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\sb-admin-2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\simditor.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\static\js\uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\templates\add_news.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\templates\home.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\templates\index.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\templates\news_admin.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\classes\templates\news_detail.ftl" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\antlr-2.7.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\aspectjrt-1.8.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\aspectjweaver-1.8.5.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\btf-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\classmate-1.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\dom4j-1.6.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\evo-inflector-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\freemarker-2.3.22.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\guava-16.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\hibernate-commons-annotations-4.0.5.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\hibernate-core-4.3.10.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\hibernate-entitymanager-4.3.10.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\hibernate-validator-5.1.3.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jackson-annotations-2.4.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jackson-core-2.4.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jackson-coreutils-1.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jackson-databind-2.4.6.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jandex-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\javassist-3.18.1-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\javax.transaction-api-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jboss-logging-3.1.3.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jboss-logging-annotations-1.2.0.Beta1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jcl-over-slf4j-1.7.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\json-patch-1.7.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jsoup-1.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jsr305-2.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\jul-to-slf4j-1.7.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\log4j-over-slf4j-1.7.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\logback-classic-1.1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\logback-core-1.1.3.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\msg-simple-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\mysql-connector-java-5.1.35.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\objenesis-2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\slf4j-api-1.7.12.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\snakeyaml-1.14.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-aop-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-aspects-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-beans-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-autoconfigure-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-aop-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-data-jpa-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-data-rest-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-freemarker-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-jdbc-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-logging-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-tomcat-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-web-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-boot-starter-websocket-1.2.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-context-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-context-support-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-core-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-data-commons-1.9.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-data-jpa-1.7.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-data-rest-core-2.2.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-data-rest-webmvc-2.2.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-expression-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-hateoas-0.16.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-jdbc-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-messaging-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-orm-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-plugin-core-1.1.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-tx-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-web-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-webmvc-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\spring-websocket-4.1.6.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-embed-core-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-embed-el-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-embed-logging-juli-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-embed-websocket-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-jdbc-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\tomcat-juli-8.0.23.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\demo-0.0.1-SNAPSHOT\WEB-INF\lib\xml-apis-1.0.b2.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\dznews.war" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\surefire-reports\TEST-song.NewsServiceEndApplicationTests.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\target\surefire-reports\song.NewsServiceEndApplicationTests.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/APIController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/APIController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/Admin.class" afterPath="$PROJECT_DIR$/target/classes/song/model/Admin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/AdminRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/AdminRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView$1.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView$2.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/AdminView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm$1.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm$2.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/EditArticleForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/song/controller/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/NewsDetail.class" afterPath="$PROJECT_DIR$/target/classes/song/model/NewsDetail.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/NewsDetailRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/NewsDetailRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/model/NewsItem.class" afterPath="$PROJECT_DIR$/target/classes/song/model/NewsItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/repository/NewsItemRepository.class" afterPath="$PROJECT_DIR$/target/classes/song/repository/NewsItemRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/NewsItemResTest.class" afterPath="$PROJECT_DIR$/target/classes/test/NewsItemResTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/service/NewsItemService.class" afterPath="$PROJECT_DIR$/target/classes/song/service/NewsItemService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/NewsItemServiceTest.class" afterPath="$PROJECT_DIR$/target/classes/test/NewsItemServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/service/NewsDetailService.class" afterPath="$PROJECT_DIR$/target/classes/song/service/NewsDetailService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication$1.class" afterPath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" afterPath="$PROJECT_DIR$/target/classes/song/NewsServiceEndApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/SimpleLoginUI$1.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/SimpleLoginUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/song/vaadin/SimpleLoginUI.class" afterPath="$PROJECT_DIR$/target/classes/song/vaadin/SimpleLoginUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/model/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/song/model/Admin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java" afterPath="$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/controller/APIController.java" afterPath="$PROJECT_DIR$/src/main/java/song/controller/APIController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java" afterPath="$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/service/BaseService.java" afterPath="$PROJECT_DIR$/src/main/java/song/service/BaseService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java" afterPath="$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java" afterPath="$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java" afterPath="$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/model/NewsItem.java" afterPath="$PROJECT_DIR$/src/main/java/song/model/NewsItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java" afterPath="$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java" afterPath="$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/NewsItemServiceTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/NewsItemServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsServiceEnd.iml" afterPath="$PROJECT_DIR$/NewsServiceEnd.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java" afterPath="$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginUI.java" afterPath="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.log" afterPath="$PROJECT_DIR$/my.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\vaadin\SImpleLoginView.java" afterPath="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginView.java" />
@@ -157,107 +245,143 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/model/Comment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="e#1323#1324#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
+                <element signature="e#1515#1516#0" expanded="true" />
+                <element signature="e#1548#1549#0" expanded="true" />
+                <element signature="e#1579#1580#0" expanded="true" />
+                <element signature="e#1625#1626#0" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1767#1768#0" expanded="true" />
+                <element signature="e#1801#1802#0" expanded="true" />
+                <element signature="e#1838#1839#0" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
+                <element signature="e#1915#1916#0" expanded="true" />
+                <element signature="e#1951#1952#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/APIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsDetailService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7263682">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NewsServiceEndApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1556#1924#0" expanded="true" />
-                <element signature="e#1923#1924#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsItemRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MutableConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/configuration/MutableConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="434" column="0" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java">
+      <file leaf-file-name="CrudRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.0.RELEASE/spring-data-commons-1.11.0.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsDetailRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsDetailService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/song/service/BaseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4465116">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsItemService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java">
+      <file leaf-file-name="CommentTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test/CommentTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+              <caret line="33" column="34" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customnews.news_detail" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_detail">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.11-sources.jar!/org/junit/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customnews.comment" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..comment">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -268,10 +392,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="Bootstrap" />
-        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Html5" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -291,24 +416,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginMainView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/PrototypeScope.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/AdminUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/event/listener/AddArticleListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/utils/EventBusHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/DashboardMenu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/event/AddArticleEvent.java" />
-        <option value="dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_detail" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/news_detail.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/song/service.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/service/NewsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/BaseService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/error1.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/song/exception/handler/GlobalDefaultExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/exception/NewsItemNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/song/utils/View.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/exception/GlobalDefaultExceptionHandler.java" />
@@ -320,28 +427,46 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a270bf0d-e27c-4e6b-955e-e9e2336e6882/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/test/ColllectRegularNewsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/exception/NewsNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/controller/APIController.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/vaadin/EditArticleForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/NewsItemServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginUI.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ehcache.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/my.log" />
         <option value="$PROJECT_DIR$/src/main/java/song/model/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/model/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/model/NewsItem.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/service/BaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/.bowerrc" />
+        <option value="$PROJECT_DIR$/src/main/resources/bower.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/package.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/services.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/song/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/news_detail.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/controller.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/news_list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/app.js" />
+        <option value="$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/song/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/controller/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/model/Admin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/repository/UserRepository.java" />
+        <option value="dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..comment" />
+        <option value="$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java" />
+        <option value="$PROJECT_DIR$/target/my.log" />
+        <option value="$PROJECT_DIR$/src/main/java/song/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/controller/APIController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/CommentTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/model/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java" />
       </list>
     </option>
   </component>
@@ -365,10 +490,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1374" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -421,21 +546,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -467,200 +577,25 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="song" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="song" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="song" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="song" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="song" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsServiceEnd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -684,13 +619,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources" />
       <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\templates" />
       <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\static\img" />
       <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\static\css" />
       <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\static\js" />
-      <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\static\part" />
+      <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\static" />
+      <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd" />
       <recent name="D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\resources\templates\admin" />
     </key>
     <key name="OPEN_URL_DIALOG">
@@ -698,32 +636,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.NewsServiceEndApplication">
-    <configuration default="false" name="NewsItemResTest.testFindNewsDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="NewsServiceEnd" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.NewsItemResTest" />
-      <option name="METHOD_NAME" value="testFindNewsDetail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="NewsItemResTest.testGetNewsDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -820,6 +732,32 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="NewsServiceEnd" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommentTest.testAddComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="NewsServiceEnd" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CommentTest" />
+      <option name="METHOD_NAME" value="testAddComment" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1089,6 +1027,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1121,19 +1062,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testFindNewsDetail" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testGetNewsDetail" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindOne" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindRecentNews" />
-      <item index="4" class="java.lang.String" itemvalue="Application.NewsServiceEndApplication" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testGetNewsDetail" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindOne" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindRecentNews" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NewsServiceEndApplication" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CommentTest.testAddComment" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.NewsServiceEndApplication" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindRecentNews" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindOne" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testGetNewsDetail" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testFindNewsDetail" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CommentTest.testAddComment" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindRecentNews" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NewsItemServiceTest.testFindOne" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NewsItemResTest.testGetNewsDetail" />
       </list>
     </recent_temporary>
   </component>
@@ -1203,7 +1144,12 @@
       <workItem from="1445259772632" duration="49000" />
       <workItem from="1445306980863" duration="9691000" />
       <workItem from="1445408743280" duration="15047000" />
-      <workItem from="1445479052826" duration="18269000" />
+      <workItem from="1445479052826" duration="18870000" />
+      <workItem from="1445672363800" duration="10046000" />
+      <workItem from="1445739936817" duration="3228000" />
+      <workItem from="1445760877822" duration="3552000" />
+      <workItem from="1445836923167" duration="841000" />
+      <workItem from="1445916135086" duration="15515000" />
     </task>
     <task id="LOCAL-00001" summary="新闻项和新闻详情之间建立单向一对一的关系">
       <created>1438934052089</created>
@@ -1395,7 +1341,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367869000" />
+    <option name="totallyTimeSpent" value="401652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1407,8 +1353,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752994" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1418,20 +1364,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.50961536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5947282" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24591948" sideWeight="0.4903846" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3101197" sideWeight="0.4871795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35280728" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24839744" sideWeight="0.48924732" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24839744" sideWeight="0.5107527" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2003035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14102565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35364527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.5071942" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35364527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1440,37 +1386,6 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861805" sideWeight="0.4903846" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39499456" sideWeight="0.5106838" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14102565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35364527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752994" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32100108" sideWeight="0.49358973" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24591948" sideWeight="0.4903846" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39281827" sideWeight="0.48931623" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861805" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24839744" sideWeight="0.49280575" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2457265" sideWeight="0.5071942" order="3" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1517,7 +1432,7 @@
           <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="73" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1526,232 +1441,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.0.RC1/spring-web-4.2.0.RC1.jar!/org/springframework/web/bind/annotation/CrossOrigin.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/exception/GlobalDefaultExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/exception/NewsNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.7.2.RELEASE/spring-data-jpa-1.7.2.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.5.5/vaadin-server-7.5.5-sources.jar!/com/vaadin/server/communication/JSR356WebsocketInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="198" column="32" selection-start-line="198" selection-start-column="32" selection-end-line="198" selection-end-column="32" />
-          <folding>
-            <element signature="e#6977#6978#0" expanded="false" />
-            <element signature="e#7060#7061#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.2.RELEASE/spring-data-commons-1.9.2.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.1.6.RELEASE/spring-tx-4.1.6.RELEASE.jar!/org/springframework/transaction/annotation/Transactional.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8333335">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/NewsItemServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/NewsDetailRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/NewsItemResTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1059#1060#0" expanded="false" />
-            <element signature="e#1155#1156#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/ColllectRegularNewsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/EditArticleForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="43" selection-start-line="42" selection-start-column="7" selection-end-line="43" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2205#2900#0" expanded="false" />
-            <element signature="e#2899#2900#0" expanded="false" />
-            <element signature="e#2935#3240#0" expanded="false" />
-            <element signature="e#3239#3240#0" expanded="false" />
-            <element signature="e#4261#4262#0" expanded="false" />
-            <element signature="e#4291#4292#0" expanded="false" />
-            <element signature="e#4372#4373#0" expanded="false" />
-            <element signature="e#4401#4402#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1233#1234#0" expanded="false" />
-            <element signature="e#1261#1262#0" expanded="false" />
-            <element signature="e#2635#2981#0" expanded="false" />
-            <element signature="e#2980#2981#0" expanded="false" />
-            <element signature="e#3162#3527#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/ehcache/ehcache/3.0.0.m2/ehcache-3.0.0.m2.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/SimpleLoginUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="85" selection-start-line="50" selection-start-column="85" selection-end-line="50" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/NewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/APIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
-            <element signature="e#1023#1024#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ehcache/ehcache/3.0.0.m2/ehcache-3.0.0.m2.jar!/org/ehcache/config/CacheConfigurationBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8333335">
-          <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ehcache/ehcache/3.0.0.m2/ehcache-3.0.0.m2-sources.jar!/org/ehcache/config/CacheConfigurationBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.2.2.RELEASE/spring-context-support-4.2.2.RELEASE.jar!/org/springframework/cache/ehcache/EhCacheCacheManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1767,17 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1785,9 +1466,147 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0.jar!/javax/cache/annotation/CacheDefaults.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CacheDefaults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/ehcache/ehcache/3.0.0.m2/ehcache-3.0.0.m2-sources.jar!/org/ehcache/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.0.RC1/spring-boot-autoconfigure-1.3.0.RC1.jar!/org/springframework/boot/autoconfigure/cache/JCacheManagerCustomizer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.0.RC1/spring-boot-autoconfigure-1.3.0.RC1-sources.jar!/org/springframework/boot/autoconfigure/cache/JCacheManagerCustomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CacheResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CachePut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/configuration/MutableConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="434" column="0" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..admin">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_item">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.1.8.RELEASE/spring-context-4.1.8.RELEASE.jar!/org/springframework/cache/annotation/Cacheable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.1.8.RELEASE/spring-context-4.1.8.RELEASE-sources.jar!/org/springframework/cache/annotation/Cacheable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding>
+            <element signature="e#0#3627#0" expanded="false" />
             <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1802,116 +1621,24 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0.pom">
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/vaadin/AdminView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0.jar!/javax/cache/annotation/CacheDefaults.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CacheDefaults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ehcache/ehcache/3.0.0.m2/ehcache-3.0.0.m2-sources.jar!/org/ehcache/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.0.RC1/spring-boot-autoconfigure-1.3.0.RC1.jar!/org/springframework/boot/autoconfigure/cache/JCacheManagerCustomizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.0.RC1/spring-boot-autoconfigure-1.3.0.RC1-sources.jar!/org/springframework/boot/autoconfigure/cache/JCacheManagerCustomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/model/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CacheResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/annotation/CachePut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar!/javax/cache/configuration/MutableConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="434" column="0" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -1919,28 +1646,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsDetailRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/NewsItemRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/Temporal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToMany.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="11" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../JDK1.7/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../JDK1.7/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="744" column="0" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/spider/CollectLeiFengNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.2.RELEASE/spring-context-4.2.2.RELEASE.jar!/org/springframework/cache/annotation/Cacheable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.2.RELEASE/spring-context-4.2.2.RELEASE-sources.jar!/org/springframework/cache/annotation/Cacheable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="43" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#4086#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/AdminRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.0.RELEASE/spring-data-commons-1.11.0.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsDetail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#2025#2026#0" expanded="true" />
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/NewsItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/my.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1339" column="0" selection-start-line="1339" selection-start-column="0" selection-end-line="1339" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/repository/CommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/ColllectRegularNewsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.11-sources.jar!/org/junit/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.0.RELEASE/spring-data-commons-1.11.0.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/controller/APIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..news_detail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1948,35 +1818,74 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/song/NewsServiceEndApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1556#1924#0" expanded="true" />
-            <element signature="e#1923#1924#0" expanded="true" />
-          </folding>
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsItemService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/CommentTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <caret line="33" column="34" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
+            <element signature="e#1579#1580#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1838#1839#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1915#1916#0" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/service/NewsDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/service/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4465116">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7263682">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
