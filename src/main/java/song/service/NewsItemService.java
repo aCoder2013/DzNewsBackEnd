@@ -66,9 +66,14 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
         return itemList;
     }
 
+    /**
+     *  根据时间排序
+     * @param pageable
+     * @return
+     */
     @Cacheable
     public List<NewsItem> findAll(Pageable pageable) {
-        List<NewsItem> itemList = itemRepository.findAll(pageable).getContent();
+        List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();
         if(itemList==null) throw new NewsNotFoundException();
         return itemList;
     }

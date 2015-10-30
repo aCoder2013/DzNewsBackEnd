@@ -1,6 +1,6 @@
-D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\controller\NewsController.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\model\NewsItem.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\model\Admin.java
+D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\repository\CommentRepository.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\spider\AutoCollectNews.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\utils\NewsItemBuilder.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\spider\CollectRegularNews.java
@@ -10,7 +10,6 @@ D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\model\BaseEntity.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\service\NewsDetailService.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\controller\APIController.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\model\NewsDetail.java
-D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\controller\IndexController.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\service\NewsItemService.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\spider\CollectLeiFengNews.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\vaadin\DashboardMenu.java
@@ -30,8 +29,9 @@ D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\test\NewsItemResTest.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\service\BaseService.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\vaadin\EditArticleForm.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\exception\NewsNotFoundException.java
+D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\test\CommentTest.java
+D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\model\Comment.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\test\ColllectRegularNewsTest.java
-D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\controller\UserController.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\utils\View.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\vaadin\SimpleLoginView.java
 D:\AboutCoding\Java\项目\NewsServiceEnd\src\main\java\song\utils\SaeUploadUtils.java
