@@ -1,23 +1,19 @@
-package song.rest.controller.mvc;
+package song.rest.mvc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.hateoas.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import song.core.model.Comment;
-import song.core.model.NewsDetail;
-import song.core.model.NewsItem;
 import song.core.service.NewsDetailService;
 import song.core.service.NewsItemService;
-import song.rest.controller.resource.NewsDetailResource;
-import song.rest.controller.resource.NewsItemResource;
-import song.rest.controller.resource.asm.NewsDetailResourceAssmbler;
-import song.rest.controller.resource.asm.NewsItemResourceAssembler;
+import song.rest.resource.NewsDetailResource;
+import song.rest.resource.NewsItemResource;
+import song.rest.resource.asm.NewsDetailResourceAssmbler;
+import song.rest.resource.asm.NewsItemResourceAssembler;
 
 import java.util.List;
 

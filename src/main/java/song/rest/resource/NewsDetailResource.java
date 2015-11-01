@@ -1,4 +1,4 @@
-package song.rest.controller.resource;
+package song.rest.resource;
 
 import org.springframework.hateoas.ResourceSupport;
 import song.core.model.NewsDetail;

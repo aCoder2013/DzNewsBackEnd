@@ -1,9 +1,9 @@
-package song.rest.controller.resource.asm;
+package song.rest.resource.asm;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 import song.core.model.NewsDetail;
-import song.rest.controller.mvc.APIController;
-import song.rest.controller.resource.NewsDetailResource;
+import song.rest.mvc.APIController;
+import song.rest.resource.NewsDetailResource;
 
 
 /**
