@@ -8,8 +8,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 import song.NewsServiceEndApplication;
-import song.model.NewsItem;
-import song.service.NewsItemService;
+import song.core.model.NewsItem;
+import song.core.service.NewsItemService;
 
 import java.util.List;
 

@@ -4,11 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import song.NewsServiceEndApplication;
-import song.model.NewsDetail;
-import song.repository.NewsDetailRepository;
+import song.core.model.NewsDetail;
+import song.core.repository.NewsDetailRepository;
 
 /**
  * Created by Song on 2015/10/18.

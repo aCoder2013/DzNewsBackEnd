@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import song.NewsServiceEndApplication;
-import song.model.Comment;
-import song.model.NewsDetail;
-import song.repository.CommentRepository;
-import song.repository.NewsDetailRepository;
+import song.core.model.Comment;
+import song.core.model.NewsDetail;
+import song.core.repository.CommentRepository;
+import song.core.repository.NewsDetailRepository;
 
 /**
  * Created by Song on 2015/10/27.
@@ -22,6 +22,7 @@ public class CommentTest {
     private NewsDetailRepository repository;
     @Autowired
     private CommentRepository commentRepository;
+
 
     @Test
     public void testAddComment() throws Exception {
