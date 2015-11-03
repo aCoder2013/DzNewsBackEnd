@@ -1,8 +1,15 @@
 package song;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.support.http.StatViewServlet;
+import org.ehcache.CacheManager;
+import org.ehcache.EhcacheManager;
+import org.ehcache.config.DefaultConfiguration;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
+import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
@@ -11,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.cache.configuration.MutableConfiguration;
+import javax.sql.DataSource;
 import java.text.SimpleDateFormat;
 
 /**
@@ -50,11 +58,46 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
     }
 
 
+
+
     @Bean
     public Jackson2ObjectMapperBuilder jacksonBuilder() {
         Jackson2ObjectMapperBuilder b = new Jackson2ObjectMapperBuilder();
         b.indentOutput(true).dateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
         return b;
+    }
+
+/*    @Bean
+    public ServletRegistrationBean druidServlet() {
+        return new ServletRegistrationBean(new StatViewServlet(), "/druid*//*");
+    }*/
+
+
+    /**
+     * Druid DataSource
+     * @param driver
+     * @param url
+     * @param username
+     * @param password
+     * @return
+     */
+    @Bean
+    public DataSource druidDataSource(@Value("${spring.datasource.driver-class-name}") String driver,
+                                      @Value("${spring.datasource.url}") String url,
+                                      @Value("${spring.datasource.username}") String username,
+                                      @Value("${spring.datasource.password}") String password){
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName(driver);
+        dataSource.setUrl(url);
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        dataSource.setMaxActive(20);
+        dataSource.setMinIdle(1);
+        dataSource.setMaxWait(60000);
+        dataSource.setInitialSize(1);
+        dataSource.setTestOnBorrow(false);
+        dataSource.setTestOnReturn(false);
+        return dataSource;
     }
 
 }

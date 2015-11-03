@@ -13,6 +13,8 @@ import song.core.service.NewsDetailService;
 import song.core.service.NewsItemService;
 import song.core.utils.NewsItemBuilder;
 
+import java.util.Date;
+
 
 /**
  * Created by Song on 2015/9/29.
@@ -68,15 +70,18 @@ public class EditArticleForm extends FormLayout implements Property.ValueChangeL
             public void buttonClick(Button.ClickEvent event) {
                 if(changed){
                     NewsDetail detail = item.getNewsDetail();
+                    detail.setTitle(item.getTitle());
+                    detail.setPubTime(new Date());
                     detail.setContent(content.getValue());
                     detailService.save(detail);
                     item.setAuth(auth.getValue());
                     item.setTitle(title.getValue());
                     item.setDescription(description.getValue());
+                    item.setPubTime(new Date());
                     itemService.save(item);
                 }
 //                getUI().refereshTable();//刷新模型
-                Notification.show("save", Notification.Type.TRAY_NOTIFICATION);
+                Notification.show("Congratulation","新建文章成功，文章已经保存！",Notification.Type.HUMANIZED_MESSAGE);
             }
         });
         cancel.addClickListener(new Button.ClickListener() {

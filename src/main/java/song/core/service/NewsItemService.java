@@ -3,8 +3,7 @@ package song.core.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +22,6 @@ import java.util.List;
 @CacheConfig(cacheNames = "items")
 public class NewsItemService extends BaseService<NewsItem,Long> {
 
-    static int i =0;
     @Autowired
     private NewsItemRepository itemRepository ;
     private Logger logger = LoggerFactory.getLogger(NewsItemService.class);
@@ -40,27 +38,32 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
         if(item==null)throw new NewsNotFoundException("News with "+id +" not found ");
         item.setBeenRead(item.getBeenRead()+1);
         itemRepository.save(item);
-        logger.warn("===" +i+"====");
-        i++;
         return item;
     }
 
-
-
-
-    @Transactional(readOnly = true)
-    @Cacheable
-    public List<NewsItem>  findRecentNews(Pageable pageable){
-        List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();
-        if(itemList ==null)throw new NewsNotFoundException();
-        return itemList;
+    @Override
+    @CacheEvict(value = "items",key ="0")
+    public NewsItem save(NewsItem entity) {
+        return super.save(entity);
     }
 
-    @Cacheable
-    public List<NewsItem> findAll(){
-        List<NewsItem> itemList = itemRepository.findAll();
-        if(itemList==null) throw new NewsNotFoundException();
-        return itemList;
+
+    /**
+     * 当爬虫抓取最新新闻时,清除当前第一页的缓存，
+     * 并将itemList放入缓存中
+     * @param itemList
+     * @return
+     */
+    @Caching(evict = {@CacheEvict(value = "items",key ="0")},
+            put = {@CachePut(value = "items",key = "0")})
+    public List<NewsItem> save(List<NewsItem> itemList) {
+        return itemRepository.save(itemList);
+    }
+
+    @Override
+    @CacheEvict(value = "items",allEntries = true)
+    public void delete(Long id ) {
+        super.delete(id);
     }
 
     /**
@@ -68,9 +71,16 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @param pageable
      * @return
      */
-    @Cacheable
-    public List<NewsItem> findAll(Pageable pageable) {
+    @Transactional(readOnly = true)
+    @Cacheable(value = "items",key = "#pageable.getPageNumber()")
+    public List<NewsItem>  findRecentNews(Pageable pageable){
         List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();
+        if(itemList ==null)throw new NewsNotFoundException();
+        return itemList;
+    }
+
+    public List<NewsItem> findAll(){
+        List<NewsItem> itemList = itemRepository.findAll();
         if(itemList==null) throw new NewsNotFoundException();
         return itemList;
     }

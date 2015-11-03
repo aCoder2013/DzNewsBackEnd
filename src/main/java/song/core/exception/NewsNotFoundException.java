@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(value= HttpStatus.NOT_FOUND, reason="No such News ")  // 404
 public class NewsNotFoundException extends RuntimeException {
     private Logger logger = LoggerFactory.getLogger(NewsNotFoundException.class);
-    private String message;
 
 
     public NewsNotFoundException() {
@@ -19,7 +18,6 @@ public class NewsNotFoundException extends RuntimeException {
 
     public NewsNotFoundException(String message) {
         super(message);
-        this.message = message;
         logger.warn(message,getCause());
     }
 }

@@ -9,6 +9,8 @@ import song.core.model.NewsDetail;
 import song.core.model.NewsItem;
 import song.core.repository.NewsDetailRepository;
 import song.core.repository.NewsItemRepository;
+import song.core.service.NewsDetailService;
+import song.core.service.NewsItemService;
 import song.core.utils.NewsItemBuilder;
 
 import java.io.IOException;
@@ -28,8 +30,8 @@ public class CollectLeiFengNews implements AutoCollectNews{
 
     public static final String LEIFENG_NEWS_URL ="http://www.leiphone.com/";
 
-    private NewsItemRepository newsItemRepository;
-    private NewsDetailRepository newsDetailRepository;
+    private NewsItemService itemService;
+    private NewsDetailService detailService;
 
     private Document doc  = null;
 
@@ -37,18 +39,19 @@ public class CollectLeiFengNews implements AutoCollectNews{
     public CollectLeiFengNews() {
     }
 
-    public CollectLeiFengNews(NewsItemRepository newsItemRepository, NewsDetailRepository newsDetailRepository) {
-        this.newsItemRepository = newsItemRepository;
-        this.newsDetailRepository = newsDetailRepository;
+    public CollectLeiFengNews(NewsItemService itemService, NewsDetailService detailService) {
+        this.itemService = itemService;
+        this.detailService = detailService;
     }
+
     /*
-        收集新闻
-     */
+            收集新闻
+         */
     @Override
     public void collect(String url) {
         itemList = ParseNews(url);//解析新闻列表
         if(itemList!=null) {
-            newsItemRepository.save(itemList);//保存新闻
+            itemService.save(itemList);//保存新闻
         }
     }
         /**
@@ -94,7 +97,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
     private List<NewsItem> ParseNews(String url) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy / MM /dd HH:mm");
         List<NewsItem> itemList = new ArrayList<>();
-        List<NewsItem> itemInDB = newsItemRepository.findAll();//找到在数据库中的所有数据
+        List<NewsItem> itemInDB = itemService.findAll();//找到在数据库中的所有数据
         for(NewsItem item:itemInDB){
             item.setId(null);//将ID置为空
         }
@@ -147,7 +150,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
                 if(detail!=null) {
                     detail.setAuth(news.getAuth());
                     detail.setPubTime(new Date());//设置发表日期
-                    newsDetailRepository.save(detail);
+                    detailService.save(detail);
                     news.setNewsDetail(detail);//建立关联关系
                     itemList.add(news);
                 }

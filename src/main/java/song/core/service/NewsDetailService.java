@@ -2,6 +2,7 @@ package song.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,18 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     private void init(){
         //必须调用
         setCrudRepository(detailRepository);
+    }
+
+    @Override
+    @CacheEvict(value = "details",allEntries = true)
+    public <S extends NewsDetail> S save(S entity) {
+        return super.save(entity);
+    }
+
+    @Override
+    @CacheEvict(value = "detail",allEntries = true)
+    public <S extends NewsDetail> Iterable<S> save(Iterable<S> entities) {
+        return super.save(entities);
     }
 
     @Transactional(readOnly = true)

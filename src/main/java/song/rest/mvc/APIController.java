@@ -50,7 +50,7 @@ public class APIController {
      */
     @RequestMapping(value = "",method = RequestMethod.GET)
     public ResponseEntity<List<NewsItemResource>> showNewsPage(Pageable pageable){
-        return new ResponseEntity<List<NewsItemResource>>(new NewsItemResourceAssembler().toResources(itemService.findAll(pageable)),HttpStatus.OK);
+        return new ResponseEntity<List<NewsItemResource>>(new NewsItemResourceAssembler().toResources(itemService.findRecentNews(pageable)),HttpStatus.OK);
     }
 
     /**
@@ -64,6 +64,11 @@ public class APIController {
                         .toResource(detailService.findByNewsItemId(id)),HttpStatus.OK);
     }
 
+
+    @RequestMapping("/news/{id}/delete")
+    public void delete(@PathVariable("id")Long id){
+        itemService.delete(id);
+    }
 
 
     /*@RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)

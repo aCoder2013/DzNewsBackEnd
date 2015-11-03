@@ -9,5 +9,6 @@
     <file url="file://$PROJECT_DIR$/src/lib/httpclient-4.2.jar" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/lib/httpcore-4.2.jar" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/lib/scs-java-sdk-distribution-0.0.1-SNAPSHOT-bin.jar" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -177,4 +177,12 @@ public class NewsItem extends BaseEntity {
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "NewsItem{" +
+                "title='" + title + '\'' +
+                ", pubTime=" + pubTime +
+                '}'+"\n";
+    }
 }
