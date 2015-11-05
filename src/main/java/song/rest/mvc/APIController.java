@@ -3,6 +3,7 @@ package song.rest.mvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import song.rest.resource.NewsDetailResource;
 import song.rest.resource.NewsItemResource;
 import song.rest.resource.asm.NewsDetailResourceAssmbler;
 import song.rest.resource.asm.NewsItemResourceAssembler;
+import song.rest.util.MediaTypes;
 
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class APIController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/{id}")
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResponseEntity<NewsItemResource> news(@PathVariable("id") Long id){
          return new ResponseEntity<>(new NewsItemResourceAssembler()
                  .toResource(itemService.get(id)), HttpStatus.OK);
@@ -57,7 +59,7 @@ public class APIController {
      * API：根据指定NewsItem ID
      *      获取新闻详情
      */
-    @RequestMapping(value = "/detail/{id}")
+    @RequestMapping(value = "/detail/{id}",method = RequestMethod.GET)
     public ResponseEntity<NewsDetailResource> showNewsDetail(@PathVariable("id")Long id){
         return new ResponseEntity<>(
                 new NewsDetailResourceAssmbler()
