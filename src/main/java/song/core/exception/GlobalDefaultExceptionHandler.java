@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,10 +15,16 @@ import javax.servlet.http.HttpServletRequest;
  * Created by Song on 2015/10/19.
  */
 @ControllerAdvice
-public class GlobalDefaultExceptionHandler {
+public class GlobalDefaultExceptionHandler  extends ResponseEntityExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(GlobalDefaultExceptionHandler.class);
 
     public static final String DEFAULT_ERROR_VIEW = "error";
+
+/*
+    public final ResponseEntity<?> handleException(ConstraintViolationException ex, WebRequest request)    {
+        return new ResponseEntity(BeanValidators.extractPropertyAndMessage(ex.getConstraintViolations()),
+                HttpStatus.BAD_REQUEST);
+    }*/
 
     @ExceptionHandler(value = Exception.class)
     public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
