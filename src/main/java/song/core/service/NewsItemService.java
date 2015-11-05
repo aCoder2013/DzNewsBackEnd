@@ -18,7 +18,7 @@ import java.util.List;
  * Created by Song on 2015/10/21.
  */
 @Service
-@Transactional
+@Transactional(readOnly = true)
 @CacheConfig(cacheNames = "items")
 public class NewsItemService extends BaseService<NewsItem,Long> {
 
@@ -42,6 +42,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
     }
 
     @Override
+    @Transactional(readOnly = false)
     @CacheEvict(value = "items",key ="0")
     public NewsItem save(NewsItem entity) {
         return super.save(entity);
@@ -54,6 +55,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @param itemList
      * @return
      */
+    @Transactional(readOnly = false)
     @Caching(evict = {@CacheEvict(value = "items",key ="0")},
             put = {@CachePut(value = "items",key = "0")})
     public List<NewsItem> save(List<NewsItem> itemList) {
@@ -61,6 +63,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
     }
 
     @Override
+    @Transactional(readOnly = false)
     @CacheEvict(value = "items",allEntries = true)
     public void delete(Long id ) {
         super.delete(id);
@@ -71,7 +74,6 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @param pageable
      * @return
      */
-    @Transactional(readOnly = true)
     @Cacheable(value = "items",key = "#pageable.getPageNumber()")
     public List<NewsItem>  findRecentNews(Pageable pageable){
         List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();

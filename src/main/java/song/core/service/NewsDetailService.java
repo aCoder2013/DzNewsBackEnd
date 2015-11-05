@@ -20,7 +20,7 @@ import java.util.List;
  * Created by Song on 2015/10/22.
  */
 @Service
-@Transactional
+@Transactional(readOnly = true)
 @CacheConfig(cacheNames = "details")
 public class NewsDetailService extends BaseService<NewsDetail,Long> {
 
@@ -37,17 +37,18 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
 
     @Override
     @CacheEvict(value = "details",allEntries = true)
+    @Transactional(readOnly = false)
     public <S extends NewsDetail> S save(S entity) {
         return super.save(entity);
     }
 
     @Override
     @CacheEvict(value = "detail",allEntries = true)
+    @Transactional(readOnly = false)
     public <S extends NewsDetail> Iterable<S> save(Iterable<S> entities) {
         return super.save(entities);
     }
 
-    @Transactional(readOnly = true)
     @Cacheable(key = "#id")
     public NewsDetail findByNewsItemId(Long id){
         NewsDetail detail = detailRepository.findNewsDetailByNewsItemId(id);
@@ -55,6 +56,7 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
         return detail;
     }
 
+    @Transactional(readOnly = false)
     public Comment  addComment(Long detailId ,Comment comment){
         NewsDetail detail =  detailRepository.findOne(detailId);
         if(detail==null) throw  new NewsNotFoundException();
