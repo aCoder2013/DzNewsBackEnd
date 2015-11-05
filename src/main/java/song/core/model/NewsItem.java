@@ -15,9 +15,7 @@ import java.util.Date;
 public class NewsItem extends BaseEntity {
     private static final long serialVersionUID = 6496239895533614232L;
 
-    @Id
-    @GeneratedValue
-    private Long id ;
+
     @Column(nullable = false)
     private String title;//标题
     @Column
@@ -47,18 +45,7 @@ public class NewsItem extends BaseEntity {
     public NewsItem() {
     }
 
-    public NewsItem(Long id,String title, String thumbnail, String description, String auth, Date pubTime, int comNumber, String targerUrl, String fromPublisher, NewsDetail newsDetail) {
-        this.id = id;
-        this.title = title;
-        this.thumbnail = thumbnail;
-        this.description = description;
-        this.auth = auth;
-        this.pubTime = pubTime;
-        this.comNumber = comNumber;
-        this.targerUrl = targerUrl;
-        this.fromPublisher = fromPublisher;
-        this.newsDetail = newsDetail;
-    }
+
 
     public NewsItem(String title, String thumbnail, String description, String auth, Date pubTime, int comNumber, String targerUrl,String fromPublisher) {
         this.title = title;
@@ -71,13 +58,7 @@ public class NewsItem extends BaseEntity {
         this.fromPublisher = fromPublisher;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;

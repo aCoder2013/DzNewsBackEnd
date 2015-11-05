@@ -18,9 +18,7 @@ public class NewsDetail extends BaseEntity{
 
     private static final long serialVersionUID = 3078316919038400285L;
 
-    @Id
-    @GeneratedValue
-    private Long  id ;
+
     @Column
     private String title;
     @Column
@@ -47,13 +45,7 @@ public class NewsDetail extends BaseEntity{
         this.comNumber = comNumber;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;

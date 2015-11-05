@@ -13,9 +13,6 @@ import java.util.List;
 public class User extends BaseEntity {
     private static final long serialVersionUID = 1162584138313350068L;
 
-    @Id
-    @GeneratedValue
-    private Long id ;
 
     @Column(length = 30)
     private String name ; //昵称
@@ -71,11 +68,5 @@ public class User extends BaseEntity {
         this.name = name;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

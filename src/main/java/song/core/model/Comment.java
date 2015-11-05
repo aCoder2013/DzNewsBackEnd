@@ -18,9 +18,7 @@ public class Comment extends BaseEntity {
     private static final long serialVersionUID = 3334651482912441069L;
 
 
-    @Id
-    @GeneratedValue
-    private Long id ;
+
 
     @Column
     private String name ;
@@ -43,13 +41,6 @@ public class Comment extends BaseEntity {
     private Date  pub_time;
 
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

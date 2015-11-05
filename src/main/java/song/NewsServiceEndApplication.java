@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.jcache.JCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
@@ -19,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import javax.cache.configuration.MutableConfiguration;
 import javax.sql.DataSource;
+import java.net.URI;
 import java.text.SimpleDateFormat;
 
 /**
@@ -48,6 +50,9 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
 
     @Bean
     public JCacheManagerCustomizer jCacheManagerCustomizer(){
+//        JCacheManagerFactoryBean managerFactoryBean = new JCacheManagerFactoryBean();
+//        managerFactoryBean.setCacheManagerUri(URI.create(""));
+//        managerFactoryBean.getObject();
         return new JCacheManagerCustomizer() {
             @Override
             public void customize(javax.cache.CacheManager cacheManager) {

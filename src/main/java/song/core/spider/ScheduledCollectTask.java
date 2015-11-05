@@ -18,9 +18,8 @@ import song.core.service.NewsItemService;
 public class ScheduledCollectTask {
     private Logger logger = LoggerFactory.getLogger(ScheduledCollectTask.class);
 
-    //时间间隔,在此我们设置为6个小时
-//    private static final long PERIOD_DAY = 2 * 60 * 60 * 1000;
-    private static final long PERIOD_DAY = 60*1000;
+    //时间间隔,在此我们设置为2个小时
+    private static final long PERIOD_DAY = 2 * 60 * 60 * 1000;
 
     @Autowired
     private NewsItemService itemService;

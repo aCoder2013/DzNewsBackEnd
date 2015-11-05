@@ -1,6 +1,7 @@
 package song.core.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,26 +17,18 @@ import javax.persistence.Id;
 public class Admin extends BaseEntity {
     private static final long serialVersionUID = 1103848239243405667L;
 
-    @Id
-    @GeneratedValue
-    private Integer id;
+
     @Column
     private String name; //用户名
     @Column
     private String password;//密码
     @Column(nullable = false)
+    @Email
     private String email;//邮箱
 
     public Admin() {
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -66,31 +59,19 @@ public class Admin extends BaseEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Admin user = (Admin) o;
+        Admin admin = (Admin) o;
 
-        if (id != null ? !id.equals(user.id) : user.id != null) return false;
-        if (name != null ? !name.equals(user.name) : user.name != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        return !(email != null ? !email.equals(user.email) : user.email != null);
+        if (name != null ? !name.equals(admin.name) : admin.name != null) return false;
+        if (password != null ? !password.equals(admin.password) : admin.password != null) return false;
+        return email.equals(admin.email);
 
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + email.hashCode();
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", id=" + id +
-                '}';
     }
 }
