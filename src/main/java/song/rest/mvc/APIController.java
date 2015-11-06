@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import song.core.model.NewsItem;
 import song.core.service.NewsDetailService;
 import song.core.service.NewsItemService;
 import song.rest.resource.NewsDetailResource;
@@ -41,33 +42,42 @@ public class APIController {
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResponseEntity<NewsItemResource> news(@PathVariable("id") Long id){
          return new ResponseEntity<>(new NewsItemResourceAssembler()
-                 .toResource(itemService.get(id)), HttpStatus.OK);
+                 .toResource(itemService.getWithNewsDetail(id)), HttpStatus.OK);
     }
 
 
     /**
-     * API:获取单页新闻
+     * API:
+     * 获取单页新闻
      * @param pageable
      * @return
      */
     @RequestMapping(value = "",method = RequestMethod.GET)
     public ResponseEntity<List<NewsItemResource>> showNewsPage(Pageable pageable){
-        return new ResponseEntity<List<NewsItemResource>>(new NewsItemResourceAssembler().toResources(itemService.findRecentNews(pageable)),HttpStatus.OK);
+        List<NewsItemResource> itemResources = new NewsItemResourceAssembler().
+                toResources(itemService.findRecentNews(pageable));
+        return new ResponseEntity<>(itemResources,HttpStatus.OK);
     }
 
+
+
     /**
-     * API：根据指定NewsItem ID
-     *      获取新闻详情
+     * API：
+     * 根据指定NewsDetail.Id
+     * 获取新闻详情
      */
     @RequestMapping(value = "/detail/{id}",method = RequestMethod.GET)
     public ResponseEntity<NewsDetailResource> showNewsDetail(@PathVariable("id")Long id){
         return new ResponseEntity<>(
                 new NewsDetailResourceAssmbler()
-                        .toResource(detailService.findByNewsItemId(id)),HttpStatus.OK);
+                        .toResource(detailService.findOne(id)),HttpStatus.OK);
     }
 
-
-    @RequestMapping("/news/{id}/delete")
+    /**
+     * 删除指定新闻
+     * @param id
+     */
+    @RequestMapping(value = "/{id}" , method = RequestMethod.DELETE)
     public void delete(@PathVariable("id")Long id){
         itemService.delete(id);
     }

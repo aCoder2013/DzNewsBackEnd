@@ -1,9 +1,7 @@
 package song.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import song.core.exception.NewsNotFoundException;
@@ -11,8 +9,9 @@ import song.core.model.Comment;
 import song.core.model.NewsDetail;
 import song.core.repository.CommentRepository;
 import song.core.repository.NewsDetailRepository;
-
 import javax.annotation.PostConstruct;
+import javax.cache.Cache;
+import javax.cache.CacheManager;
 import java.util.Date;
 import java.util.List;
 
@@ -21,14 +20,20 @@ import java.util.List;
  */
 @Service
 @Transactional(readOnly = true)
-@CacheConfig(cacheNames = "details")
+@CacheConfig(cacheNames = NewsDetailService.CACHE_DETAILS)
 public class NewsDetailService extends BaseService<NewsDetail,Long> {
 
+    public static final String CACHE_DETAILS = "details";
     @Autowired
     private NewsDetailRepository detailRepository;
 
     @Autowired
     private CommentRepository commentRepository;
+
+
+    @Autowired
+    private CacheManager cacheManager;
+
     @PostConstruct
     private void init(){
         //必须调用
@@ -36,25 +41,40 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     }
 
     @Override
-    @CacheEvict(value = "details",allEntries = true)
+    @CachePut(key = "#entity.getId()")
     @Transactional(readOnly = false)
-    public <S extends NewsDetail> S save(S entity) {
-        return super.save(entity);
+    public NewsDetail  save(NewsDetail entity) {
+        return detailRepository.save(entity);
     }
+
+
+    @Transactional(readOnly = false)
+    public List<NewsDetail>  save(List<NewsDetail> entities) {
+        List<NewsDetail> detailList =  detailRepository.save(entities);
+        putInCache(detailList);
+        return detailList;
+    }
+
 
     @Override
-    @CacheEvict(value = "detail",allEntries = true)
-    @Transactional(readOnly = false)
-    public <S extends NewsDetail> Iterable<S> save(Iterable<S> entities) {
-        return super.save(entities);
-    }
-
-    @Cacheable(key = "#id")
-    public NewsDetail findByNewsItemId(Long id){
-        NewsDetail detail = detailRepository.findNewsDetailByNewsItemId(id);
-        if (null == detail) throw new NewsNotFoundException();
+    @Cacheable(key="#id")
+    public NewsDetail findOne(Long id) {
+        NewsDetail detail = detailRepository.findOne(id);
+        if(detail==null) throw new NewsNotFoundException();
         return detail;
     }
+
+    /**
+     * 将List<>放入缓存中
+     * @param entities
+     */
+    private void putInCache(List<NewsDetail> entities){
+        Cache cache  = cacheManager.getCache(CACHE_DETAILS);
+        for(NewsDetail detail : entities){
+            cache.put(detail.getId(),detail);
+        }
+    }
+
 
     @Transactional(readOnly = false)
     public Comment  addComment(Long detailId ,Comment comment){

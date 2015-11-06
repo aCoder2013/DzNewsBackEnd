@@ -32,6 +32,8 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
         //必须调用
         setCrudRepository(itemRepository);
     }
+
+
     @Cacheable(key = "#id")
     public NewsItem get(Long id ){
         NewsItem item = itemRepository.findOne(id);
@@ -40,6 +42,19 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
         itemRepository.save(item);
         return item;
     }
+
+    /**
+     * 同时抓取NewsDetail
+     * @param id
+     * @return
+     */
+    @Cacheable(key = "#id")
+    public NewsItem getWithNewsDetail(Long id){
+        NewsItem item = itemRepository.findByIdFetchNewsDetailEarly(id);
+        if(item==null) throw new NewsNotFoundException();
+        return item;
+    }
+
 
     @Override
     @Transactional(readOnly = false)
@@ -71,6 +86,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
 
     /**
      *  根据时间排序
+     *  将页数作为Cache的Key
      * @param pageable
      * @return
      */

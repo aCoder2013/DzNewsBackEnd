@@ -44,9 +44,9 @@ public class CollectLeiFengNews implements AutoCollectNews{
         this.detailService = detailService;
     }
 
-    /*
-            收集新闻
-         */
+    /**
+     * 收集新闻
+     */
     @Override
     public void collect(String url) {
         itemList = ParseNews(url);//解析新闻列表
@@ -55,7 +55,7 @@ public class CollectLeiFengNews implements AutoCollectNews{
         }
     }
         /**
-            解析新闻详情页面
+         *  解析新闻详情页面
          */
         private NewsDetail parseDetail(String url) {
             NewsDetail newsDetail = null;

@@ -37,7 +37,7 @@ public class NewsItem extends BaseEntity {
     @Column
     private int beenRead ;  //阅读数
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY,optional = false,cascade = CascadeType.REMOVE)
     @JsonIgnore
     private NewsDetail newsDetail;
 

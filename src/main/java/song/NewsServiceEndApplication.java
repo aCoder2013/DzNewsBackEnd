@@ -17,6 +17,7 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import song.core.service.NewsDetailService;
 
 import javax.cache.configuration.MutableConfiguration;
 import javax.sql.DataSource;
@@ -57,7 +58,7 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
             @Override
             public void customize(javax.cache.CacheManager cacheManager) {
                 cacheManager.createCache("items",new MutableConfiguration<>().setStatisticsEnabled(true));
-                cacheManager.createCache("details",new MutableConfiguration<>().setStatisticsEnabled(true));
+                cacheManager.createCache(NewsDetailService.CACHE_DETAILS,new MutableConfiguration<>().setStatisticsEnabled(true));
             }
         };
     }

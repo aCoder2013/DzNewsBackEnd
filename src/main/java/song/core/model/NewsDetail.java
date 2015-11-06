@@ -32,6 +32,8 @@ public class NewsDetail extends BaseEntity{
     @Column
     private int comNumber;//评论数目
 
+
+
     @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.EAGER,mappedBy ="detail")
     @JsonIgnore
     private List<Comment> comments = new ArrayList<>();
@@ -87,6 +89,9 @@ public class NewsDetail extends BaseEntity{
         this.comNumber = comNumber;
     }
 
+
+
+
     public List<Comment> getComments() {
         return comments;
     }
@@ -94,6 +99,8 @@ public class NewsDetail extends BaseEntity{
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

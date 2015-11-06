@@ -13,7 +13,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 import song.NewsServiceEndApplication;
+import song.core.model.NewsItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,5 +45,13 @@ public class APIControllerTest {
         Assert.notEmpty(entity);
     }
 
+    @Test
+    public void showNewsPageTest(){
+        NewsList items = template.getForEntity("http://localhost:"+port+"/api/news",NewsList.class).getBody();
+        Assert.notEmpty(items);
+    }
 
+    private static class NewsList extends ArrayList<NewsItem>{
+
+    }
 }

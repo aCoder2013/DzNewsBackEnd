@@ -27,7 +27,7 @@ public class NewsItemResourceAssembler extends ResourceAssemblerSupport<NewsItem
     @Override
     public NewsItemResource toResource(NewsItem entity) {
         NewsItemResource resource = createResourceWithId(entity.getId(),entity);
-        resource.add(linkTo(methodOn(APIController.class).showNewsDetail(entity.getId())).withRel("detail"));
+        resource.add(linkTo(methodOn(APIController.class).showNewsDetail(entity.getNewsDetail().getId())).withRel("detail"));
         return resource;
     }
 
