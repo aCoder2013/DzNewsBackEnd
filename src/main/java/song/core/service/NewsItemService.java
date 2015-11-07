@@ -19,9 +19,10 @@ import java.util.List;
  */
 @Service
 @Transactional(readOnly = true)
-@CacheConfig(cacheNames = "items")
+@CacheConfig(cacheNames = NewsItemService.CACHE_ITEMS)
 public class NewsItemService extends BaseService<NewsItem,Long> {
 
+    public static final String CACHE_ITEMS = "items";
     @Autowired
     private NewsItemRepository itemRepository ;
     private Logger logger = LoggerFactory.getLogger(NewsItemService.class);
@@ -58,7 +59,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
 
     @Override
     @Transactional(readOnly = false)
-    @CacheEvict(value = "items",key ="0")
+    @CacheEvict(value = CACHE_ITEMS,key ="0")
     public NewsItem save(NewsItem entity) {
         return super.save(entity);
     }
@@ -71,15 +72,15 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @return
      */
     @Transactional(readOnly = false)
-    @Caching(evict = {@CacheEvict(value = "items",key ="0")},
-            put = {@CachePut(value = "items",key = "0")})
+    @Caching(evict = {@CacheEvict(value = CACHE_ITEMS,key ="0")},
+            put = {@CachePut(value = CACHE_ITEMS,key = "0")})
     public List<NewsItem> save(List<NewsItem> itemList) {
         return itemRepository.save(itemList);
     }
 
     @Override
     @Transactional(readOnly = false)
-    @CacheEvict(value = "items",allEntries = true)
+    @CacheEvict(value = CACHE_ITEMS,allEntries = true)
     public void delete(Long id ) {
         super.delete(id);
     }
@@ -90,7 +91,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @param pageable
      * @return
      */
-    @Cacheable(value = "items",key = "#pageable.getPageNumber()")
+    @Cacheable(value = CACHE_ITEMS,key = "#pageable.getPageNumber()")
     public List<NewsItem>  findRecentNews(Pageable pageable){
         List<NewsItem> itemList = itemRepository.findAllByOrderByPubTime(pageable).getContent();
         if(itemList ==null)throw new NewsNotFoundException();
