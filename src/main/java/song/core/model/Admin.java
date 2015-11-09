@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 /**
  * 用户表
@@ -19,10 +20,14 @@ public class Admin extends BaseEntity {
 
 
     @Column
+    @NotNull
     private String name; //用户名
+
     @Column
     private String password;//密码
+
     @Column(nullable = false)
+    @NotNull
     @Email
     private String email;//邮箱
 

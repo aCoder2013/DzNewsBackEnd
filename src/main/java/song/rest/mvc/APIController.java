@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import song.core.model.Comment;
 import song.core.model.NewsItem;
 import song.core.service.NewsDetailService;
 import song.core.service.NewsItemService;
@@ -83,13 +84,24 @@ public class APIController {
     }
 
 
-    /*@RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)
+    /**
+     * 添加评论到指定的新闻
+     * @param detailId
+     * @param comment
+     * @return
+     */
+    @RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)
     public Comment addComment(@PathVariable("id") Long detailId,Comment comment){
             return detailService.addComment(detailId,comment);
     }
 
-    @RequestMapping(value = "/detail/{id}/comment")
+    /**
+     * 获取所有评论
+     * @param detailId
+     * @return
+     */
+    @RequestMapping(value = "/detail/{id}/comment",method = RequestMethod.GET)
     public List<Comment> showAllComments(@PathVariable("id") Long detailId){
         return detailService.getAllComments(detailId);
-    }*/
+    }
 }

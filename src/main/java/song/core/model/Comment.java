@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -21,10 +23,12 @@ public class Comment extends BaseEntity {
 
 
     @Column
+    @NotNull
     private String name ;
 
 
     @Column
+    @NotNull
     private String content ;
 
     @Column
@@ -39,8 +43,6 @@ public class Comment extends BaseEntity {
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date  pub_time;
-
-
 
     public String getName() {
         return name;
