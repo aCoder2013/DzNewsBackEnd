@@ -56,9 +56,8 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     }
 
 
-    @Override
     @Cacheable(key="#id")
-    public NewsDetail findOne(Long id) {
+    public NewsDetail get(Long id) {
         NewsDetail detail = detailRepository.findOne(id);
         if(detail==null) throw new NewsNotFoundException();
         return detail;
@@ -75,7 +74,12 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
         }
     }
 
-
+    /**
+     * 增加评论
+     * @param detailId
+     * @param comment
+     * @return
+     */
     @Transactional(readOnly = false)
     public Comment  addComment(Long detailId ,Comment comment){
         NewsDetail detail =  detailRepository.findOne(detailId);
@@ -84,10 +88,16 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
         comment.setDetail(detail);
         Comment co  = commentRepository.save(comment);
         detail.getComments().add(co);
+        detail.setComNumber(detail.getComNumber()+1);
         detailRepository.save(detail);
         return co;
     }
 
+    /**
+     * 获取文章的所有评论
+     * @param detailId
+     * @return
+     */
     public List<Comment> getAllComments(Long detailId){
         NewsDetail detail =  detailRepository.findOne(detailId);
         if(detail==null) throw  new NewsNotFoundException();

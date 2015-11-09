@@ -70,7 +70,7 @@ public class APIController {
     public ResponseEntity<NewsDetailResource> showNewsDetail(@PathVariable("id")Long id){
         return new ResponseEntity<>(
                 new NewsDetailResourceAssmbler()
-                        .toResource(detailService.findOne(id)),HttpStatus.OK);
+                        .toResource(detailService.get(id)),HttpStatus.OK);
     }
 
     /**

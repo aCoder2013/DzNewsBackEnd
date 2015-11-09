@@ -53,6 +53,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
     public NewsItem getWithNewsDetail(Long id){
         NewsItem item = itemRepository.findByIdFetchNewsDetailEarly(id);
         if(item==null) throw new NewsNotFoundException();
+        item.setBeenRead(item.getBeenRead()+1);
         return item;
     }
 

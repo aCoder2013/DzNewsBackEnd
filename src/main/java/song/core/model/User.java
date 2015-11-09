@@ -2,13 +2,16 @@ package song.core.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
  * Created by Song on 2015/10/31.
  */
+@Entity
 @JsonAutoDetect
 public class User extends BaseEntity {
     private static final long serialVersionUID = 1162584138313350068L;
@@ -18,16 +21,21 @@ public class User extends BaseEntity {
     private String name ; //昵称
 
     @Column(unique = true)
+    @NotBlank
     private String email;
 
+    @Size(min = 6)
+    @JsonIgnore
     private String password;
 
     private String loacation ;
 
+    @OneToMany(cascade =CascadeType.REMOVE,fetch = FetchType.LAZY,mappedBy ="user")
+    @JsonIgnore
     private List<Comment> comments;
 
-    @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.LAZY,mappedBy ="user")
-    @JsonIgnore
+
+
     public List<Comment> getComments() {
         return comments;
     }

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * Created by Song on 2015/10/19.
  */
-@ResponseStatus(value= HttpStatus.NOT_FOUND, reason="No such News ")  // 404
 public class NewsNotFoundException extends RuntimeException {
     private Logger logger = LoggerFactory.getLogger(NewsNotFoundException.class);
 
