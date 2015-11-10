@@ -17,6 +17,8 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
+import song.core.exception.PersonalMappingExceptionResolver;
 import song.core.service.NewsDetailService;
 import song.core.service.NewsItemService;
 
@@ -105,6 +107,11 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         dataSource.setTestOnBorrow(false);
         dataSource.setTestOnReturn(false);
         return dataSource;
+    }
+
+    @Bean(name = "simpleMappingExceptionResolver")
+    public SimpleMappingExceptionResolver  createSimpleMappingExceptionResolver(){
+        return new PersonalMappingExceptionResolver();
     }
 
 }

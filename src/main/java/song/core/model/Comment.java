@@ -40,6 +40,10 @@ public class Comment extends BaseEntity {
     @NotFound(action = NotFoundAction.IGNORE)
     private NewsDetail detail;
 
+
+    @ManyToOne(targetEntity = User.class,fetch = FetchType.LAZY )
+    private User user;
+
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date  pub_time;
@@ -84,5 +88,11 @@ public class Comment extends BaseEntity {
         this.detail = detail;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

@@ -3,15 +3,22 @@ package song.core.exception;
 import com.google.web.bindery.requestfactory.shared.messages.ResponseMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.jcache.interceptor.SimpleExceptionCacheResolver;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import song.rest.AdminError;
+import song.rest.util.MediaTypes;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,17 +31,22 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     public static final String DEFAULT_ERROR_VIEW = "error";
 
-/*
-    public final ResponseEntity<?> handleException(ConstraintViolationException ex, WebRequest request)    {
-        return new ResponseEntity(BeanValidators.extractPropertyAndMessage(ex.getConstraintViolations()),
-                HttpStatus.BAD_REQUEST);
-    }*/
+
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(PersonalBadRequestException.class)
+    public ResponseEntity<?> handleBadRequest(Exception ex , WebRequest request) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.parseMediaType(MediaTypes.JSON_UTF_8));
+        String body = ex.getLocalizedMessage();
+        return handleExceptionInternal(ex, body, headers, HttpStatus.BAD_REQUEST, request);
+    }
 
     @ExceptionHandler(value = {NewsNotFoundException.class})
     @ResponseBody
     public ResponseEntity<ResponseMessage> handleNewsNotFoundException(){
         logger.debug("handle news not found exception");
-        return new ResponseEntity<ResponseMessage>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
 
