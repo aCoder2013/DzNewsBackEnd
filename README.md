@@ -2,7 +2,7 @@
 一个采用SpringBoot,SpringDataJPA,Material Design Lite
 编写的Simple新闻客户端,
 ##Framework or Third Party Component
-1.  Spring Boot,SpringMVC,Spring DataJPA,spring-hateoas,
+1.  Spring Boot,SpringMVC,Spring DataJPA,spring-hateoas
 2.  Vaadin
 3.  Hibernate Validator
 4.  EhCache
