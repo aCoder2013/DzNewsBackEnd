@@ -1,12 +1,14 @@
 # XX-NewsSystem
 一个采用SpringBoot,SpringDataJPA,Material Design Lite
 编写的Simple新闻客户端,
-##Feature
-1.  图片支持上传到新浪云
-2.  新闻数据支持由爬虫抓取或人工添加。
-3.  后端采用Vaadin框架，不用写一行前端代码！
-4.  采用SpringBoot，省去了大量配置文件
-5.  采用Spring DataJPA，只需定义接口即可
+##Framework or Third Party Component
+1.  Spring Boot,SpringMVC,Spring DataJPA,spring-hateoas,
+2.  Vaadin
+3.  Hibernate Validator
+4.  EhCache
+5.  Druid  
+6.  Material Design Lite
+7.  jsoup
 
 ##API
 1.  /api/news ：获取单页新闻,支持size,page,sort
