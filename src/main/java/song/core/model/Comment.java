@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.SafeHtml;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -36,6 +37,7 @@ public class Comment extends BaseEntity {
 
     @Column
     @NotNull(message = "内容不能为空")
+    @SafeHtml
     private String content ;
 
     @Column
@@ -47,8 +49,8 @@ public class Comment extends BaseEntity {
     @NotFound(action = NotFoundAction.IGNORE)
     private NewsDetail detail;
 
-
-    @ManyToOne(targetEntity = User.class,fetch = FetchType.LAZY )
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY )
     private User user;
 
     @Column

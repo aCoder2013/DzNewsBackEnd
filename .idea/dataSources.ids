@@ -22,9 +22,12 @@
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="pub_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="news_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_a6cb84j0kf4dtdrh2p9cd56op" columns="news_detail_id" ref-table="news_detail" ref-schema="" ref-catalog="customnews" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_mxoojfj9tmy8088avf57mpm02" columns="user_id" ref-table="user" ref-schema="" ref-catalog="customnews" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="FK_a6cb84j0kf4dtdrh2p9cd56op" unique="false" columns="news_detail_id"/>
+      <index name="FK_mxoojfj9tmy8088avf57mpm02" unique="false" columns="user_id"/>
     </table>
     <table name="news_detail" schema="" catalog="customnews" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
@@ -51,7 +54,17 @@
       <column name="been_read" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_b1x0t92o6hfyqk2p6opsthe5g" columns="news_detail_id" ref-table="news_detail" ref-schema="" ref-catalog="customnews" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_b1x0t92o6hfyqk2p6opsthe5g" unique="false" columns="news_detail_id"/>
+      <index name="UK_b1x0t92o6hfyqk2p6opsthe5g" unique="true" columns="news_detail_id"/>
+    </table>
+    <table name="user" schema="" catalog="customnews" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="loacation" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_mxoojfj9tmy8088avf57mpm02" table="comment" schema="" catalog="customnews" columns="user_id"/>
+      <index name="UK_ob8kqyqqgmefl0aco34akdtpe" unique="true" columns="email"/>
     </table>
   </data-source>
 </component>

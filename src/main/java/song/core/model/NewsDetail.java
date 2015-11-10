@@ -2,6 +2,7 @@ package song.core.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.SafeHtml;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;

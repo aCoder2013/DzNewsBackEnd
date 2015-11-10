@@ -2,6 +2,7 @@ package song.core.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class User extends BaseEntity {
 
     @Column(unique = true)
     @NotBlank
+    @Email
     private String email;
 
     @Size(min = 6)
@@ -30,7 +32,7 @@ public class User extends BaseEntity {
 
     private String loacation ;
 
-    @OneToMany(cascade =CascadeType.REMOVE,fetch = FetchType.LAZY,mappedBy ="user")
+    @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
     @JsonIgnore
     private List<Comment> comments;
 

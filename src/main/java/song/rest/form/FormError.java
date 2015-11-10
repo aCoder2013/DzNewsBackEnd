@@ -3,6 +3,7 @@ package song.rest.form;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 /**
+ * 封装错误消息
  * Created by Song on 2015/11/9.
  */
 @JsonAutoDetect

@@ -1,13 +1,8 @@
 package song.rest.mvc;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hibernate.cfg.beanvalidation.BeanValidationIntegrator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import song.core.exception.PersonalBadRequestException;
 import song.core.model.Admin;
 import song.core.repository.AdminRepository;
-import song.rest.AdminError;
-import song.rest.util.BeanValidators;
 
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * Created by Song on 2015/11/9.

@@ -7,8 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 import song.core.exception.NewsNotFoundException;
 import song.core.model.Comment;
 import song.core.model.NewsDetail;
+import song.core.model.User;
 import song.core.repository.CommentRepository;
 import song.core.repository.NewsDetailRepository;
+import song.core.repository.UserRepository;
+
 import javax.annotation.PostConstruct;
 import javax.cache.Cache;
 import javax.cache.CacheManager;
@@ -30,6 +33,8 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     @Autowired
     private CommentRepository commentRepository;
 
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     private CacheManager cacheManager;
@@ -87,7 +92,15 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
         comment.setPub_time(new Date());
         comment.setDetail(detail);
         Comment co  = commentRepository.save(comment);
-        detail.getComments().add(co);
+        User user = userRepository.findByEmail(comment.getEmail());
+        if(user == null){
+            user = new User();
+            user.setEmail(comment.getEmail());
+            user.setName(comment.getName());
+            userRepository.save(user);
+        }
+        co.setUser(user);
+        commentRepository.save(co);
         detail.setComNumber(detail.getComNumber()+1);
         detailRepository.save(detail);
         return co;
