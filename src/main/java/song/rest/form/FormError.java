@@ -1,4 +1,4 @@
-package song.rest;
+package song.rest.form;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
@@ -6,14 +6,14 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
  * Created by Song on 2015/11/9.
  */
 @JsonAutoDetect
-public class AdminError {
+public class FormError {
 
 
     private String code ;
 
     private String message ;
 
-    public AdminError(String code, String message) {
+    public FormError(String code, String message) {
         this.code = code;
         this.message = message;
     }

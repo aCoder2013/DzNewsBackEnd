@@ -3,10 +3,8 @@ package song.core.exception;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
-import org.springframework.http.HttpStatus;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import song.rest.AdminError;
+import song.rest.form.FormError;
 
 import java.util.List;
 
@@ -40,9 +38,9 @@ public class PersonalBadRequestException extends RuntimeException{
 
     @Override
     public String getLocalizedMessage() {
-        List<AdminError> errorList = Lists.newArrayList();
+        List<FormError> errorList = Lists.newArrayList();
         for(ObjectError error : errors){
-            errorList.add(new AdminError(error.getCode(),error.getDefaultMessage()));
+            errorList.add(new FormError(error.getCode(),error.getDefaultMessage()));
         }
         try {
             return new ObjectMapper().writeValueAsString(errorList);

@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
+import org.hibernate.validator.constraints.Email;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
@@ -23,12 +25,17 @@ public class Comment extends BaseEntity {
 
 
     @Column
-    @NotNull
+    @NotNull(message = "昵称不能为空")
+    @Size(min =3,message = "昵称需要至少3个字符")
     private String name ;
 
+    @Column
+    @NotNull(message = "邮箱不能为空")
+    @Email
+    private String email ;
 
     @Column
-    @NotNull
+    @NotNull(message = "内容不能为空")
     private String content ;
 
     @Column
@@ -62,6 +69,14 @@ public class Comment extends BaseEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getLocation() {

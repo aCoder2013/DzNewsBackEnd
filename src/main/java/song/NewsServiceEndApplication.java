@@ -109,9 +109,6 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         return dataSource;
     }
 
-    @Bean(name = "simpleMappingExceptionResolver")
-    public SimpleMappingExceptionResolver  createSimpleMappingExceptionResolver(){
-        return new PersonalMappingExceptionResolver();
-    }
+
 
 }

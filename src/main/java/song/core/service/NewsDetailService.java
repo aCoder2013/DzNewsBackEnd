@@ -64,7 +64,7 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     }
 
     /**
-     * 将List<>放入缓存中
+     * 将List<NewsDetail>放入缓存中
      * @param entities
      */
     private void putInCache(List<NewsDetail> entities){

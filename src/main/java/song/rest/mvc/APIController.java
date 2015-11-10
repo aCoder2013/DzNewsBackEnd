@@ -5,10 +5,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import song.core.exception.PersonalBadRequestException;
 import song.core.model.Comment;
 import song.core.model.NewsItem;
 import song.core.service.NewsDetailService;
@@ -19,6 +21,7 @@ import song.rest.resource.asm.NewsDetailResourceAssmbler;
 import song.rest.resource.asm.NewsItemResourceAssembler;
 import song.rest.util.MediaTypes;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -91,8 +94,11 @@ public class APIController {
      * @return
      */
     @RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)
-    public Comment addComment(@PathVariable("id") Long detailId,Comment comment){
-            return detailService.addComment(detailId,comment);
+    public Comment addComment(@PathVariable("id") Long detailId,@Valid Comment comment,BindingResult result){
+        if(result.hasErrors()){
+            throw new PersonalBadRequestException(result.getAllErrors());
+        }
+        return detailService.addComment(detailId,comment);
     }
 
     /**
