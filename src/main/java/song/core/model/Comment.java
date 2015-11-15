@@ -6,6 +6,7 @@ import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.SafeHtml;
+import org.hibernate.validator.constraints.URL;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -34,6 +35,13 @@ public class Comment extends BaseEntity {
     @NotNull(message = "邮箱不能为空")
     @Email
     private String email ;
+
+
+    @URL
+    @Column
+    private String thumbnail;//头像
+
+
 
     @Column
     @NotNull(message = "内容不能为空")
@@ -79,6 +87,14 @@ public class Comment extends BaseEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
     public String getLocation() {

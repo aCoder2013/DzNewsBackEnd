@@ -5,6 +5,7 @@ import com.alibaba.druid.support.http.StatViewServlet;
 import org.ehcache.CacheManager;
 import org.ehcache.EhcacheManager;
 import org.ehcache.config.DefaultConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -41,7 +42,14 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         SpringApplication
                 .run(NewsServiceEndApplication.class, args);
     }
+/*
 
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("user").password("password").roles("USER");
+    }
+*/
 
     /*@Bean
     public EmbeddedServletContainerFactory servletContainer() {
@@ -108,7 +116,4 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         dataSource.setTestOnReturn(false);
         return dataSource;
     }
-
-
-
 }

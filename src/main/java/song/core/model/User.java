@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.URL;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -20,6 +21,11 @@ public class User extends BaseEntity {
 
     @Column(length = 30)
     private String name ; //昵称
+
+
+    @URL
+    @Column
+    private String thumbnail;//头像
 
     @Column(unique = true)
     @NotBlank
@@ -78,5 +84,11 @@ public class User extends BaseEntity {
         this.name = name;
     }
 
+    public String getThumbnail() {
+        return thumbnail;
+    }
 
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
 }
