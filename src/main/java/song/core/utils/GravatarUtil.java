@@ -1,6 +1,7 @@
 package song.core.utils;
 
 
+import org.apache.commons.codec.binary.*;
 
 /**
  * 获取Gravatar中的头像
@@ -25,7 +26,7 @@ public class GravatarUtil {
      * @return
      */
     public static String getHeadPortrait(String email) {
-        String hash = MD5Util.md5Hex(email);
+        String hash = MD5Util.md5Hex(email.toLowerCase());
         //得到头像URL
         String imgUrl = GRAVATAR_PREFIX + hash +"?d="+DEFAULT_HEADPORT;
         return imgUrl!=null?imgUrl:null;

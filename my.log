@@ -7034,3 +7034,13 @@ java.lang.NullPointerException: null
 2015-11-15 21:38:52.968  INFO 1140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2015-11-15 21:38:52.969  INFO 1140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2015-11-15 21:38:53.004  INFO 1140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2015-11-15 23:37:51.606  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Start To Collect News
+2015-11-15 23:37:54.516  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Finish To Collect News
+2015-11-16 01:37:51.604  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Start To Collect News
+2015-11-16 01:37:55.224  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Finish To Collect News
+2015-11-16 03:37:51.604  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Start To Collect News
+2015-11-16 03:37:53.398  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Finish To Collect News
+2015-11-16 05:37:51.604  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Start To Collect News
+2015-11-16 05:37:53.413  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Finish To Collect News
+2015-11-16 07:37:51.606  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Start To Collect News
+2015-11-16 07:37:53.085  INFO 1140 --- [pool-2-thread-1] song.core.spider.ScheduledCollectTask    : Finish To Collect News
