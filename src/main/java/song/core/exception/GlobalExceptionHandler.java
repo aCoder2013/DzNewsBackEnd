@@ -29,17 +29,25 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     public static final String DEFAULT_ERROR_VIEW = "error";
 
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(UserNotExistException.class)
+    public ResponseEntity<?> handleUserNotExist(){
+        logger.debug("handle user not exist exception");
+        return new ResponseEntity<>(new FormError("0","用户名不存在"),HttpStatus.NOT_FOUND);
+    }
+
+
     @ResponseStatus(HttpStatus.CONFLICT)
     @ExceptionHandler(UserNameExistException.class)
     public ResponseEntity<FormError> handleUserNameExist(){
-        logger.debug("handle news not found exception");
+        logger.debug("handle user name exist exception");
         return new ResponseEntity<>(new FormError("0","用户名已经存在，请重新选择一个！"),HttpStatus.CONFLICT);
     }
 
     @ResponseStatus(HttpStatus.CONFLICT)
     @ExceptionHandler(UserEmailExistException.class)
     public ResponseEntity<FormError>  handleUserEmailExist(){
-        logger.debug("handle news not found exception");
+        logger.debug("handle user email exist exception");
         return new ResponseEntity<>(new FormError("0","邮箱已经存在，请重新选择一个！"),HttpStatus.CONFLICT);
     }
 

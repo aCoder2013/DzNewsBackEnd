@@ -5,6 +5,7 @@ import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import song.core.exception.NewsNotFoundException;
+import song.core.exception.UserNotExistException;
 import song.core.model.Comment;
 import song.core.model.NewsDetail;
 import song.core.model.User;
@@ -83,28 +84,23 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     /**
      * 增加评论
      * @param detailId
-     * @param comment
      * @return
      */
     @Transactional(readOnly = false)
-    public Comment  addComment(Long detailId ,Comment comment){
+    public Comment  addComment(Long detailId ,Long userid,String content){
         NewsDetail detail =  detailRepository.findOne(detailId);
         if(detail==null) throw  new NewsNotFoundException();
+        User user = userRepository.findOne(userid);
+        if(user==null) throw new UserNotExistException();
+        Comment comment = new Comment();
+        comment.setContent(content);
+        comment.setName(user.getName());
+        comment.setEmail(user.getEmail());
+        comment.setThumbnail(user.getThumbnail());
+        comment.setUser(user);
         comment.setPub_time(new Date());
         comment.setDetail(detail);
         Comment co  = commentRepository.save(comment);
-        User user = userRepository.findByEmail(comment.getEmail());
-        String thumbnail = GravatarUtil.getHeadPortrait(comment.getEmail());
-        if(user == null){
-            user = new User();
-            user.setThumbnail(thumbnail);//获取头像
-            user.setEmail(comment.getEmail());
-            user.setName(comment.getName());
-            userRepository.save(user);
-        }
-        co.setUser(user);
-        co.setThumbnail(thumbnail);//设置头像
-        commentRepository.save(co);
         detail.setComNumber(detail.getComNumber()+1);
         detailRepository.save(detail);
         return co;

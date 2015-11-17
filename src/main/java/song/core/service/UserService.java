@@ -7,6 +7,7 @@ import song.core.exception.UserEmailExistException;
 import song.core.exception.UserNameExistException;
 import song.core.model.User;
 import song.core.repository.UserRepository;
+import song.core.utils.GravatarUtil;
 
 /**
  * Created by Song on 2015/11/10.
@@ -32,8 +33,15 @@ public class UserService {
         if(userRepository.findByEmail(user.getEmail())!=null){
             throw new UserEmailExistException();
         }
+        user.setThumbnail(GravatarUtil.getHeadPortrait(user.getEmail()));//设置头像
         User userSaved = userRepository.save(user);
         return userSaved;
+    }
+
+
+    public User login(String emaill ,String email){
+        User user = userRepository.findByEmailAndPassword(emaill,email);
+        return user;
     }
 
 

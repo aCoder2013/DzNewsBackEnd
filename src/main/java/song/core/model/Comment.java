@@ -28,7 +28,7 @@ public class Comment extends BaseEntity {
 
     @Column
     @NotNull(message = "昵称不能为空")
-    @Size(min =3,message = "昵称需要至少3个字符")
+    @Size(min =2,message = "昵称需要至少2个字符")
     private String name ;
 
     @Column

@@ -88,15 +88,13 @@ public class APIController {
     /**
      * 添加评论到指定的新闻
      * @param detailId
-     * @param comment
      * @return
      */
     @RequestMapping(value = "/detail/{id}/comment/new",method = RequestMethod.POST)
-    public Comment addComment(@PathVariable("id") Long detailId,@Valid Comment comment,BindingResult result){
-        if(result.hasErrors()){
-            throw new PersonalBadRequestException(result.getAllErrors());
-        }
-        return detailService.addComment(detailId,comment);
+    public Comment addComment(@PathVariable("id") Long detailId,@RequestParam(name = "userid") Long  userid,
+                              @RequestParam(name = "content") String content){
+        System.out.println(userid);
+        return detailService.addComment(detailId,userid,content);
     }
 
     /**

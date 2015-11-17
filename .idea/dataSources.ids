@@ -62,6 +62,7 @@
       <column name="loacation" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="thumbnail" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="FK_mxoojfj9tmy8088avf57mpm02" table="comment" schema="" catalog="customnews" columns="user_id"/>
       <index name="UK_ob8kqyqqgmefl0aco34akdtpe" unique="true" columns="email"/>
