@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import song.rest.form.FormError;
 import song.rest.util.MediaTypes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +29,19 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     public static final String DEFAULT_ERROR_VIEW = "error";
 
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler(UserNameExistException.class)
+    public ResponseEntity<FormError> handleUserNameExist(){
+        logger.debug("handle news not found exception");
+        return new ResponseEntity<>(new FormError("0","用户名已经存在，请重新选择一个！"),HttpStatus.CONFLICT);
+    }
 
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler(UserEmailExistException.class)
+    public ResponseEntity<FormError>  handleUserEmailExist(){
+        logger.debug("handle news not found exception");
+        return new ResponseEntity<>(new FormError("0","邮箱已经存在，请重新选择一个！"),HttpStatus.CONFLICT);
+    }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(PersonalBadRequestException.class)

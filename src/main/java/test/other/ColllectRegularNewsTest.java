@@ -1,4 +1,4 @@
-package test;
+package test.other;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,10 +27,9 @@ public class ColllectRegularNewsTest {
 
 
 
-
     @Test
     public void  test(){
         CollectRegularNews news = new CollectRegularNews(newsItemRepository, newsDetailRepository);
         news.collect("http://www.cnbeta.com/articles/433807.htm");
-    }
-    }
+     }
+}

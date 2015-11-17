@@ -19,8 +19,10 @@ public class User extends BaseEntity {
     private static final long serialVersionUID = 1162584138313350068L;
 
 
-    @Column(length = 30)
-    private String name ; //昵称
+    @Column()
+    @NotBlank
+    private String name; //昵称
+
 
 
     @URL
@@ -34,8 +36,9 @@ public class User extends BaseEntity {
 
     @Size(min = 6)
     @JsonIgnore
+    @Column
     private String password;
-
+    @Column
     private String loacation ;
 
     @OneToMany(cascade =CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
@@ -91,4 +94,7 @@ public class User extends BaseEntity {
     public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
+
+
 }
+

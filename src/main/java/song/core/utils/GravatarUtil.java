@@ -1,7 +1,6 @@
 package song.core.utils;
 
 
-import org.apache.commons.codec.binary.*;
 
 /**
  * 获取Gravatar中的头像

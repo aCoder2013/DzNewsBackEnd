@@ -1,4 +1,4 @@
-package test;
+package test.controller;
 
 
 import static org.assertj.core.api.Assertions.*;
