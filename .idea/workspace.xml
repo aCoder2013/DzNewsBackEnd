@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="支持注册新用户">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/core/exception/UserNotExistException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/song/rest/form/WrapForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/rest/mvc/APIController.java" afterPath="$PROJECT_DIR$/src/main/java/song/rest/mvc/APIController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/core/model/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/song/core/model/Comment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/core/exception/GlobalExceptionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/song/core/exception/GlobalExceptionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/core/service/NewsDetailService.java" afterPath="$PROJECT_DIR$/src/main/java/song/core/service/NewsDetailService.java" />
+    <list default="true" id="9ebca0cf-08e0-4fde-99c3-cf7ac2f8f1ce" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/core/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/song/core/model/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/song/core/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/song/core/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.log" afterPath="$PROJECT_DIR$/my.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,7 +56,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="customnews.user" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customnews.user" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/52d98b1/a270bf0d-e27c-4e6b-955e-e9e2336e6882/customnews..user">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -74,6 +67,26 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5809129">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/song/core/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/song/core/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,26 +166,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserNotExistException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/core/exception/UserNotExistException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalExceptionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/song/core/exception/GlobalExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="86" selection-start-line="35" selection-start-column="86" selection-end-line="35" selection-end-column="86" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -247,16 +240,16 @@
         <option value="$PROJECT_DIR$/src/main/java/song/core/exception/UserExistException.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/exception/UserEmailExistException.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/exception/UserNameExistException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/core/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/rest/form/WrapForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/exception/UserNotExistException.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/exception/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/song/core/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/model/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/core/service/NewsDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/song/rest/mvc/APIController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/core/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/core/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java" />
       </list>
     </option>
   </component>
@@ -1409,13 +1402,7 @@
       <workItem from="1447335559273" duration="243000" />
       <workItem from="1447396900099" duration="923000" />
       <workItem from="1447400420274" duration="8709000" />
-      <workItem from="1447586746129" duration="26124000" />
-    </task>
-    <task id="LOCAL-00004" summary="新闻项和新闻详情之间建立单向一对一的关系">
-      <created>1441950466408</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1441950466408</updated>
+      <workItem from="1447586746129" duration="30680000" />
     </task>
     <task id="LOCAL-00005" summary="将个人新闻和爬虫抓取新闻合并">
       <created>1441982089128</created>
@@ -1705,11 +1692,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447757166905</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="支持用户登录+优化评论">
+      <created>1447763126852</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1447763126852</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549535000" />
+    <option name="totallyTimeSpent" value="554091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1767,7 +1760,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Interceptor" />
     <MESSAGE value="增加登陆拦截器" />
     <MESSAGE value="登陆界面切换至Vaadin" />
     <MESSAGE value="重构" />
@@ -1792,7 +1784,8 @@
     <MESSAGE value="增加用户默认头像" />
     <MESSAGE value="bug fixed" />
     <MESSAGE value="支持注册新用户" />
-    <option name="LAST_COMMIT_MESSAGE" value="支持注册新用户" />
+    <MESSAGE value="支持用户登录+优化评论" />
+    <option name="LAST_COMMIT_MESSAGE" value="支持用户登录+优化评论" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2047,7 +2040,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2144,23 +2137,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/core/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/core/repository/NewsItemRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2206,19 +2188,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="7" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2275,16 +2245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/song/core/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/song/core/service/NewsDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2313,6 +2273,32 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/core/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/core/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/song/rest/mvc/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5809129">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

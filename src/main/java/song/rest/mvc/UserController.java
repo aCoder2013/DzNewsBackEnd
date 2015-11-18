@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import song.core.exception.PersonalBadRequestException;
 import song.core.model.Admin;
 import song.core.model.User;
@@ -27,6 +24,12 @@ public class UserController {
     private UserService userService;
 
 
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    public ResponseEntity<User> getUserInfoById(@PathVariable("id") Long id){
+        return ResponseEntity.ok(userService.findById(id));
+    }
+
+
     /**
      * 注册新用户
      * @param user
@@ -42,6 +45,13 @@ public class UserController {
         return ResponseEntity.ok(userService.register(user));
     }
 
+
+    /**
+     *  用户登录
+     * @param email
+     * @param password
+     * @return
+     */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public ResponseEntity<WrapForm> login(String email ,String password){
         User user = userService.login(email,password);

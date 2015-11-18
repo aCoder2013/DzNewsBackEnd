@@ -37,6 +37,7 @@ public class User extends BaseEntity {
     @Size(min = 6)
     @JsonIgnore
     @Column
+    @NotBlank
     private String password;
     @Column
     private String loacation ;

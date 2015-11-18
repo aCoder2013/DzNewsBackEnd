@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import song.core.exception.UserEmailExistException;
 import song.core.exception.UserNameExistException;
+import song.core.exception.UserNotExistException;
 import song.core.model.User;
 import song.core.repository.UserRepository;
 import song.core.utils.GravatarUtil;
@@ -18,6 +19,14 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+
+
+    public User findById(Long id ){
+        User user = userRepository.findOne(id);
+        if(null==user) throw  new UserNotExistException();
+        return user;
+    }
 
 
     /**
