@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -14,6 +15,7 @@ import java.util.List;
  * Created by Song on 2015/10/31.
  */
 @Entity
+@Validated
 @JsonAutoDetect
 public class User extends BaseEntity {
     private static final long serialVersionUID = 1162584138313350068L;

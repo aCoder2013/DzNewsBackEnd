@@ -17,6 +17,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import song.core.exception.PersonalMappingExceptionResolver;
@@ -84,6 +86,19 @@ public class NewsServiceEndApplication   extends WebMvcConfigurerAdapter {
         return b;
     }
 
+    @Bean
+    public MethodValidationPostProcessor methodValidationPostProcessor(){
+        final MethodValidationPostProcessor methodValidationPostProcessor = new MethodValidationPostProcessor();
+        methodValidationPostProcessor.setValidator(validator());
+
+        return methodValidationPostProcessor;
+    }
+
+    @Bean
+    public LocalValidatorFactoryBean validator() {
+        final LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+        return localValidatorFactoryBean;
+    }
 /*    @Bean
     public ServletRegistrationBean druidServlet() {
         return new ServletRegistrationBean(new StatViewServlet(), "/druid*//*");

@@ -6,10 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import song.core.exception.PersonalBadRequestException;
-import song.core.model.Admin;
 import song.core.model.User;
 import song.core.service.UserService;
-import song.rest.form.WrapForm;
+import song.rest.form.WrapResponse;
 
 import javax.validation.Valid;
 
@@ -38,11 +37,8 @@ public class UserController {
      */
     @RequestMapping(value = "/register",method = RequestMethod.POST)
     public @ResponseBody
-    ResponseEntity<User> regisiter(@Valid User user, BindingResult result){
-        if(result.hasErrors()){
-            throw new PersonalBadRequestException(result.getAllErrors());
-        }
-        return ResponseEntity.ok(userService.register(user));
+    ResponseEntity<WrapResponse> regisiter(@Valid User user, BindingResult result){
+        return ResponseEntity.ok(new WrapResponse().success(userService.register(user)));
     }
 
 
@@ -53,12 +49,12 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public ResponseEntity<WrapForm> login(String email ,String password){
+    public ResponseEntity<WrapResponse> login(String email ,String password){
         User user = userService.login(email,password);
         if(user==null){
-            return new ResponseEntity<WrapForm>(new WrapForm(0,"邮箱或者密码不正确"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new WrapResponse().failure("邮箱或者密码不正确"), HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<WrapForm>(new WrapForm(1,user), HttpStatus.OK );
+        return new ResponseEntity<>(new WrapResponse().success(user), HttpStatus.OK );
     }
 }
 
