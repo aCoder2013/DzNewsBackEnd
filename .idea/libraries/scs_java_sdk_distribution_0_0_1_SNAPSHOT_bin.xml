@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="scs-java-sdk-distribution-0.0.1-SNAPSHOT-bin">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/lib/scs-java-sdk-distribution-0.0.1-SNAPSHOT-bin.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
