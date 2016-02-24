@@ -1,11 +1,8 @@
 package song.core.service;
 
-import com.github.stuxuhai.jpinyin.PinyinFormat;
-import com.github.stuxuhai.jpinyin.PinyinHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 import song.core.exception.UserEmailExistException;
 import song.core.exception.UserNameExistException;
 import song.core.exception.UserNotExistException;

@@ -1,7 +1,11 @@
 package song.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.*;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import song.core.exception.NewsNotFoundException;
@@ -12,11 +16,8 @@ import song.core.model.User;
 import song.core.repository.CommentRepository;
 import song.core.repository.NewsDetailRepository;
 import song.core.repository.UserRepository;
-import song.core.utils.GravatarUtil;
 
 import javax.annotation.PostConstruct;
-import javax.cache.Cache;
-import javax.cache.CacheManager;
 import java.util.Date;
 import java.util.List;
 
