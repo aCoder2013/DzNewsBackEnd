@@ -61,7 +61,6 @@ public class SimpleLoginUI extends UI {
                 boolean isLoggedIn = getSession().getAttribute("admin") != null;
                 boolean isLoginView = event.getNewView() instanceof SimpleLoginView;
                 boolean isAdminView = event.getNewView() instanceof AdminView;
-
                 if (!isLoggedIn && !isLoginView) {
                     // Redirect to login view always if a user has not yet
                     // logged in

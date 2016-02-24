@@ -127,6 +127,7 @@ public final class DashboardMenu extends CustomComponent {
         return valoMenuToggleButton;
     }
 
+
     private Component buildMenuItems() {
         CssLayout menuItemsLayout = new CssLayout();
         menuItemsLayout.addStyleName("valo-menuitems");
