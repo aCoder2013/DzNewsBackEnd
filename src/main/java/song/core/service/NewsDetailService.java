@@ -1,10 +1,8 @@
 package song.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.Cache;
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,8 +37,8 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private CacheManager cacheManager;
+//    @Autowired
+//    private CacheManager cacheManager;
 
     @PostConstruct
     private void init(){
@@ -49,7 +47,6 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     }
 
     @Override
-    @CachePut(key = "#entity.getId()")
     @Transactional(readOnly = false)
     public NewsDetail  save(NewsDetail entity) {
         return detailRepository.save(entity);
@@ -59,9 +56,21 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
     @Transactional(readOnly = false)
     public List<NewsDetail>  save(List<NewsDetail> entities) {
         List<NewsDetail> detailList =  detailRepository.save(entities);
-        putInCache(detailList);
         return detailList;
     }
+
+    @Override
+    @CacheEvict(value = CACHE_DETAILS,key = "#entity.getId()")
+    public void delete(NewsDetail entity) {
+        super.delete(entity);
+    }
+
+    @Override
+    @CacheEvict(value = CACHE_DETAILS,key = "#id")
+    public void delete(Long id) {
+        super.delete(id);
+    }
+
 
 
     @Cacheable(key="#id")
@@ -75,12 +84,12 @@ public class NewsDetailService extends BaseService<NewsDetail,Long> {
      * 将List<NewsDetail>放入缓存中
      * @param entities
      */
-    private void putInCache(List<NewsDetail> entities){
-        Cache cache  = cacheManager.getCache(CACHE_DETAILS);
-        for(NewsDetail detail : entities){
-            cache.put(detail.getId(),detail);
-        }
-    }
+//    private void putInCache(List<NewsDetail> entities){
+//        Cache cache  = cacheManager.getCache(CACHE_DETAILS);
+//        for(NewsDetail detail : entities){
+//            cache.put(detail.getId(),detail);
+//        }
+//    }
 
     /**
      * 增加评论

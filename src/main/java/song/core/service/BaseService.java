@@ -2,7 +2,6 @@ package song.core.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -64,9 +63,6 @@ public abstract  class BaseService<T,ID extends Serializable>{
         crudRepository.delete(entity);
     }
 
-    public void delete(Iterable<? extends T> entities){
-        crudRepository.delete(entities);
-    }
 
 
 }

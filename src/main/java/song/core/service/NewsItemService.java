@@ -25,6 +25,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
     public static final String CACHE_ITEMS = "items";
     @Autowired
     private NewsItemRepository itemRepository ;
+
     private Logger logger = LoggerFactory.getLogger(NewsItemService.class);
 
 
@@ -35,7 +36,6 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
     }
 
 
-    @Cacheable(key = "#id")
     public NewsItem get(Long id ){
         NewsItem item = itemRepository.findOne(id);
         if(item==null)throw new NewsNotFoundException("News with "+id +" not found ");
@@ -49,7 +49,6 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @param id
      * @return
      */
-    @Cacheable(key = "#id")
     public NewsItem getWithNewsDetail(Long id){
         NewsItem item = itemRepository.findByIdFetchNewsDetailEarly(id);
         if(item==null) throw new NewsNotFoundException();
@@ -60,7 +59,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
 
     @Override
     @Transactional(readOnly = false)
-    @CacheEvict(value = CACHE_ITEMS,key ="0")
+    @CacheEvict(value = CACHE_ITEMS,allEntries = true)
     public NewsItem save(NewsItem entity) {
         return super.save(entity);
     }
@@ -73,8 +72,7 @@ public class NewsItemService extends BaseService<NewsItem,Long> {
      * @return
      */
     @Transactional(readOnly = false)
-    @Caching(evict = {@CacheEvict(value = CACHE_ITEMS,key ="0")},
-            put = {@CachePut(value = CACHE_ITEMS,key = "0")})
+    @CacheEvict(value = CACHE_ITEMS,allEntries = true)
     public List<NewsItem> save(List<NewsItem> itemList) {
         return itemRepository.save(itemList);
     }
